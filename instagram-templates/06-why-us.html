@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Post - Why Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    .post {
+      width: 1080px;
+      height: 1080px;
+      background: #0a0a0a;
+      font-family: 'Vazirmatn', sans-serif;
+      position: relative;
+      overflow: hidden;
+      direction: rtl;
+    }
+
+    .post__gold-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #d4af37, #f4d03f, #d4af37);
+    }
+
+    .post__header {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      left: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .post__brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .post__logo {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0a0a0a;
+    }
+
+    .post__brand-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .post__content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 60px;
+      left: 60px;
+    }
+
+    .post__eyebrow {
+      font-size: 18px;
+      color: #d4af37;
+      font-weight: 500;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .post__title {
+      font-size: 48px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 50px;
+    }
+
+    .post__title span {
+      color: #d4af37;
+    }
+
+    .post__pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .post__pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 30px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .post__pillar-num {
+      font-size: 36px;
+      font-weight: 800;
+      color: #d4af37;
+      line-height: 1;
+      min-width: 50px;
+    }
+
+    .post__pillar-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .post__pillar-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    .post__footer {
+      position: absolute;
+      bottom: 60px;
+      right: 60px;
+      left: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .post__cta {
+      background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+      color: #0a0a0a;
+      padding: 16px 40px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .post__contact {
+      text-align: left;
+      direction: ltr;
+    }
+
+    .post__contact-item {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+    <div class="post__gold-bar"></div>
+
+    <div class="post__header">
+      <div class="post__brand">
+        <div class="post__logo">QP</div>
+        <span class="post__brand-name">Q Plast</span>
+      </div>
+    </div>
+
+    <div class="post__content">
+      <p class="post__eyebrow">— چرا کیو پلاست؟</p>
+      <h1 class="post__title">چهار دلیل برای <span>انتخاب ما</span></h1>
+      
+      <div class="post__pillars">
+        <div class="post__pillar">
+          <span class="post__pillar-num">۰۱</span>
+          <div>
+            <h3 class="post__pillar-title">تخصص فقط در پمپ آرایشی</h3>
+            <p class="post__pillar-desc">تمرکز کامل روی یک محصول با کیفیت</p>
+          </div>
+        </div>
+        <div class="post__pillar">
+          <span class="post__pillar-num">۰۲</span>
+          <div>
+            <h3 class="post__pillar-title">کیفیت پریمیوم</h3>
+            <p class="post__pillar-desc">تلورانس کنترل‌شده و ثبات بین بچ‌ها</p>
+          </div>
+        </div>
+        <div class="post__pillar">
+          <span class="post__pillar-num">۰۳</span>
+          <div>
+            <h3 class="post__pillar-title">پشتیبانی فنی</h3>
+            <p class="post__pillar-desc">از انتخاب پمپ تا تست سازگاری فرمول</p>
+          </div>
+        </div>
+        <div class="post__pillar">
+          <span class="post__pillar-num">۰۴</span>
+          <div>
+            <h3 class="post__pillar-title">تحویل سریع</h3>
+            <p class="post__pillar-desc">تولید بومی و تحویل به‌موقع</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post__footer">
+      <a class="post__cta" href="#">بیشتر بدانید</a>
+      <div class="post__contact">
+        <div class="post__contact-item">Qplast.ir</div>
+        <div class="post__contact-item">@Qplast.1</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

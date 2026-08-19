@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>راهنمای برند — Q Plast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&family=Vazirmatn:wght@400;600;700;800&family=Tajawal:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .brand-intro { max-width: 740px; margin: 0 auto; text-align: center; padding: 60px 0 40px; }
+    .brand-intro h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+    .brand-intro p { color: var(--ink-soft); font-size: 17px; line-height: 1.9; }
+
+    .brand-section { padding: 56px 0; border-top: 1px solid var(--line); }
+    .brand-section__title { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+    .brand-section__desc { color: var(--ink-soft); font-size: 16px; margin-bottom: 32px; max-width: 640px; line-height: 1.9; }
+
+    /* BrandScript table */
+    .bs-table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .bs-table th, .bs-table td { padding: 16px 20px; text-align: right; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.8; }
+    .bs-table th { background: var(--bg-alt); color: #f2efe7; font-weight: 700; width: 180px; white-space: nowrap; }
+    .bs-table td { color: var(--ink); }
+    .bs-table tr:last-child th, .bs-table tr:last-child td { border-bottom: none; }
+    .bs-table .sub { padding-right: 40px; font-size: 14px; color: var(--ink-soft); }
+    .bs-table .sub strong { color: var(--ink); }
+
+    /* Colors */
+    .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .color-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .color-card__swatch { height: 120px; display: flex; align-items: flex-end; padding: 16px; }
+    .color-card__info { padding: 16px; background: var(--surface); }
+    .color-card__name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .color-card__hex { font-family: var(--sans); font-size: 14px; color: var(--ink-soft); letter-spacing: 0.02em; }
+
+    /* Typography */
+    .type-sample { margin-bottom: 36px; }
+    .type-sample__label { font-size: 13px; font-weight: 700; color: var(--gold-dark); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+    .type-sample__example { font-size: 32px; line-height: 1.4; }
+    .type-sample__meta { font-size: 13px; color: var(--ink-soft); margin-top: 6px; }
+
+    /* Logo */
+    .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .logo-box { border-radius: var(--radius); padding: 48px 32px; display: flex; align-items: center; justify-content: center; min-height: 200px; font-size: 36px; font-weight: 800; letter-spacing: 0.04em; }
+    .logo-box--dark { background: var(--bg-alt); color: #f2efe7; }
+    .logo-box--light { background: var(--surface); border: 1px solid var(--line); color: var(--ink); }
+    .logo-box--gold { background: var(--gold); color: #fff; }
+
+    /* Voice */
+    .voice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .voice-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .voice-card__icon { font-size: 28px; margin-bottom: 12px; }
+    .voice-card__title { font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+    .voice-card__text { font-size: 14.5px; color: var(--ink-soft); line-height: 1.8; }
+
+    /* Do / Don't */
+    .do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+    .do-card, .dont-card { border-radius: var(--radius); padding: 28px; }
+    .do-card { background: #f0f7f0; border: 1px solid #b5d6b5; }
+    .dont-card { background: #fdf0f0; border: 1px solid #e0b5b5; }
+    .do-card h4 { color: #2e7d32; margin-bottom: 12px; font-size: 16px; }
+    .dont-card h4 { color: #c62828; margin-bottom: 12px; font-size: 16px; }
+    .do-card li, .dont-card li { font-size: 14.5px; line-height: 2; color: var(--ink-soft); }
+
+    /* Spacing */
+    .spacing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
+    .spacing-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; text-align: center; }
+    .spacing-card__bar { background: var(--gold-soft); border: 1px dashed var(--gold); border-radius: 4px; margin-bottom: 12px; }
+    .spacing-card__label { font-size: 13px; font-weight: 700; }
+    .spacing-card__value { font-family: var(--sans); font-size: 12px; color: var(--ink-soft); }
+
+    /* Tone scale */
+    .tone-bar { display: flex; gap: 0; border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+    .tone-bar__segment { flex: 1; padding: 20px 12px; text-align: center; color: #fff; font-weight: 700; font-size: 14px; }
+
+    /* Plan steps */
+    .plan-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 24px; }
+    .plan-step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; text-align: center; }
+    .plan-step__num { font-size: 32px; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+    .plan-step__title { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+    .plan-step__desc { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
+
+    /* CTA cards */
+    .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .cta-card { border-radius: var(--radius); padding: 28px; }
+    .cta-card--direct { background: var(--gold); color: #fff; }
+    .cta-card--transitional { background: var(--surface); border: 2px dashed var(--gold); }
+    .cta-card h4 { font-size: 16px; margin-bottom: 8px; }
+    .cta-card p { font-size: 14.5px; line-height: 1.8; }
+
+    /* Stakes */
+    .stakes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stakes-card { border-radius: var(--radius); padding: 28px; }
+    .stakes-card--neg { background: #fdf5f0; border: 1px solid #e8c9b0; }
+    .stakes-card--pos { background: #f0f7f0; border: 1px solid #b5d6b5; }
+    .stakes-card h4 { font-size: 16px; margin-bottom: 10px; }
+    .stakes-card li { font-size: 14.5px; line-height: 2; color: var(--ink-soft); }
+
+    /* One-liner box */
+    .oneliner-box { background: var(--bg-alt); color: #f2efe7; border-radius: var(--radius); padding: 48px; text-align: center; max-width: 740px; margin: 0 auto; }
+    .oneliner-box p { font-size: 22px; font-weight: 700; line-height: 1.9; font-family: var(--fa); }
+
+    /* Three questions */
+    .three-q { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .three-q__card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; }
+    .three-q__num { font-size: 28px; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+    .three-q__q { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .three-q__a { font-size: 14px; color: var(--ink-soft); }
+
+    @media (max-width: 760px) {
+      .do-dont, .cta-grid, .stakes-grid, .three-q { grid-template-columns: 1fr; }
+      .type-sample__example { font-size: 24px; }
+      .bs-table th { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo" data-fa="Q Plast" data-en="Q Plast" data-ar="Q Plast" data-tr="Q Plast" data-zh="Q Plast">Q Plast</a>
+      <nav class="nav" id="nav">
+        <a href="../index.html" data-fa="خانه" data-en="Home" data-ar="الرئيسية" data-tr="Ana Sayfa" data-zh="首页">خانه</a>
+        <a href="products.html" data-fa="محصولات" data-en="Products" data-ar="المنتجات" data-tr="Ürünler" data-zh="产品">محصولات</a>
+        <a href="quality.html" data-fa="کیفیت" data-en="Quality" data-ar="الجودة" data-tr="Kalite" data-zh="品质">کیفیت</a>
+        <a href="about.html" data-fa="درباره ما" data-en="About" data-ar="عنا" data-tr="Hakkımızda" data-zh="关于我们">درباره ما</a>
+        <a href="contact.html" data-fa="تماس" data-en="Contact" data-ar="اتصل بنا" data-tr="İletişim" data-zh="联系我们">تماس</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="brand-intro container">
+      <h1>راهنمای برند Q Plast</h1>
+      <p>این سند هویت بصری، محتوایی و استراتژیک برند کیوپلاست را بر اساس فریمورک <strong>StoryBrand</strong> تعریف می‌کند. اصل اساسی: مشتری قهرمان داستان است، ما راهنمای او هستیم.</p>
+    </section>
+
+    <!-- ==================== 1. BrandScript ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">BrandScript — داستان برند</h2>
+      <p class="brand-section__desc">هر محتوایی که منتشر می‌شود باید از این داستان پیروی کند. مشتری قهرمان است، کیوپلاست راهنما.</p>
+
+      <table class="bs-table">
+        <tr>
+          <th>۱. قهرمان</th>
+          <td>تولیدکننده محصولات آرایشی و بهداشتی که می‌خواهد پمپ اسپری مناسب محصولش را پیدا کند — از حجم کوچک ۳۰ میلی‌لیتر تا ۲۲۰ میلی‌لیتر، با دهانه‌های ۱۸، ۲۰ و ۲۴ میلی‌متر — تا بسته‌بندی‌اش حرفه‌ای به نظر برسد.</td>
+        </tr>
+        <tr>
+          <th>۲. مشکل</th>
+          <td>
+            <div><strong>شرور:</strong> پراکندگی و بی‌نظمی در بازار پمپ اسپری</div>
+            <div class="sub"><strong>بیرونی:</strong> پمپ نامناسب = نشتی، ظاهر نازیبا، نارضایتی مشتری</div>
+            <div class="sub"><strong>درونی:</strong> نگرانی از از دست دادن مشتری به خاطر بسته‌بندی ضعیف</div>
+            <div class="sub"><strong>فلسفی:</strong> هر محصول خوبی لایق بسته‌بندی درجه یک است</div>
+          </td>
+        </tr>
+        <tr>
+          <th>۳. راهنما</th>
+          <td>
+            <div><strong>همدلی:</strong> «ما می‌دانیم انتخاب پمپ مناسب از بین ده‌ها دهانه و حجم مختلف چقدر دشوار است.»</div>
+            <div class="sub"><strong>صلاحیت:</strong> ۵ مجموعه متنوع | طراحی فنی اختصاصی | پشتیبانی ۵ زبانه</div>
+          </td>
+        </tr>
+        <tr>
+          <th>۴. برنامه</th>
+          <td>
+            <div><strong>مسیر ساده (۳ مرحله):</strong></div>
+            <div class="sub">۱) نوع محصول، دهانه (۱۸/۲۰/۲۴) و حجم را مشخص کن</div>
+            <div class="sub">۲) پمپ مناسب را انتخاب کن</div>
+            <div class="sub">۳) استعلام قیمت بده و شروع کن</div>
+            <div style="margin-top:12px;"><strong>وعده‌ها:</strong> مشاوره رایگان | ارسال نمونه | تضمین کیفیت</div>
+          </td>
+        </tr>
+        <tr>
+          <th>۵. دعوت به اقدام</th>
+          <td>
+            <div><strong>مستقیم:</strong> «همین حالا استعلام قیمت بدهید»</div>
+            <div class="sub"><strong>انتقالی:</strong> «پمپ مناسب خود را با فایندر پیدا کنید»</div>
+          </td>
+        </tr>
+        <tr>
+          <th>۶. عواقب منفی</th>
+          <td>
+            <div>• محصول خوب + بسته‌بندی ضعیف = از دست دادن مشتری</div>
+            <div>• اتلاف وقت و هزینه برای آزمون و خطا</div>
+            <div>• عقب ماندن از رقبا</div>
+          </td>
+        </tr>
+        <tr>
+          <th>۷. نتیجه مثبت</th>
+          <td>
+            <div><strong>قبل:</strong> تولیدکننده‌ای که وقت زیادی صرف انتخاب پمپ می‌کند و نگران کیفیت بسته‌بندی است</div>
+            <div class="sub"><strong>بعد:</strong> تولیدکننده‌ای حرفه‌ای با بسته‌بندی متناسب محصول</div>
+            <div class="sub"><strong>تحول:</strong> از «تولیدکننده معمولی» → «برند محبوب مشتری»</div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ==================== 2. Three Questions ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">آزمون سؤال سه‌گانه</h2>
+      <p class="brand-section__desc">هر خط محتوا باید بتواند این سه سؤال را در چند ثانیه پاسخ دهد. اگر نتواند، «نویز» است.</p>
+
+      <div class="three-q">
+        <div class="three-q__card">
+          <div class="three-q__num">۱</div>
+          <div class="three-q__q">چه چیزی ارائه می‌دهید؟</div>
+          <div class="three-q__a">پمپ اسپری با دهانه ۱۸/۲۰/۲۴ و حجم ۳۰ تا ۲۲۰ میلی‌لیتر (همتا، آریا، پارس، سپنتا، روغن Q)</div>
+        </div>
+        <div class="three-q__card">
+          <div class="three-q__num">۲</div>
+          <div class="three-q__q">زندگی من چطور بهتر می‌شود؟</div>
+          <div class="three-q__a">بسته‌بندی حرفه‌ای، مشتری راضی‌تر، فروش بیشتر</div>
+        </div>
+        <div class="three-q__card">
+          <div class="three-q__num">۳</div>
+          <div class="three-q__q">بعد چه کنم؟</div>
+          <div class="three-q__a">استعلام قیمت بدهید</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. One-liner ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">جمله اصلی برند (One-liner)</h2>
+      <p class="brand-section__desc">این جمله باید در همه جا تکرار شود: سایت، ایمیل، معرفی حضوری، شبکه‌های اجتماعی. باید با صدای بلند خوانده شود و طبیعی به نظر برسد.</p>
+
+      <div class="oneliner-box">
+        <p>ما به تولیدکنندگان آرایشی و بهداشتی کمک می‌کنیم<br>پمپ اسپری مناسب محصولشان را پیدا کنند<br>تا بسته‌بندی‌شان حرفه‌ای و مشتری‌پسند باشد.</p>
+      </div>
+    </section>
+
+    <!-- ==================== 4. Plan ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">برنامه عمل</h2>
+      <p class="brand-section__desc">برنامه ترس و سردرگمی مشتری را از بین می‌برد. مسیر ساده ۳ مرحله‌ای، قابل فهم در ۵ ثانیه.</p>
+
+      <div class="plan-steps">
+        <div class="plan-step">
+          <div class="plan-step__num">۱</div>
+          <div class="plan-step__title">مشخص کنید</div>
+          <div class="plan-step__desc">دهانه (۱۸/۲۰/۲۴) و حجم (۳۰ تا ۲۲۰ میلی‌لیتر) را مشخص کنید.</div>
+        </div>
+        <div class="plan-step">
+          <div class="plan-step__num">۲</div>
+          <div class="plan-step__title">انتخاب کنید</div>
+          <div class="plan-step__desc">پمپ مناسب از میان ۵ مجموعه متنوع را پیدا کنید.</div>
+        </div>
+        <div class="plan-step">
+          <div class="plan-step__num">۳</div>
+          <div class="plan-step__title">شروع کنید</div>
+          <div class="plan-step__desc">استعلام قیمت بدهید و سفارش دهید.</div>
+        </div>
+      </div>
+
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;">
+        <strong style="font-size: 15px;">وعده‌ها (Agreement Plan):</strong>
+        <ul style="margin-top: 8px; padding-right: 20px;">
+          <li style="font-size: 14.5px; line-height: 2; color: var(--ink-soft);">✓ مشاوره رایگان قبل از خرید</li>
+          <li style="font-size: 14.5px; line-height: 2; color: var(--ink-soft);">✓ ارسال نمونه برای تست</li>
+          <li style="font-size: 14.5px; line-height: 2; color: var(--ink-soft);">✓ تضمین کیفیت محصول</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== 5. Call to Action ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">دعوت به اقدام</h2>
+      <p class="brand-section__desc">مردم بدون دعوت صریح اقدام نمی‌کنند. هر دو نوع CTA باید در سایت وجود داشته باشد.</p>
+
+      <div class="cta-grid">
+        <div class="cta-card cta-card--direct">
+          <h4>دعوت مستقیم</h4>
+          <p>«همین حالا استعلام قیمت بدهید»</p>
+          <p style="margin-top: 8px; font-size: 13px; opacity: 0.85;">در هدر سایت، انتهای هر صفحه، و ایمیل‌ها تکرار شود.</p>
+        </div>
+        <div class="cta-card cta-card--transitional">
+          <h4>دعوت انتقالی</h4>
+          <p>«پمپ مناسب خود را با فایندر پیدا کنید»</p>
+          <p style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);">برای کسانی که هنوز آماده خرید نیستند. رابطه می‌سازد.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. Negative & Positive Stakes ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">عواقب و نتایج</h2>
+      <p class="brand-section__desc">loss بیشتر از gain انگیزه ایجاد می‌کند. اما از ترس زیاد اجتناب کنید.</p>
+
+      <div class="stakes-grid">
+        <div class="stakes-card stakes-card--neg">
+          <h4 style="color: #c62828;">اگر اقدام نکنید...</h4>
+          <ul style="padding-right: 20px;">
+            <li>محصول خوب + بسته‌بندی ضعیف = از دست دادن مشتری</li>
+            <li>اتلاف وقت و هزینه برای آزمون و خطا</li>
+            <li>عقب ماندن از رقبا</li>
+          </ul>
+        </div>
+        <div class="stakes-card stakes-card--pos">
+          <h4 style="color: #2e7d32;">وقتی اقدام کنید...</h4>
+          <ul style="padding-right: 20px;">
+            <li>بسته‌بندی حرفه‌ای که مشتری را جذب می‌کند</li>
+            <li>صرفه‌جویی در وقت با انتخاب درست از اول</li>
+            <li>اعتماد بیشتر مشتری به برند شما</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. Voice & Tone ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">لحن برند</h2>
+      <p class="brand-section__desc">کیوپلاست مثل یک راهنمای قابل اعتماد صحبت می‌کند. نه فروشنده، نه دوست صمیمی. متخصصی که کنار مشتری ایستاده.</p>
+
+      <div class="tone-bar">
+        <div class="tone-bar__segment" style="background: #e0e0e0; color: #555;">فروشنده</div>
+        <div class="tone-bar__segment" style="background: var(--gold-dark); color: #fff;">راهنمای قابل اعتماد</div>
+        <div class="tone-bar__segment" style="background: #e0e0e0; color: #555;">دوست صمیمی</div>
+      </div>
+
+      <div class="voice-grid">
+        <div class="voice-card">
+          <div class="voice-card__icon">🤝</div>
+          <div class="voice-card__title">همدلی</div>
+          <div class="voice-card__text">«ما می‌دانیم انتخاب پمپ مناسب چقدر دشوار است.» نشان بدهید که مشکل مشتری را درک می‌کنید.</div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-card__icon">📐</div>
+          <div class="voice-card__title">صلاحیت</div>
+          <div class="voice-card__text">اطلاعات فنی دقیق بدهید. اعداد و ابعاد مشخص. ادعای بدون پشتوانه نکنید.</div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-card__icon">🎯</div>
+          <div class="voice-card__title">واضح و ساده</div>
+          <div class="voice-card__text">جملات کوتاه. کلمات ساده. هدف مشتری در اولویت. نه اصطلاحات پیچیده.</div>
+        </div>
+        <div class="voice-card">
+          <div class="voice-card__icon">👤</div>
+          <div class="voice-card__title">مشتری قهرمان است</div>
+          <div class="voice-card__text">«ما» کمتر، «شما» بیشتر. برند فقط راهنماست. هرگز خود را قهرمان معرفی نکنید.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. Copy Examples ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">نمونه محتوا — درست vs اشتباه</h2>
+      <p class="brand-section__desc">هر خط محتوا باید با تست «آیا مشتری قهرمان است؟» بررسی شود.</p>
+
+      <div class="do-dont">
+        <div class="do-card">
+          <h4>✓ درست (مشتری قهرمان است)</h4>
+          <ul>
+            <li>«پمپ اسپری مناسب محصول شما را پیدا کنید»</li>
+            <li>«۵ مجموعه، ۳ دهانه، یک استاندارد»</li>
+            <li>«حجم‌ها: ۳۰ / ۵۰ / ۸۰ / ۹۰ / ۱۰۰ / ۱۴۰ / ۱۷۰ / ۲۲۰ میلی‌لیتر»</li>
+            <li>«دهانه ۱۸/۲۰/۲۴ میلی‌متر | Ø ۳۰.۵ / ۳۶ / ۴۵ میلی‌متر»</li>
+            <li>«استعلام قیمت بدهید»</li>
+            <li>«مجموعه همتا (دهانه ۲۴)، آریا (دهانه ۱۸)، پارس (دهانه ۲۰) برای محصول شما مناسب است»</li>
+          </ul>
+        </div>
+        <div class="dont-card">
+          <h4>✗ اشتباه (برند قهرمان است)</h4>
+          <ul>
+            <li>«ما بهترین پمپ‌های دنیا را می‌سازیم»</li>
+            <li>«با کیفیت بی‌نظیر و قیمت باورنکردنی»</li>
+            <li>«با ما تماس بگیرید» (بدون دلیل مشخص)</li>
+            <li>«پمپ‌های ما خیلی خوب هستند»</li>
+            <li>«شرکت ما در سال ۱۳۹۰ تأسیس شده»</li>
+            <li>«بهترین، باکیفیت‌ترین، ارزان‌ترین»</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. Logo ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">لوگو</h2>
+      <p class="brand-section__desc">لوگوی Q Plast باید همیشه با فضای کافی (Clear Space) از سایر المان‌ها جدا باشد. حداقل فاصله برابر با ارتفاع حرف Q باشد.</p>
+
+      <div class="logo-grid">
+        <div class="logo-box logo-box--dark">Q PLAST</div>
+        <div class="logo-box logo-box--light">Q PLAST</div>
+        <div class="logo-box logo-box--gold">Q PLAST</div>
+      </div>
+    </section>
+
+    <!-- ==================== 10. Colors ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">رنگ‌ها</h2>
+      <p class="brand-section__desc">پالت رنگی کیوپلاست ترکیبی از طلایی گرم، خاکستری تیره و کرمی روشن است. حس لوکس بودن و اعتماد را منتقل می‌کند.</p>
+
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-card__swatch" style="background:#c19a55;"></div>
+          <div class="color-card__info">
+            <div class="color-card__name">طلایی اصلی (Gold)</div>
+            <div class="color-card__hex">#C19A55 — RGB 193, 154, 85</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-card__swatch" style="background:#9c7a3e;"></div>
+          <div class="color-card__info">
+            <div class="color-card__name">طلایی تیره (Gold Dark)</div>
+            <div class="color-card__hex">#9C7A3E — RGB 156, 122, 62</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-card__swatch" style="background:#faf8f4;"></div>
+          <div class="color-card__info">
+            <div class="color-card__name">کرمی روشن (Background)</div>
+            <div class="color-card__hex">#FAF8F4 — RGB 250, 248, 244</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-card__swatch" style="background:#ffffff; border-bottom: 1px solid #eae4d8;"></div>
+          <div class="color-card__info">
+            <div class="color-card__name">سفید (Surface)</div>
+            <div class="color-card__hex">#FFFFFF — RGB 255, 255, 255</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-card__swatch" style="background:#1b1915;"></div>
+          <div class="color-card__info">
+            <div class="color-card__name">مشکی گرم (Ink)</div>
+            <div class="color-card__hex">#1B1915 — RGB 27, 25, 21</div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-card__swatch" style="background:#5f5a50;"></div>
+          <div class="color-card__info">
+            <div class="color-card__name">خاکستری متن (Ink Soft)</div>
+            <div class="color-card__hex">#5F5A50 — RGB 95, 90, 80</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11. Typography ==================== -->
+    <section class="brand-section container">
+      <h2 class="brand-section__title">تایپوگرافی</h2>
+      <p class="brand-section__desc">عنوان‌ها با فونت سریف و متن‌ها با فونت سنس‌ریف. ترکیب سریف و سنس‌ریف حس لوکس بودن را تقویت می‌کند.</p>
+
+      <div class="type-sample">
+        <div class="type-sample__label">عنوان اصلی — Playfair Display</div>
+        <div class="type-sample__example" style="font-family: 'Playfair Display', serif; font-weight: 700;">Q Plast — Quality in Every Drop</div>
+        <div class="type-sample__meta">وزن: 700 | اندازه: clamp(32px, 5vw, 56px) | حالت: Italic برای زیرعنوان‌ها</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-sample__label">متن فارسی — Vazirmatn</div>
+        <div class="type-sample__example" style="font-family: 'Vazirmatn', sans-serif; font-weight: 700;">پمپ اسپری مناسب محصول شما</div>
+        <div class="type-sample__meta">وزن: 700 (عنوان) / 400 (متن) | خط‌بندی: 1.8</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-sample__label">متن انگلیسی — Inter</div>
+        <div class="type-sample__example" style="font-family: 'Inter', sans-serif; font-weight: 600;">The right pump for every formulation</div>
+        <div class="type-sample__meta">وزن: 600 (عنوان) / 400 (متن) | اعداد: tabular-nums</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-sample__label">اعداد و ابعاد فنی</div>
+        <div class="type-sample__example" style="font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: 0.02em;">Ø 30.5 / 36 / 45 mm | Neck 18 / 20 / 24 | 30–220 ml</div>
+        <div class="type-sample__meta">فونت: Inter | وزن: 700 | همیشه LTR با tabular-nums</div>
+      </div>
+    </section>
+
+    <!-- ==================== 12. Spacing ==================== -->
+    <section class="brand-section container" style="border-bottom: 1px solid var(--line); padding-bottom: 80px;">
+      <h2 class="brand-section__title">فاصله‌گذاری</h2>
+      <p class="brand-section__desc">فاصله‌ها بر اساس واحد ۴px طراحی شده‌اند.</p>
+
+      <div class="spacing-grid">
+        <div class="spacing-card">
+          <div class="spacing-card__bar" style="height: 4px;"></div>
+          <div class="spacing-card__label">xs</div>
+          <div class="spacing-card__value">4px</div>
+        </div>
+        <div class="spacing-card">
+          <div class="spacing-card__bar" style="height: 8px;"></div>
+          <div class="spacing-card__label">sm</div>
+          <div class="spacing-card__value">8px</div>
+        </div>
+        <div class="spacing-card">
+          <div class="spacing-card__bar" style="height: 16px;"></div>
+          <div class="spacing-card__label">md</div>
+          <div class="spacing-card__value">16px</div>
+        </div>
+        <div class="spacing-card">
+          <div class="spacing-card__bar" style="height: 24px;"></div>
+          <div class="spacing-card__label">lg</div>
+          <div class="spacing-card__value">24px</div>
+        </div>
+        <div class="spacing-card">
+          <div class="spacing-card__bar" style="height: 36px;"></div>
+          <div class="spacing-card__label">xl</div>
+          <div class="spacing-card__value">36px</div>
+        </div>
+        <div class="spacing-card">
+          <div class="spacing-card__bar" style="height: 56px;"></div>
+          <div class="spacing-card__label">2xl</div>
+          <div class="spacing-card__value">56px</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" style="padding: 24px 0; text-align: center; color: var(--ink-soft); font-size: 14px;">
+    <div class="container">
+      <p>© 2026 Q Plast — راهنمای برند ( داخلی )</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qplast.ir/sitemap.xml
+
+# Disallow admin/private paths
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay
+Crawl-delay: 1
