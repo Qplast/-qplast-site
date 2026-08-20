@@ -222,7 +222,7 @@
         qoil: "针对您的目标容量，Q油雾喷头系列是最佳选择。"
       }
     };
-    return (t[lang] || t.en)[fam] || t.en.all;
+    return (t[lang] || t.en)[fam] || (t[lang] || t.en)["all"] || t.en.all;
   }
 
   /* ---------- Blueprint drawing ---------- */
