@@ -122,6 +122,7 @@
   var finderRec = document.getElementById("finderRec");
   var finderType = document.getElementById("finderType");
   var finderVol = document.getElementById("finderVol");
+  var finderNeck = document.getElementById("finderNeck");
   var beautyCards = document.getElementById("beautyCards");
 
   var SPECS_DATA = {
@@ -391,10 +392,13 @@
     if (!finderRec || !beautyCards) return;
     var type = "all";
     var vol = "all";
+    var neck = "all";
     var typeActive = finderType && finderType.querySelector(".finder__chip.active");
     var volActive = finderVol && finderVol.querySelector(".finder__chip.active");
+    var neckActive = finderNeck && finderNeck.querySelector(".finder__chip.active");
     if (typeActive) type = typeActive.getAttribute("data-type");
     if (volActive) vol = volActive.getAttribute("data-vol");
+    if (neckActive) neck = neckActive.getAttribute("data-neck");
 
     var volFams = vol === "small" ? ["arya", "pars", "sepanta", "qoil"] : vol === "large" ? ["hamta"] : null;
     var cards = beautyCards.querySelectorAll(".card[data-family]");
@@ -402,9 +406,11 @@
     cards.forEach(function (card) {
       var fam = card.getAttribute("data-family");
       var types = (card.getAttribute("data-types") || "").split(" ");
+      var cardNeck = card.getAttribute("data-neck") || "";
       var typeHit = type === "all" || types.indexOf(type) !== -1;
       var volHit = !volFams || volFams.indexOf(fam) !== -1;
-      var match = typeHit && volHit;
+      var neckHit = neck === "all" || cardNeck === neck;
+      var match = typeHit && volHit && neckHit;
       card.style.display = match ? "" : "none";
       if (match) shown.push(fam);
     });
@@ -441,6 +447,17 @@
       var chip = e.target.closest(".finder__chip");
       if (!chip) return;
       finderVol.querySelectorAll(".finder__chip").forEach(function (c) {
+        c.classList.remove("active");
+      });
+      chip.classList.add("active");
+      updateFinder();
+    });
+  }
+  if (finderNeck) {
+    finderNeck.addEventListener("click", function (e) {
+      var chip = e.target.closest(".finder__chip");
+      if (!chip) return;
+      finderNeck.querySelectorAll(".finder__chip").forEach(function (c) {
         c.classList.remove("active");
       });
       chip.classList.add("active");
