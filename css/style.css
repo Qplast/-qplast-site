@@ -649,7 +649,8 @@ ul { list-style: none; }
 .finder__head { text-align: center; max-width: 640px; margin: 0 auto; }
 .finder__title { font-size: 24px; font-weight: 800; }
 .finder__sub { color: var(--ink-soft); margin-top: 8px; font-size: 15px; }
-.finder__row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin-top: 30px; }
+.finder__row { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 30px; }
+.finder__group { flex: 1 1 0; min-width: 180px; }
 .finder__label { display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 12px; letter-spacing: 0.02em; }
 .finder__chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .finder__chip {
