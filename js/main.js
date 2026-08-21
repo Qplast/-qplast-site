@@ -418,6 +418,11 @@
     finderRec.textContent = msg;
   }
 
+  function hideSpecs() {
+    var p = document.getElementById("specsPanel");
+    if (p) p.hidden = true;
+  }
+
   function showSpecs(fam) {
     if (!SPECS_DATA[fam]) return;
     var specsPanel = document.getElementById("specsPanel");
@@ -439,6 +444,7 @@
         c.classList.remove("active");
       });
       chip.classList.add("active");
+      hideSpecs();
       updateFinder();
     });
   }
@@ -450,6 +456,7 @@
         c.classList.remove("active");
       });
       chip.classList.add("active");
+      hideSpecs();
       updateFinder();
     });
   }
@@ -461,6 +468,7 @@
         c.classList.remove("active");
       });
       chip.classList.add("active");
+      hideSpecs();
       updateFinder();
     });
   }
