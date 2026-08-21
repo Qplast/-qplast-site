@@ -175,54 +175,47 @@
   };
 
   function recText(lang, fam) {
-    var t = {
-      fa: {
-        all: "برای محصول شما، مجموعه‌های «همتا»، «آریا» و «پارس» مناسب هستند.",
-        "arya+pars+qoil": "برای حجم موردنظر شما، مجموعه‌های «آریا»، «پارس» و «اسپری روغن Q» مناسب هستند.",
-        "arya+pars": "برای حجم موردنظر شما، مجموعه‌های «آریا» و «پارس» مناسب هستند.",
-        hamta: "برای حجم موردنظر شما، مجموعه «همتا» بهترین انتخاب است.",
-        arya: "برای حجم موردنظر شما، مجموعه «آریا» بهترین انتخاب است.",
-        pars: "برای حجم موردنظر شما، مجموعه «پارس» بهترین انتخاب است.",
-        qoil: "برای حجم موردنظر شما، مجموعه «اسپری روغن Q» بهترین انتخاب است."
-      },
-      en: {
-        all: "The Hamta, Arya and Pars collections suit your product.",
-        "arya+pars+qoil": "For your target volume, the Arya, Pars and Q Oil Spray collections are the best fit.",
-        "arya+pars": "For your target volume, the Arya and Pars collections are the best fit.",
-        hamta: "For your target volume, the Hamta collection is the best fit.",
-        arya: "For your target volume, the Arya collection is the best fit.",
-        pars: "For your target volume, the Pars collection is the best fit.",
-        qoil: "For your target volume, the Q Oil Spray collection is the best fit."
-      },
-      ar: {
-        all: "مجموعات «همتا» و«آريا» و«بارس» مناسبة لمنتجك.",
-        "arya+pars+qoil": "مجموعات «آريا» و«بارس» و«رذاذ الزيت Q» مناسبة للحجم المطلوب.",
-        "arya+pars": "مجموعتا «آريا» و«بارس» مناسبتان للحجم المطلوب.",
-        hamta: "بالنسبة للحجم المطلوب، مجموعة «همتا» هي الخيار الأفضل.",
-        arya: "بالنسبة للحجم المطلوب، مجموعة «آريا» هي الخيار الأفضل.",
-        pars: "بالنسبة للحجم المطلوب، مجموعة «بارس» هي الخيار الأفضل.",
-        qoil: "بالنسبة للحجم المطلوب، مجموعة «رذاذ الزيت Q» هي الخيار الأفضل."
-      },
-      tr: {
-        all: "Hamta, Arya ve Pars koleksiyonları ürününüze uygundur.",
-        "arya+pars+qoil": "Hedef hacminiz için Arya, Pars ve Q Yağ Spreyi koleksiyonları en iyi seçimdir.",
-        "arya+pars": "Hedef hacminiz için Arya ve Pars koleksiyonları en iyi seçimdir.",
-        hamta: "Hedef hacminiz için Hamta koleksiyonu en iyi seçimdir.",
-        arya: "Hedef hacminiz için Arya koleksiyonu en iyi seçimdir.",
-        pars: "Hedef hacminiz için Pars koleksiyonu en iyi seçimdir.",
-        qoil: "Hedef hacminiz için Q Yağ Spreyi koleksiyonu en iyi seçimdir."
-      },
-      zh: {
-        all: "Hamta、Arya和Pars系列都适合您的产品。",
-        "arya+pars+qoil": "针对您的目标容量，Arya、Pars和Q油雾喷头系列是最佳选择。",
-        "arya+pars": "针对您的目标容量，Arya和Pars系列是最佳选择。",
-        hamta: "针对您的目标容量，Hamta系列是最佳选择。",
-        arya: "针对您的目标容量，Arya系列是最佳选择。",
-        pars: "针对您的目标容量，Pars系列是最佳选择。",
-        qoil: "针对您的目标容量，Q油雾喷头系列是最佳选择。"
-      }
+    var NAMES = {
+      fa: { hamta: "«همتا»", arya: "«آریا»", pars: "«پارس»", sepanta: "«سپنتا»", qoil: "«اسپری روغن Q»" },
+      en: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q Oil Spray" },
+      ar: { hamta: "«همتا»", arya: "«آريا»", pars: "«بارس»", sepanta: "«سبنتا»", qoil: "«رذاذ الزيت Q»" },
+      tr: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q Yağ Spreyi" },
+      zh: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q油雾喷头" }
     };
-    return (t[lang] || t.en)[fam] || (t[lang] || t.en)["all"] || t.en.all;
+    var names = NAMES[lang] || NAMES.en;
+    var families = fam === "all" ? [] : fam.split("+");
+    var L = (t[lang] || t.en);
+    if (families.length === 0) {
+      var allMsg = {
+        fa: "برای محصول شما، مجموعه‌های «همتا»، «آریا»، «پارس» و «سپنتا» مناسب هستند.",
+        en: "The Hamta, Arya, Pars and Sepanta collections suit your product.",
+        ar: "مجموعات «همتا» و«آريا» و«بارس» و«سبنتا» مناسبة لمنتجك.",
+        tr: "Hamta, Arya, Pars ve Sepanta koleksiyonları ürününüze uygundur.",
+        zh: "Hamta、Arya、Pars和Sepanta系列都适合您的产品。"
+      };
+      return allMsg[lang] || allMsg.en;
+    }
+    var labeled = families.map(function (f) { return names[f] || f; });
+    var joined;
+    if (labeled.length === 1) joined = labeled[0];
+    else if (labeled.length === 2) joined = labeled[0] + " و " + labeled[1];
+    else if (labeled.length === 3) joined = labeled[0] + "، " + labeled[1] + " و " + labeled[2];
+    else joined = labeled.slice(0, -1).join("، ") + " و " + labeled[labeled.length - 1];
+    var prefix = {
+      fa: "برای محصول شما، مجموعه" + (labeled.length > 1 ? "های" : "") + " ",
+      en: "For your product, the ",
+      ar: "لمنتجك، ",
+      tr: "Ürününüz için ",
+      zh: "针对您的产品，"
+    };
+    var suffix = {
+      fa: " مناسب هستند.",
+      en: " collections are the best fit.",
+      ar: " مناسبة لك.",
+      tr: " koleksiyonları en iyi seçimdir.",
+      zh: " 系列是最佳选择。"
+    };
+    return (prefix[lang] || prefix.en) + joined + (suffix[lang] || suffix.en);
   }
 
   /* ---------- Blueprint drawing ---------- */
