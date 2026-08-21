@@ -184,7 +184,6 @@
     };
     var names = NAMES[lang] || NAMES.en;
     var families = fam === "all" ? [] : fam.split("+");
-    var L = (t[lang] || t.en);
     if (families.length === 0) {
       var allMsg = {
         fa: "برای محصول شما، مجموعه‌های «همتا»، «آریا»، «پارس» و «سپنتا» مناسب هستند.",
