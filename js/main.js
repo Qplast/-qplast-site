@@ -404,7 +404,7 @@
     if (typeActive) type = typeActive.getAttribute("data-type");
     if (volActive) vol = volActive.getAttribute("data-vol");
 
-    var volFams = vol === "small" ? ["arya", "pars", "qoil"] : vol === "large" ? ["hamta"] : null;
+    var volFams = vol === "small" ? ["arya", "pars", "sepanta", "qoil"] : vol === "large" ? ["hamta"] : null;
     var cards = beautyCards.querySelectorAll(".card[data-family]");
     var shown = [];
     cards.forEach(function (card) {
