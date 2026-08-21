@@ -518,16 +518,31 @@
       window.location.href =
         "mailto:sales@qplast.ir?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
 
+      var whatsappBody = lines.join("\n");
+      var whatsappUrl = "https://wa.me/989909702100?text=" + encodeURIComponent(whatsappBody);
+
       note.hidden = false;
       note.className = "form__note success";
       var okText = {
-        fa: "درخواست شما آماده شد. لطفاً ارسال ایمیل را تأیید کنید. در صورت باز نشدن ایمیل‌خوان، درخواست را به sales@qplast.ir بفرستید.",
-        en: "Your request is ready. Please confirm sending the email. If your mail client doesn't open, send the request to sales@qplast.ir.",
-        ar: "تم تجهيز طلبك. يرجى تأكيد إرسال البريد الإلكتروني. إذا لم يفتح برنامج البريد، أرسل الطلب إلى sales@qplast.ir.",
-        tr: "Talebiniz hazır. Lütfen e-postayı göndermeyi onaylayın. E-posta uygulaması açılmazsa talebi sales@qplast.ir adresine gönderin.",
-        zh: "您的请求已准备好。请确认发送邮件。如果邮件客户端未打开，请将请求发送至 sales@qplast.ir。"
+        fa: "درخواست شما آماده شد. لطفاً ارسال ایمیل را تأیید کنید. در صورت باز نشدن ایمیل‌خوان: ",
+        en: "Your request is ready. Please confirm sending the email. If your mail client doesn't open: ",
+        ar: "تم تجهيز طلبك. يرجى تأكيد إرسال البريد الإلكتروني. إذا لم يفتح برنامج البريد: ",
+        tr: "Talebiniz hazır. Lütfen e-postayı göndermeyi onaylayın. E-posta uygulaması açılmazsa: ",
+        zh: "您的请求已准备好。请确认发送邮件。如果邮件客户端未打开："
       };
-      note.textContent = okText[currentLang] || okText.en;
+      var okSuffix = {
+        fa: "یا از واتساپ استفاده کنید.",
+        en: "use WhatsApp instead.",
+        ar: "استخدم واتساب بدلاً من ذلك.",
+        tr: "WhatsApp'ı kullanın.",
+        zh: "请使用WhatsApp。"
+      };
+      note.textContent = (okText[currentLang] || okText.en);
+      var waLink = document.createElement("a");
+      waLink.href = whatsappUrl;
+      waLink.target = "_blank";
+      waLink.textContent = (okSuffix[currentLang] || okSuffix.en);
+      note.appendChild(waLink);
 
       form.reset();
     });
@@ -558,16 +573,31 @@
       window.location.href =
         "mailto:sales@qplast.ir?subject=" + encodeURIComponent(subject || "Contact — " + name) + "&body=" + encodeURIComponent(lines.join("\n"));
 
+      var cWhatsappBody = lines.join("\n");
+      var cWhatsappUrl = "https://wa.me/989909702100?text=" + encodeURIComponent(cWhatsappBody);
+
       cNote.hidden = false;
       cNote.className = "form__note success";
       var okText = {
-        fa: "پیام شما آماده شد. لطفاً ارسال ایمیل را تأیید کنید.",
-        en: "Your message is ready. Please confirm sending the email.",
-        ar: "تم تجهيز رسالتك. يرجى تأكيد إرسال البريد الإلكتروني.",
-        tr: "Mesajınız hazır. Lütfen e-postayı göndermeyi onaylayın.",
-        zh: "您的留言已准备好。请确认发送邮件。"
+        fa: "پیام شما آماده شد. لطفاً ارسال ایمیل را تأیید کنید. در صورت باز نشدن ایمیل‌خوان: ",
+        en: "Your message is ready. Please confirm sending the email. If your mail client doesn't open: ",
+        ar: "تم تجهيز رسالتك. يرجى تأكيد إرسال البريد الإلكتروني. إذا لم يفتح: ",
+        tr: "Mesajınız hazır. Lütfen e-postayı göndermeyi onaylayın. E-posta açılmazsa: ",
+        zh: "您的留言已准备好。请确认发送邮件。如果邮件客户端未打开："
       };
-      cNote.textContent = okText[currentLang] || okText.en;
+      var okSuffix = {
+        fa: "یا از واتساپ استفاده کنید.",
+        en: "use WhatsApp instead.",
+        ar: "استخدم واتساب.",
+        tr: "WhatsApp'ı kullanın.",
+        zh: "请使用WhatsApp。"
+      };
+      cNote.textContent = (okText[currentLang] || okText.en);
+      var cWaLink = document.createElement("a");
+      cWaLink.href = cWhatsappUrl;
+      cWaLink.target = "_blank";
+      cWaLink.textContent = (okSuffix[currentLang] || okSuffix.en);
+      cNote.appendChild(cWaLink);
 
       cForm.reset();
     });

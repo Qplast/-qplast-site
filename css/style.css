@@ -967,3 +967,7 @@ section[id] { scroll-margin-top: 80px; }
   .process__grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .process__grid::before { display: none; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg video { animation: none !important; }
+}
