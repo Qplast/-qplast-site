@@ -404,7 +404,9 @@
       var types = (card.getAttribute("data-types") || "").split(" ");
       var typeHit = type === "all" || types.indexOf(type) !== -1;
       var volHit = !volFams || volFams.indexOf(fam) !== -1;
-      if (typeHit && volHit) shown.push(fam);
+      var match = typeHit && volHit;
+      card.style.display = match ? "" : "none";
+      if (match) shown.push(fam);
     });
     var msg = recText(currentLang, shown.length ? shown.join("+") : "all");
     if (type === "oil") {
