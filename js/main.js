@@ -7,7 +7,7 @@
   /* ---------- Language ---------- */
   var LANGS = ["fa", "en", "ar", "tr", "zh"];
   var LABELS = { fa: "فارسی", en: "English", ar: "العربية", tr: "Türkçe", zh: "中文" };
-  var SITE_VER = 2;
+  var SITE_VER = 3;
   var savedVer = parseInt(localStorage.getItem("qplast-ver") || "0", 10);
   if (savedVer < SITE_VER) {
     localStorage.removeItem("qplast-lang");
