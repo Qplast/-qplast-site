@@ -184,17 +184,19 @@
       zh: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q油雾喷头" }
     };
     var names = NAMES[lang] || NAMES.en;
-    var families = fam === "all" ? [] : fam.split("+");
-    if (families.length === 0) {
-      var allMsg = {
-        fa: "برای محصول شما، مجموعه‌های «همتا»، «آریا»، «پارس» و «سپنتا» مناسب هستند.",
-        en: "The Hamta, Arya, Pars and Sepanta collections suit your product.",
-        ar: "مجموعات «همتا» و«آريا» و«بارس» و«سبنتا» مناسبة لمنتجك.",
-        tr: "Hamta, Arya, Pars ve Sepanta koleksiyonları ürününüze uygundur.",
-        zh: "Hamta、Arya、Pars和Sepanta系列都适合您的产品。"
+
+    if (fam === "none") {
+      var noMatch = {
+        fa: "محصولی با مشخصات انتخاب‌شده یافت نشد. فیلترها را تغییر دهید یا با ما تماس بگیرید.",
+        en: "No collection matches your selection. Try adjusting filters or contact us.",
+        ar: "لا توجد مجموعة تطابق اختيارك. غيّر الفلاتر أو تواصل معنا.",
+        tr: "Seçiminizle eşleşen koleksiyon bulunamadı. Filtreleri değiştirin veya bize ulaşın.",
+        zh: "没有匹配的系列。请调整筛选条件或联系我们。"
       };
-      return allMsg[lang] || allMsg.en;
+      return noMatch[lang] || noMatch.en;
     }
+
+    var families = fam.split("+");
     var labeled = families.map(function (f) { return names[f] || f; });
     var joined;
     if (labeled.length === 1) joined = labeled[0];
@@ -414,7 +416,7 @@
       card.style.display = match ? "" : "none";
       if (match) shown.push(fam);
     });
-    var msg = recText(currentLang, shown.length ? shown.join("+") : "all");
+    var msg = recText(currentLang, shown.length ? shown.join("+") : "none");
     finderRec.textContent = msg;
   }
 
