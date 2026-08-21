@@ -414,7 +414,28 @@
       var volHit = !volFams || volFams.indexOf(fam) !== -1;
       if (typeHit && volHit) shown.push(fam);
     });
-    finderRec.textContent = recText(currentLang, shown.length ? shown.join("+") : "all");
+    var msg = recText(currentLang, shown.length ? shown.join("+") : "all");
+    if (type === "oil") {
+      var oilNote = {
+        fa: "میست روغن خوراکی: اسپری Q | میست روغن آرایشی: همتا",
+        en: "Edible oil mist: Q Oil Spray | Cosmetic oil mist: Hamta",
+        ar: "رذاذ زيت غذائي: رذاذ الزيت Q | رذاذ زيت تجميلي: همتا",
+        tr: "Yenilebilir yağ spreyi: Q Yağ Spreyi | Kozmetik yağ spreyi: Hamta",
+        zh: "食用油喷雾：Q Oil Spray | 化妆品油雾：Hamta"
+      };
+      msg += " — " + (oilNote[currentLang] || oilNote.en);
+    }
+    if (type === "micellar") {
+      var micNote = {
+        fa: "میسلار واتر معمولاً با پمپ همتا (دهانه ۲۴) سازگار است.",
+        en: "Micellar water is typically compatible with the Hamta pump (Neck 24).",
+        ar: "ماء الميسيلار عادة ما يتوافق مع مضخة همتا (عنق ٢٤).",
+        tr: "Misel suyu genellikle Hamta pompası (24 boyun) ile uyumludur.",
+        zh: "卸妆水通常与Hamta泵（口径24）兼容。"
+      };
+      msg += " — " + (micNote[currentLang] || micNote.en);
+    }
+    finderRec.textContent = msg;
   }
 
   function showSpecs(fam) {
