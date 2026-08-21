@@ -7,7 +7,7 @@
   /* ---------- Language ---------- */
   var LANGS = ["fa", "en", "ar", "tr", "zh"];
   var LABELS = { fa: "فارسی", en: "English", ar: "العربية", tr: "Türkçe", zh: "中文" };
-  var SITE_VER = 3;
+  var SITE_VER = 4;
   var savedVer = parseInt(localStorage.getItem("qplast-ver") || "0", 10);
   if (savedVer < SITE_VER) {
     localStorage.removeItem("qplast-lang");
@@ -93,7 +93,7 @@
 
   /* ---------- Active nav link ---------- */
   var page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  nav.querySelectorAll("a").forEach(function (a) {
+  if (nav) nav.querySelectorAll("a").forEach(function (a) {
     var href = (a.getAttribute("href") || "").toLowerCase();
     if (href && href.charAt(0) !== "#" && href === page) a.classList.add("active");
   });
