@@ -968,6 +968,3 @@ section[id] { scroll-margin-top: 80px; }
   .process__grid::before { display: none; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero__bg video { animation: none !important; }
-}

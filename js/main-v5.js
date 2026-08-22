@@ -603,6 +603,21 @@
     });
   }
 
+  /* ---------- Reduced motion for hero video ---------- */
+  var heroVideo = document.querySelector(".hero__video");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function applyMotionPreference() {
+    if (!heroVideo) return;
+    if (reduceMotion.matches) {
+      heroVideo.pause();
+      heroVideo.removeAttribute("autoplay");
+    } else {
+      heroVideo.play();
+    }
+  }
+  applyMotionPreference();
+  reduceMotion.addEventListener("change", applyMotionPreference);
+
   /* ---------- Scroll to hash on load ---------- */
   function scrollToHash() {
     var h = window.location.hash;
