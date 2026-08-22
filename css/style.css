@@ -278,7 +278,7 @@ ul { list-style: none; }
 }
 .btn--gold {
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  color: #fff;
+  color: var(--ink);
   box-shadow: var(--shadow-gold);
 }
 .btn--gold:hover { transform: translateY(-3px); box-shadow: 0 18px 38px rgba(156, 122, 62, 0.42); }
