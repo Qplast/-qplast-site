@@ -180,34 +180,55 @@
             <p class="finder__sub" data-fa="نوع محصول و حجم آن را انتخاب کنید؛ ما مناسب‌ترین پمپ را به شما پیشنهاد می‌دهیم." data-en="Select your product type and volume, and we recommend the best-fitting pump." data-ar="اختر نوع المنتج وحجمه، وسنقترح عليك المضخة الأنسب." data-tr="Ürün türünüzü ve hacmini seçin; size en uygun pompayı önerelim." data-zh="选择您的产品类型和容量，我们为您推荐最合适的泵。">نوع محصول و حجم آن را انتخاب کنید؛ ما مناسب‌ترین پمپ را به شما پیشنهاد می‌دهیم.</p>
           </div>
           <div class="finder__row">
-            <div class="finder__group">
-              <span class="finder__label" data-fa="نوع محصول شما" data-en="Your product type" data-ar="نوع منتجك" data-tr="Ürün türünüz" data-zh="您的产品类型">نوع محصول شما</span>
-              <div class="finder__chips" id="finderType">
-                <button type="button" class="finder__chip active" data-type="all" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</button>
-                <button type="button" class="finder__chip" data-type="mist" data-fa="میست اسپری" data-en="Mist spray" data-ar="رذاذ" data-tr="Mist sprey" data-zh="喷雾">میست اسپری</button>
-                <button type="button" class="finder__chip" data-type="lotion" data-fa="لوسیون" data-en="Lotion" data-ar="لوشن" data-tr="Losyon" data-zh="乳液">لوسیون</button>
-                <button type="button" class="finder__chip" data-type="treatment" data-fa="تریتمنت" data-en="Treatment" data-ar="تريتمنت" data-tr="Tretman" data-zh="精华">تریتمنت</button>
-                <button type="button" class="finder__chip" data-type="oil" data-fa="میست روغن" data-en="Oil mist" data-ar="رذاذ زيت" data-tr="Yağ mist" data-zh="油雾">میست روغن</button>
-                <button type="button" class="finder__chip" data-type="micellar" data-fa="میسلار واتر" data-en="Micellar water" data-ar="ماء ميسيلار" data-tr="Misel suyu" data-zh="卸妆水">میسلار واتر</button>
-                <button type="button" class="finder__chip" data-type="airless" data-fa="آیرلس" data-en="Airless" data-ar="إيرلس" data-tr="Airless" data-zh="空气泵">آیرلس</button>
-                <button type="button" class="finder__chip" data-type="dropper" data-fa="قطره چکان" data-en="Dropper" data-ar="قطارة" data-tr="Damlalık" data-zh="滴管">قطره چکان</button>
+            <div class="finder__drop" id="finderDrop-product">
+              <button type="button" class="finder__dropBtn" aria-expanded="false">
+                <span class="finder__dropIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></span>
+                <span class="finder__dropLabel" data-fa="محصول" data-en="Product" data-ar="المنتج" data-tr="Ürün" data-zh="产品">محصول</span>
+                <span class="finder__dropSel" id="finderSel-product" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</span>
+                <span class="finder__dropCaret"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </button>
+              <div class="finder__menu" id="finderType">
+                <button type="button" class="finder__opt active" data-type="all" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</button>
+                <button type="button" class="finder__opt" data-type="mist" data-fa="میست اسپری" data-en="Mist spray" data-ar="رذاذ" data-tr="Mist sprey" data-zh="喷雾">میست اسپری</button>
+                <button type="button" class="finder__opt" data-type="lotion" data-fa="لوسیون" data-en="Lotion" data-ar="لوشن" data-tr="Losyon" data-zh="乳液">لوسیون</button>
+                <button type="button" class="finder__opt" data-type="treatment" data-fa="تریتمنت" data-en="Treatment" data-ar="تريتمنت" data-tr="Tretman" data-zh="精华">تریتمنت</button>
+                <button type="button" class="finder__opt" data-type="oil" data-fa="میست روغن" data-en="Oil mist" data-ar="رذاذ زيت" data-tr="Yağ mist" data-zh="油雾">میست روغن</button>
+                <button type="button" class="finder__opt" data-type="micellar" data-fa="میسلار واتر" data-en="Micellar water" data-ar="ماء ميسيلار" data-tr="Misel suyu" data-zh="卸妆水">میسلار واتر</button>
+                <button type="button" class="finder__opt" data-type="airless" data-fa="آیرلس" data-en="Airless" data-ar="إيرلس" data-tr="Airless" data-zh="空气泵">آیرلس</button>
+                <button type="button" class="finder__opt" data-type="dropper" data-fa="قطره چکان" data-en="Dropper" data-ar="قطارة" data-tr="Damlalık" data-zh="滴管">قطره چکان</button>
               </div>
             </div>
-            <div class="finder__group">
-              <span class="finder__label" data-fa="حجم محصول" data-en="Product volume" data-ar="حجم المنتج" data-tr="Ürün hacmi" data-zh="产品容量">حجم محصول</span>
-              <div class="finder__chips" id="finderVol">
-                <button type="button" class="finder__chip active" data-vol="all" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</button>
-                <button type="button" class="finder__chip" data-vol="small" data-fa="کوچک (تا ۸۰)" data-en="Small (up to 80 ml)" data-ar="صغير (حتى ٨٠ مل)" data-tr="Küçük (80 ml'ye kadar)" data-zh="小（80毫升以内）">کوچک (تا ۸۰)</button>
-                <button type="button" class="finder__chip" data-vol="large" data-fa="بزرگ (۹۰ تا ۲۲۰)" data-en="Large (90–220 ml)" data-ar="كبير (من ٩٠ إلى ٢٢٠ مل)" data-tr="Büyük (90–220 ml)" data-zh="大（90–220毫升）">بزرگ (۹۰ تا ۲۲۰)</button>
+            <div class="finder__drop" id="finderDrop-neck">
+              <button type="button" class="finder__dropBtn" aria-expanded="false">
+                <span class="finder__dropIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg></span>
+                <span class="finder__dropLabel" data-fa="دهانه" data-en="Neck" data-ar="العنق" data-tr="Boyun" data-zh="口径">دهانه</span>
+                <span class="finder__dropSel" id="finderSel-neck" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</span>
+                <span class="finder__dropCaret"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </button>
+              <div class="finder__menu" id="finderNeck">
+                <button type="button" class="finder__opt active" data-neck="all" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</button>
+                <button type="button" class="finder__opt" data-neck="18" data-fa="۱۸ میلی‌متر" data-en="18 mm" data-ar="١٨ مم" data-tr="18 mm" data-zh="18毫米">۱۸ میلی‌متر</button>
+                <button type="button" class="finder__opt" data-neck="20" data-fa="۲۰ میلی‌متر" data-en="20 mm" data-ar="٢٠ مم" data-tr="20 mm" data-zh="20毫米">۲۰ میلی‌متر</button>
+                <button type="button" class="finder__opt" data-neck="24" data-fa="۲۴ میلی‌متر" data-en="24 mm" data-ar="٢٤ مم" data-tr="24 mm" data-zh="24毫米">۲۴ میلی‌متر</button>
               </div>
             </div>
-            <div class="finder__group">
-              <span class="finder__label" data-fa="دهانه" data-en="Neck size" data-ar="العنق" data-tr="Boyun çapı" data-zh="口径">دهانه</span>
-              <div class="finder__chips" id="finderNeck">
-                <button type="button" class="finder__chip active" data-neck="all" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</button>
-                <button type="button" class="finder__chip" data-neck="18" data-fa="۱۸" data-en="18" data-ar="١٨" data-tr="18" data-zh="18">۱۸</button>
-                <button type="button" class="finder__chip" data-neck="20" data-fa="۲۰" data-en="20" data-ar="٢٠" data-tr="20" data-zh="20">۲۰</button>
-                <button type="button" class="finder__chip" data-neck="24" data-fa="۲۴" data-en="24" data-ar="٢٤" data-tr="24" data-zh="24">۲۴</button>
+            <div class="finder__drop" id="finderDrop-vol">
+              <button type="button" class="finder__dropBtn" aria-expanded="false">
+                <span class="finder__dropIcon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v5L5 17a3 3 0 0 0 3 5h8a3 3 0 0 0 3-5l-5-10V2"></path><line x1="8.5" y1="2" x2="15.5" y2="2"></line></svg></span>
+                <span class="finder__dropLabel" data-fa="حجم" data-en="Volume" data-ar="الحجم" data-tr="Hacim" data-zh="容量">حجم</span>
+                <span class="finder__dropSel" id="finderSel-vol" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</span>
+                <span class="finder__dropCaret"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </button>
+              <div class="finder__menu" id="finderVol">
+                <button type="button" class="finder__opt active" data-vol="all" data-fa="همه" data-en="All" data-ar="الكل" data-tr="Tümü" data-zh="全部">همه</button>
+                <button type="button" class="finder__opt" data-vol="30" data-fa="۳۰ میلی‌لیتر" data-en="30 ml" data-ar="٣٠ مل" data-tr="30 ml" data-zh="30毫升">۳۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="50" data-fa="۵۰ میلی‌لیتر" data-en="50 ml" data-ar="٥٠ مل" data-tr="50 ml" data-zh="50毫升">۵۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="80" data-fa="۸۰ میلی‌لیتر" data-en="80 ml" data-ar="٨٠ مل" data-tr="80 ml" data-zh="80毫升">۸۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="90" data-fa="۹۰ میلی‌لیتر" data-en="90 ml" data-ar="٩٠ مل" data-tr="90 ml" data-zh="90毫升">۹۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="100" data-fa="۱۰۰ میلی‌لیتر" data-en="100 ml" data-ar="١٠٠ مل" data-tr="100 ml" data-zh="100毫升">۱۰۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="140" data-fa="۱۴۰ میلی‌لیتر" data-en="140 ml" data-ar="١٤٠ مل" data-tr="140 ml" data-zh="140毫升">۱۴۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="170" data-fa="۱۷۰ میلی‌لیتر" data-en="170 ml" data-ar="١٧٠ مل" data-tr="170 ml" data-zh="170毫升">۱۷۰ میلی‌لیتر</button>
+                <button type="button" class="finder__opt" data-vol="220" data-fa="۲۲۰ میلی‌لیتر" data-en="220 ml" data-ar="٢٢٠ مل" data-tr="220 ml" data-zh="220毫升">۲۲۰ میلی‌لیتر</button>
               </div>
             </div>
           </div>
@@ -219,6 +240,7 @@
             <div class="specs__head">
               <h4 class="specs__title" id="specsTitle" data-fa="مشخصات فنی" data-en="Technical specifications" data-ar="المواصفات الفنية" data-tr="Teknik özellikler" data-zh="技术规格">مشخصات فنی</h4>
               <span class="specs__family" id="specsFamily">همتا</span>
+              <button type="button" class="specs__close" id="specsClose" data-close aria-label="بستن"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
             </div>
             <div class="specs__volumes" id="specsVolumes"></div>
             <div class="specs__cols">
@@ -230,7 +252,7 @@
           </div>
         </div>
         <div class="cards" id="beautyCards">
-          <article class="card" data-family="hamta" data-types="mist lotion treatment oil micellar" data-neck="24">
+          <article class="card" data-family="hamta" data-types="mist lotion treatment oil micellar" data-neck="24" data-vols="90 100 140 170 220">
             <div class="card__media gallery-trigger" data-gallery="hamta">
               <img src="../assets/hamta-product.jpg" alt="Hamta — neck 24" loading="lazy" />
               <span class="card__badge" data-fa="دهانه ۲۴" data-en="Neck 24" data-ar="عنق ٢٤" data-tr="24 boyun" data-zh="口径24">دهانه ۲۴</span>
@@ -247,7 +269,7 @@
             </div>
           </article>
 
-          <article class="card" data-family="arya" data-types="mist lotion treatment serum" data-neck="18">
+          <article class="card" data-family="arya" data-types="mist lotion treatment serum" data-neck="18" data-vols="30 50 80">
             <div class="card__media">
               <img src="../assets/arya-white.jpg" alt="Arya — white bottle" loading="lazy" />
               <span class="card__badge" data-fa="دهانه ۱۸" data-en="Neck 18" data-ar="عنق ١٨" data-tr="18 boyun" data-zh="口径18">دهانه ۱۸</span>
@@ -263,7 +285,7 @@
             </div>
           </article>
 
-          <article class="card" data-family="pars" data-types="mist lotion treatment" data-neck="20">
+          <article class="card" data-family="pars" data-types="mist lotion treatment" data-neck="20" data-vols="30 50 80">
             <div class="card__media">
               <img src="../assets/pars-product.png" alt="Pars — metallic pump" loading="lazy" />
               <span class="card__badge" data-fa="دهانه ۲۰" data-en="Neck 20" data-ar="عنق ٢٠" data-tr="20 boyun" data-zh="口径20">دهانه ۲۰</span>
@@ -279,7 +301,7 @@
             </div>
           </article>
 
-          <article class="card dropper-card" data-family="dropper" data-types="dropper serum treatment" data-neck="18 20">
+          <article class="card dropper-card" data-family="dropper" data-types="dropper serum treatment" data-neck="18 20" data-vols="30 50 80">
             <div class="card__media">
               <img src="../assets/dropper-product.png" alt="Dropper" data-neck18="../assets/dropper-18.png" data-neck20="../assets/dropper-product.png" />
               <span class="card__badge" data-fa="دهانه ۱۸/۲۰" data-en="Neck 18/20" data-ar="عنق ١٨/٢٠" data-tr="18/20 boyun" data-zh="口径18/20">دهانه ۱۸/۲۰</span>
@@ -295,7 +317,7 @@
             </div>
           </article>
 
-          <article class="card" data-family="sepanta" data-types="airless lotion cream serum">
+          <article class="card" data-family="sepanta" data-types="airless lotion cream serum" data-vols="30 50 80">
             <div class="card__media">
               <img src="../assets/sepanta-product.jpg" alt="Sepanta" />
             </div>
@@ -303,12 +325,13 @@
               <h2 class="card__name" data-fa="سپنتا" data-en="Sepanta" data-ar="سبنتا" data-tr="Sepanta" data-zh="Sepanta">سپنتا</h2>
               <ul class="card__list">
                 <li data-fa="آیرلس — ۳۰، ۵۰ و ۸۰ میلی‌لیتر. محافظت کامل فرمول شما از هوا و آلودگی." data-en="Airless — 30, 50 &amp; 80 ml. Complete protection of your formula from air and contamination." data-ar="آيرلس — ٣٠، ٥٠ و ٨٠ مل. حماية كاملة لتركيبتك من الهواء والتلوث." data-tr="Airless — 30, 50 ve 80 ml. Formülünüzü havadan ve kontaminasyondan tam koruma." data-zh="无空气——30、50和80毫升。全面保护您的配方免受空气和污染。">آیرلس — ۳۰، ۵۰ و ۸۰ میلی‌لیتر. محافظت کامل فرمول شما از هوا و آلودگی.</li>
+                <li data-fa="دهانهٔ ثابت طراحی‌شده برای پمپ ایرلس — بدون نیاز به انتخاب دهانه." data-en="Fixed neck engineered for the airless pump — no neck selection needed." data-ar="عنق ثابت مصمم للمضخة الإيرلس — بدون حاجة لاختيار العنق." data-tr="Airless pompa için tasarlanmış sabit boyun — boyun seçimi gerekmez." data-zh="为空气泵设计的固定口径——无需选择口径。">دهانهٔ ثابت طراحی‌شده برای پمپ ایرلس — بدون نیاز به انتخاب دهانه.</li>
               </ul>
               <a href="inquiry.html" class="card__link" data-fa="استعلام این مجموعه" data-en="Inquire this collection" data-ar="استعلم عن هذه المجموعة" data-tr="Bu koleksiyon için teklif al" data-zh="咨询此系列">استعلام این مجموعه</a>
             </div>
           </article>
 
-          <article class="card" data-family="qoil" data-types="oil">
+          <article class="card" data-family="qoil" data-types="oil" data-neck="24" data-vols="140">
             <div class="card__media">
               <img src="../assets/qoil-product.jpg" alt="Q oil spray" />
             </div>

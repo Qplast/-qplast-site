@@ -187,6 +187,19 @@
         { vol: 50, h: 58.3, neck: 20, ref: "pars" },
         { vol: 80, h: 93.28, neck: 20, ref: "pars" }
       ]
+    },
+    sepanta: {
+      family: { fa: "سپنتا", en: "Sepanta", ar: "سبنتا", tr: "Sepanta", zh: "塞潘塔" },
+      diameter: 45,
+      pump: 45,
+      material: "PP",
+      airless: true,
+      fixedNeck: true,
+      bottles: [
+        { vol: 30, h: 110, neck: 0 },
+        { vol: 50, h: 140, neck: 0 },
+        { vol: 80, h: 170, neck: 0 }
+      ]
     }
   };
 
@@ -378,7 +391,8 @@
         hamta: "../assets/hamta-product.jpg",
         arya: "../assets/arya-white.jpg",
         pars: "../assets/pars-product.png",
-        qoil: "../assets/qoil-product.jpg"
+        qoil: "../assets/qoil-product.jpg",
+        sepanta: "../assets/sepanta-product.jpg"
       };
       var src;
       if (currentFamily === "dropper") {
@@ -417,16 +431,16 @@
     }
     var caps = [];
     caps.push({ l: "Bottle", v: fmt(bottle.h) + " mm" });
-    caps.push({ l: "Neck", v: fmt(bottle.neck || 24) + " mm" });
+    caps.push({ l: f.airless ? "NeckFixed" : "Neck", v: f.airless ? "•" : fmt(bottle.neck || 24) + " mm" });
     caps.push({ l: f.cap ? "Cap" : "Pump", v: fmt(f.cap || f.pump) + " mm" });
     caps.push({ l: "Straw", v: fmt(bottle.h) + " mm" });
     caps.push({ l: "Body", v: f.material });
     var DIM_LABELS = {
-      fa: { Bottle: "ارتفاع بطری", Neck: "دهانه", Pump: "طول پمپ", Cap: "کاپ", Straw: "نی", Body: "جنس بدنه" },
-      en: { Bottle: "Bottle height", Neck: "Neck", Pump: "Pump length", Cap: "Cap", Straw: "Straw", Body: "Body material" },
-      ar: { Bottle: "ارتفاع الزجاجة", Neck: "العنق", Pump: "طول المضخة", Cap: "الغطاء", Straw: "المصاصة", Body: "مادة الجسم" },
-      tr: { Bottle: "Şişe yüksekliği", Neck: "Boyun", Pump: "Pompa uzunluğu", Cap: "Kapak", Straw: "Pipet", Body: "Gövde malzemesi" },
-      zh: { Bottle: "瓶高", Neck: "口径", Pump: "泵长", Cap: "瓶盖", Straw: "吸管", Body: "主体材质" }
+      fa: { Bottle: "ارتفاع بطری", Neck: "دهانه", NeckFixed: "دهانهٔ ثابت", Pump: "طول پمپ", Cap: "کاپ", Straw: "نی", Body: "جنس بدنه" },
+      en: { Bottle: "Bottle height", Neck: "Neck", NeckFixed: "Fixed neck", Pump: "Pump length", Cap: "Cap", Straw: "Straw", Body: "Body material" },
+      ar: { Bottle: "ارتفاع الزجاجة", Neck: "العنق", NeckFixed: "عنق ثابت", Pump: "طول المضخة", Cap: "الغطاء", Straw: "المصاصة", Body: "مادة الجسم" },
+      tr: { Bottle: "Şişe yüksekliği", Neck: "Boyun", NeckFixed: "Sabit boyun", Pump: "Pompa uzunluğu", Cap: "Kapak", Straw: "Pipet", Body: "Gövde malzemesi" },
+      zh: { Bottle: "瓶高", Neck: "口径", NeckFixed: "固定口径", Pump: "泵长", Cap: "瓶盖", Straw: "吸管", Body: "主体材质" }
     };
     var L = DIM_LABELS[currentLang] || DIM_LABELS.en;
     capEl.innerHTML = caps.map(function (c) {
@@ -439,14 +453,13 @@
     var type = "all";
     var vol = "all";
     var neck = "all";
-    var typeActive = finderType && finderType.querySelector(".finder__chip.active");
-    var volActive = finderVol && finderVol.querySelector(".finder__chip.active");
-    var neckActive = finderNeck && finderNeck.querySelector(".finder__chip.active");
+    var typeActive = finderType && finderType.querySelector(".finder__opt.active");
+    var volActive = finderVol && finderVol.querySelector(".finder__opt.active");
+    var neckActive = finderNeck && finderNeck.querySelector(".finder__opt.active");
     if (typeActive) type = typeActive.getAttribute("data-type");
     if (volActive) vol = volActive.getAttribute("data-vol");
     if (neckActive) neck = neckActive.getAttribute("data-neck");
 
-    var volFams = vol === "small" ? ["arya", "pars", "sepanta", "qoil", "dropper"] : vol === "large" ? ["hamta"] : null;
     var cards = beautyCards.querySelectorAll(".card[data-family]");
     var dropperNeck = null;
     var shown = [];
@@ -454,9 +467,11 @@
       var fam = card.getAttribute("data-family");
       var types = (card.getAttribute("data-types") || "").split(" ");
       var cardNeck = (card.getAttribute("data-neck") || "").split(" ");
+      var cardVols = (card.getAttribute("data-vols") || "").split(" ");
+      var volHit = vol === "all" || cardVols.indexOf(vol) !== -1;
       var typeHit = type === "all" || types.indexOf(type) !== -1;
-      var volHit = !volFams || volFams.indexOf(fam) !== -1;
-      var neckHit = neck === "all" || cardNeck.indexOf(neck) !== -1;
+      var hasNeck = cardNeck.length && cardNeck[0] !== "";
+      var neckHit = (type === "airless") ? true : (neck === "all" || (hasNeck && cardNeck.indexOf(neck) !== -1));
       var match = typeHit && volHit && neckHit;
       card.style.display = match ? "" : "none";
       if (match) shown.push(fam);
@@ -475,6 +490,12 @@
     }
     var msg = recText(currentLang, shown.length ? shown.join("+") : "none");
     finderRec.textContent = msg;
+    document.querySelectorAll(".finder__dropSel").forEach(function (sel) {
+      var menu = sel.closest(".finder__drop").querySelector(".finder__menu");
+      if (!menu) return;
+      var act = menu.querySelector(".finder__opt.active");
+      if (act) sel.innerHTML = act.innerHTML;
+    });
   }
 
   function hideSpecs() {
@@ -491,7 +512,7 @@
     /* read current neck selection (dropper has two necks) */
     var selNeck = null;
     if (finderNeck) {
-      var nActive = finderNeck.querySelector(".finder__chip.active");
+      var nActive = finderNeck.querySelector(".finder__opt.active");
       if (nActive) {
         var nVal = nActive.getAttribute("data-neck");
         if (nVal !== "all") selNeck = Number(nVal);
@@ -508,49 +529,78 @@
     renderSpecs();
   }
 
-  if (finderType) {
-    finderType.addEventListener("click", function (e) {
-      var chip = e.target.closest(".finder__chip");
-      if (!chip) return;
-      finderType.querySelectorAll(".finder__chip").forEach(function (c) {
-        c.classList.remove("active");
-      });
-      chip.classList.add("active");
-      hideSpecs();
-      updateFinder();
+  function closeFinderMenus(except) {
+    document.querySelectorAll(".finder__drop .finder__menu").forEach(function (m) {
+      if (m !== except) m.classList.remove("open");
+    });
+    document.querySelectorAll(".finder__dropBtn").forEach(function (b) {
+      b.setAttribute("aria-expanded", "false");
     });
   }
-  if (finderVol) {
-    finderVol.addEventListener("click", function (e) {
-      var chip = e.target.closest(".finder__chip");
-      if (!chip) return;
-      finderVol.querySelectorAll(".finder__chip").forEach(function (c) {
-        c.classList.remove("active");
+
+  var dropBtns = document.querySelectorAll(".finder__dropBtn");
+  if (dropBtns.length) {
+    dropBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var drop = btn.closest(".finder__drop");
+        if (!drop) return;
+        var menu = drop.querySelector(".finder__menu");
+        if (!menu) return;
+        var willOpen = !menu.classList.contains("open");
+        closeFinderMenus(menu);
+        if (willOpen) {
+          menu.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
       });
-      chip.classList.add("active");
-      hideSpecs();
-      updateFinder();
     });
   }
-  if (finderNeck) {
-    finderNeck.addEventListener("click", function (e) {
-      var chip = e.target.closest(".finder__chip");
-      if (!chip) return;
-      finderNeck.querySelectorAll(".finder__chip").forEach(function (c) {
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".finder__drop")) closeFinderMenus();
+  });
+
+  function bindFinderMenu(menu, cb) {
+    if (!menu) return;
+    menu.addEventListener("click", function (e) {
+      var opt = e.target.closest(".finder__opt");
+      if (!opt) return;
+      menu.querySelectorAll(".finder__opt").forEach(function (c) {
         c.classList.remove("active");
       });
-      chip.classList.add("active");
+      opt.classList.add("active");
       hideSpecs();
-      updateFinder();
+      closeFinderMenus();
+      cb(opt);
     });
   }
+  bindFinderMenu(finderType, function () { updateFinder(); });
+  bindFinderMenu(finderVol, function () { updateFinder(); });
+  bindFinderMenu(finderNeck, function () { updateFinder(); });
+
   if (beautyCards) {
     beautyCards.addEventListener("click", function (e) {
       var card = e.target.closest(".card[data-family]");
       if (!card) return;
+      e.stopPropagation();
       showSpecs(card.getAttribute("data-family"));
     });
   }
+
+  function bindSpecsClose() {
+    var panel = document.getElementById("specsPanel");
+    var closeBtn = document.getElementById("specsClose");
+    if (closeBtn && panel) {
+      closeBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        hideSpecs();
+      });
+      document.addEventListener("click", function (e) {
+        if (!panel.hidden && !panel.contains(e.target)) hideSpecs();
+      });
+    }
+  }
+  bindSpecsClose();
   updateFinder();
 
   var SEND_ENDPOINT = (function(){ var p = (window.location.pathname.split("/").filter(Boolean)); return p.length > 1 && p[0].toLowerCase() === "pages" ? "../mail/send-mail.php" : "mail/send-mail.php"; })();

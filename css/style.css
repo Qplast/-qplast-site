@@ -751,27 +751,77 @@ ul { list-style: none; }
 .finder__head { text-align: center; max-width: 640px; margin: 0 auto; }
 .finder__title { font-size: 24px; font-weight: 800; }
 .finder__sub { color: var(--ink-soft); margin-top: 8px; font-size: 15px; }
-.finder__row { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 30px; }
-.finder__group { flex: 1 1 0; min-width: 180px; }
-.finder__label { display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 12px; letter-spacing: 0.02em; }
-.finder__chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.finder__chip {
-  border: 1px solid var(--line);
-  background: var(--bg);
-  border-radius: 999px;
-  padding: 9px 18px;
-  font-family: inherit;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-.finder__chip:hover { border-color: var(--gold); color: var(--ink); }
-.finder__chip.active { background: var(--gold); border-color: var(--gold); color: #fff; box-shadow: var(--shadow-sm); }
 .finder__result { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
 .finder__rec { text-align: center; font-size: 16px; font-weight: 700; color: var(--ink); }
 .finder__hint { text-align: center; margin-top: 8px; font-size: 13.5px; color: var(--ink-soft); }
+
+/* Finder dropdown (icon + vertical menu) */
+.finder__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 30px; }
+.finder__drop { position: relative; }
+.finder__dropBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 14px;
+  padding: 12px 18px;
+  min-width: 190px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+.finder__dropBtn:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+.finder__dropBtn[aria-expanded="true"] { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+.finder__dropIcon { display: inline-flex; color: var(--gold); flex-shrink: 0; }
+.finder__dropIcon svg { width: 22px; height: 22px; }
+.finder__dropLabel { font-size: 14.5px; font-weight: 800; color: var(--ink); }
+.finder__dropSel { font-size: 13px; font-weight: 600; color: var(--gold-dark); background: var(--gold-soft); padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.finder__dropCaret { margin-inline-start: auto; color: var(--ink-soft); flex-shrink: 0; }
+.finder__dropCaret svg { width: 16px; height: 16px; transition: transform 0.25s; }
+.finder__dropBtn[aria-expanded="true"] .finder__dropCaret svg { transform: rotate(180deg); }
+.finder__menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  inset-inline-start: 0;
+  min-width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: var(--shadow-sm);
+  z-index: 40;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.finder__menu.open { display: flex; }
+.finder__opt {
+  display: block;
+  width: 100%;
+  text-align: start;
+  border: none;
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+.finder__opt:hover { background: var(--gold-soft); color: var(--ink); }
+.finder__opt.active { background: var(--gold); color: #fff; }
+@media (max-width: 640px) {
+  .finder__row { flex-direction: column; align-items: stretch; }
+  .finder__drop { width: 100%; }
+  .finder__dropBtn { width: 100%; }
+  .finder__menu { inset-inline-start: 0; inset-inline-end: 0; }
+}
 
 /* ============================================================
    Technical specifications (blueprint)
@@ -794,6 +844,23 @@ ul { list-style: none; }
   padding: 6px 16px;
   border-radius: 999px;
 }
+.specs__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  margin-inline-start: auto;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+.specs__close:hover { color: var(--ink); border-color: var(--gold); box-shadow: var(--shadow-sm); }
+.specs__close svg { width: 16px; height: 16px; }
 .specs__volumes { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 22px; }
 .specs__vol {
   border: 1px solid var(--line);
