@@ -686,9 +686,9 @@ ul { list-style: none; }
 .lightbox { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; }
 .lightbox[hidden] { display: none !important; }
 .lightbox__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); }
-.lightbox__content { position: relative; z-index: 2; max-width: min(90vw, 960px); width: 100%; display: flex; align-items: center; gap: 12px; }
-.lightbox__stage { flex: 1; margin: 0; background: var(--surface); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
-.lightbox__stage img { width: 100%; max-height: 78vh; object-fit: contain; background: var(--surface); }
+.lightbox__content { position: relative; z-index: 2; max-width: 90vw; width: fit-content; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+.lightbox__stage { flex: 0 0 auto; margin: 0; background: var(--surface); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.lightbox__stage img { width: auto; height: auto; max-width: 78vw; max-height: 78vh; object-fit: contain; background: var(--surface); }
 .lightbox__caption { text-align: center; padding: 12px; font-size: 15px; color: var(--ink-soft); background: var(--surface); }
 .lightbox__close { position: absolute; top: -48px; left: 0; background: var(--gold); border: none; color: var(--ink); font-size: 24px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.35); }
 .lightbox__close:hover { background: var(--gold-dark); }
