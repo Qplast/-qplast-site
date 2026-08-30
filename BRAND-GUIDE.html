@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="راهنمای جامع برند Q Plast (کیوپلاست) — سند مرجع رسمی برند، نسخه ۱٫۲، اوت ۲۰۲۶">
+<title>Q Plast Brand Guide — راهنمای برند</title>
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+  :root{
+    --gold:#C19A55;
+    --gold-dark:#9C7A3E;
+    --warm-black:#1B1915;
+    --ink:#1B1915;
+    --gray:#5F5A50;
+    --muted:#5F5A50;
+    --cream:#FAF8F4;
+    --paper:#FFFFFF;
+    --line:#E8DFCE;
+    --tint:#FBF6EB;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;
+    font-size:16px;
+    line-height:1.9;
+  }
+
+  .container{max-width:960px;margin:0 auto;padding:0 20px 50px;}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    background:linear-gradient(165deg,var(--warm-black) 0%,#26221B 65%,#332B20 100%);
+    color:var(--cream);
+    text-align:center;
+    padding:66px 24px 78px;
+  }
+  .cover .brand-en{
+    font-family:'Playfair Display',Georgia,serif;
+    font-style:italic;
+    color:var(--gold);
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    font-size:1rem;
+  }
+  .cover h1{
+    font-size:2.25rem;
+    font-weight:900;
+    color:#FFFFFF;
+    margin:.7rem 0 0;
+    line-height:1.5;
+  }
+  .cover .rule{width:96px;height:3px;background:var(--gold);border-radius:2px;margin:22px auto;}
+  .cover .tag{color:var(--gold);font-weight:700;font-size:1.15rem;}
+  .cover-logo{display:block;margin:0 auto 12px;width:200px;height:auto;}
+  .cover-tagline{font-family:'Vazirmatn',sans-serif;font-size:14px;font-weight:600;color:var(--gold);letter-spacing:.1em;margin-bottom:24px;}
+  .cover-owner{margin-top:28px;color:var(--cream);font-size:.95rem;opacity:.8;}
+
+  .meta-card{
+    max-width:780px;
+    margin:-42px auto 42px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-top:4px solid var(--gold);
+    border-radius:12px;
+    padding:22px 30px;
+    box-shadow:0 12px 32px rgba(27,25,21,.10);
+  }
+  .meta-card dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.1rem;margin:0;}
+  .meta-card dt{font-weight:800;color:var(--gold-dark);white-space:nowrap;}
+  .meta-card dd{margin:0;color:var(--muted);}
+
+  /* ---------- Sections ---------- */
+  section.brand-section{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:34px 38px;
+    margin:0 0 30px;
+    box-shadow:0 6px 22px rgba(27,25,21,.05);
+  }
+
+  h2{
+    font-size:1.45rem;
+    font-weight:800;
+    color:var(--warm-black);
+    margin:0 0 1.2rem;
+    padding-bottom:.75rem;
+    border-bottom:2px solid var(--line);
+    position:relative;
+    line-height:1.7;
+  }
+  h2::after{
+    content:"";
+    position:absolute;
+    bottom:-2px;
+    inset-inline-start:0;
+    width:120px;height:2px;
+    background:var(--gold);
+  }
+  .kicker{
+    display:inline-block;
+    background:var(--gold);
+    color:#fff;
+    font-size:.76rem;
+    font-weight:800;
+    padding:.12em .95em;
+    border-radius:999px;
+    margin-inline-end:.55rem;
+    vertical-align:middle;
+    letter-spacing:.02em;
+  }
+  .latin{
+    font-family:'Playfair Display',Georgia,serif;
+    font-weight:600;
+    color:var(--gold-dark);
+    font-size:1.02rem;
+    direction:ltr;
+    unicode-bidi:isolate;
+  }
+
+  h3{
+    font-size:1.12rem;
+    font-weight:800;
+    color:var(--gold-dark);
+    margin:1.7rem 0 .6rem;
+  }
+  h4{
+    font-size:1rem;
+    font-weight:800;
+    color:var(--gold-dark);
+    margin:0 0 .5rem;
+    border-bottom:1px solid var(--line);
+    padding-bottom:.35rem;
+  }
+  p{margin:.6rem 0;}
+  ul,ol{padding-inline-start:1.45rem;margin:.5rem 0;}
+  li{margin:.32rem 0;}
+  strong{color:var(--warm-black);}
+  a{color:var(--gold-dark);}
+
+  /* ---------- Blockquotes ---------- */
+  blockquote{
+    border-left:5px solid var(--gold);
+    border-inline-start:5px solid var(--gold);
+    background:#FCF8F0;
+    padding:1rem 1.3rem;
+    margin:1.2rem 0;
+    border-radius:8px;
+    color:var(--muted);
+    font-size:1.02rem;
+  }
+  blockquote strong{color:var(--warm-black);}
+
+  /* ---------- Tables ---------- */
+  .table-wrap{overflow-x:auto;margin:1.1rem 0;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--paper);
+    font-size:.93rem;
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  thead th{
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);
+    color:#FFFFFF;
+    font-weight:800;
+    padding:.68rem .85rem;
+    text-align:start;
+    border:none;
+    white-space:nowrap;
+  }
+  tbody td{
+    padding:.62rem .85rem;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    text-align:start;
+    color:var(--ink);
+  }
+  tbody tr:nth-child(even){background:var(--tint);}
+  tbody tr:last-child td{border-bottom:none;}
+
+  .swatch{
+    display:inline-block;
+    width:15px;height:15px;
+    border-radius:4px;
+    border:1px solid rgba(27,25,21,.25);
+    vertical-align:-2px;
+    margin-inline-end:.45rem;
+  }
+
+  /* ---------- Code ---------- */
+  code{
+    font-family:Consolas,'Courier New',monospace;
+    direction:ltr;
+    unicode-bidi:embed;
+    background:#F3EDE1;
+    color:var(--gold-dark);
+    padding:.08em .45em;
+    border-radius:4px;
+    font-size:.87em;
+  }
+  pre{
+    background:var(--warm-black);
+    color:#EFE7D8;
+    padding:1.3rem 1.5rem;
+    border-radius:12px;
+    overflow-x:auto;
+    direction:ltr;
+    text-align:left;
+    font-size:.83rem;
+    line-height:1.75;
+    border:1px solid #3A342A;
+  }
+  pre code{background:transparent;color:inherit;padding:0;font-size:inherit;}
+
+  /* ---------- Voice: Do / Don't ---------- */
+  .lbl-do{color:#2E7D32;}
+  .lbl-dont{color:#C0392B;}
+  .example-label{font-weight:800;color:var(--muted);margin-top:.8rem;}
+  .good{
+    background:#F0F7EF;
+    border-inline-start:3px solid #4C9A54;
+    padding:.45rem .95rem;
+    border-radius:6px;
+    margin:.4rem 0;
+  }
+  .bad{
+    background:#FBF0EE;
+    border-inline-start:3px solid #C0564A;
+    padding:.45rem .95rem;
+    border-radius:6px;
+    margin:.4rem 0;
+  }
+
+  /* ---------- Tagline hero ---------- */
+  .tagline-hero{
+    font-size:1.85rem;
+    font-weight:900;
+    color:var(--gold-dark);
+    text-align:center;
+    background:linear-gradient(180deg,#FFFFFF 0%,#FBF4E6 100%);
+    border:1px dashed var(--gold);
+    border-radius:12px;
+    padding:28px 18px;
+    margin:1rem 0 1.2rem;
+    line-height:1.7;
+  }
+
+  /* ---------- QA Checklist ---------- */
+  .qa-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:1rem;
+    margin:1rem 0;
+  }
+  .qa-card{
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 18px;
+    background:#FFFDF8;
+  }
+  ul.checklist{list-style:none;padding:0;margin:.3rem 0;}
+  ul.checklist li{margin:.38rem 0;}
+  ul.checklist input[type="checkbox"]{
+    accent-color:var(--gold);
+    width:15px;height:15px;
+    margin-inline-end:.5rem;
+    vertical-align:-2px;
+  }
+  .stop-rule{
+    background:#FBF0EE;
+    border:1px solid #E4B7AF;
+    border-radius:8px;
+    padding:.75rem 1.1rem;
+    color:#8C3A31;
+    font-weight:700;
+    margin-top:1.2rem;
+  }
+
+  /* ---------- Audit ---------- */
+  ul.audit-grid{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:.5rem;
+    padding:0;
+    margin:1rem 0;
+  }
+  ul.audit-grid li{
+    background:var(--tint);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:.35rem .75rem;
+    font-size:.9rem;
+  }
+  .tick{color:var(--gold-dark);font-weight:800;margin-inline-end:.4rem;}
+  .banner{
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);
+    color:#FFFFFF;
+    text-align:center;
+    font-weight:800;
+    font-size:1.05rem;
+    border-radius:10px;
+    padding:.95rem 1rem;
+    margin-top:1.3rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.9rem;
+    padding:6px 0 34px;
+  }
+  footer .ftag{color:var(--gold-dark);font-weight:800;font-size:1rem;margin-bottom:.2rem;}
+
+  /* ---------- Print ---------- */
+  @page{
+    size:A4;
+    margin:16mm 14mm;
+  }
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    body{background:#FFFFFF;font-size:12.5px;line-height:1.8;}
+    .container{max-width:none;padding:0;}
+    .cover{
+      border-radius:0;
+      padding:48px 20px 58px;
+      break-after:page;
+      page-break-after:always;
+    }
+    .meta-card{box-shadow:none;margin-bottom:0;}
+    section.brand-section{
+      box-shadow:none;
+      border:1px solid var(--line);
+      border-radius:0;
+      padding:16px 18px;
+      margin:0 0 14px;
+      page-break-before:always;
+      break-before:page;
+    }
+    section.brand-section:first-of-type{
+      page-break-before:auto;
+      break-before:auto;
+    }
+    h2{font-size:1.25rem;}
+    .table-wrap{overflow:visible;}
+    table{font-size:.82rem;}
+    thead{display:table-header-group;}
+    tr,li,.qa-card,blockquote,pre{break-inside:avoid;page-break-inside:avoid;}
+    a{color:inherit;text-decoration:none;}
+    .tagline-hero{font-size:1.5rem;}
+  }
+  code{direction:ltr;unicode-bidi:embed;font-family:'Courier New',monospace;color:black!important;}
+  .kb-block{background:#1B1915;color:#C19A55;padding:20px 24px;border-radius:8px;font-family:'Courier New',monospace;font-size:13px;line-height:2;white-space:pre-wrap;overflow-wrap:break-word;word-wrap:break-word;direction:rtl;text-align:right;}
+  .kb-block code{color:#FAF8F4!important;}
+  .kb-block .kb-section{color:#FAF8F4;font-weight:bold;display:block;margin-top:8px;}
+  .kb-block .kb-section:first-child{margin-top:0;}
+  @media print{code{direction:ltr!important;unicode-bidi:embed;color:black!important;}}
+</style>
+</head>
+<body>
+
+<!-- ======================= COVER ======================= -->
+<header class="cover">
+  <img src="assets/logo-brand.jpg" alt="Q Plast Logo" class="cover-logo" />
+  <div class="cover-tagline">دقت مهندسی</div>
+  <div class="brand-en">Q Plast &middot; Brand Identity Guidelines</div>
+  <h1>راهنمای جامع برند Q Plast (کیوپلاست)</h1>
+  <div class="rule"></div>
+  <div class="tag">«دقت مهندسی، ظرافت پرمیوم»</div>
+  <div class="tag" style="font-size:0.95rem;opacity:0.85;margin-top:6px;"><span dir="ltr">Engineering Precision, Premium Elegance</span></div>
+  <div class="cover-owner">مالک برند: کیومرث مظلوم ساکی — مالک، برنامه‌ریز و مدیر ارشد برند</div>
+</header>
+
+<div class="container">
+
+  <!-- ======================= META ======================= -->
+  <div class="meta-card">
+    <dl>
+      <dt>نسخه:</dt><dd>۱٫۲</dd>
+      <dt>تاریخ:</dt><dd>اوت ۲۰۲۶</dd>
+      <dt>وضعیت:</dt><dd>سند مرجع رسمی برند</dd>
+      <dt>دامنه کاربرد:</dt><dd>وب‌سایت، شبکه‌های اجتماعی، چاپ و بسته‌بندی، ارتباطات فروش، عامل‌های هوشمند (AI Agents)</dd>
+      <dt>زبان‌های وب‌سایت:</dt><dd>فارسی (پیش‌فرض)، انگلیسی، عربی، ترکی، چینی</dd>
+      <dt>بخش اخبار صنعت:</dt><dd>بخش هفتگی اخبار مرتبط با صنعت آرایشی و بسته‌بندی</dd>
+      <dt>مالک برند:</dt><dd>کیومرث مظلوم ساکی</dd>
+      <dt>مالک سند:</dt><dd>مدیر برند کیوپلاست — تصمیم نهایی موارد مهم با مالک برند</dd>
+    </dl>
+
+
+    </dl>
+
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--line);">
+      <h3 style="margin:0 0 12px;font-size:1.1rem;">درباره مالک برند و ماهیت پروژه</h3>
+      <p><strong>کیومرث مظلوم ساکی</strong> مالک و بنیان‌گذار برند کیوپلاست است. این برند یک کسب‌وکار واقعی B2B صنعتی است — نه پروژه تمرینی و نه برند شخصی.</p>
+      <p><strong>ماهیت پروژه:</strong> این برند گاید در قالب دوره آموزشی «مشاوره هوش مصنوعی» تولید شده، اما برای یک کسب‌وکار واقعی است. یعنی:</p>
+      <ul>
+        <li>این سند همزمان هم تکلیف دوره است و هم سند عملیاتی برند کیوپلاست</li>
+        <li>تمام اطلاعات فنی، محصولات و قیمت‌ها واقعی هستند</li>
+        <li>تغییرات این سند مستقیماً روی وب‌سایت و ارتباطات فروش اعمال می‌شود</li>
+      </ul>
+      <p><strong>نقش‌های اصلی مالک برند:</strong></p>
+      <ul>
+        <li><strong>تصمیم‌گیر نهایی:</strong> تمام تغییرات کلان برند با تأیید نهایی اوست</li>
+        <li><strong>برنامه‌ریز استراتژیک:</strong> مسیر کوتاه‌مدت و بلندمدت برند</li>
+        <li><strong>نظارت فنی:</strong> محصولات و کیفیت فنی</li>
+        <li><strong>رابط مشتری:</strong> ارتباط اصلی با مشتریان کلیدی</li>
+      </ul>
+      <p style="background:var(--tint);padding:10px 14px;border-radius:6px;font-size:.9rem;"><em>تصمیم نهایی در موارد مهم همواره با مالک برند است.</em></p>
+    </div>
+  </div>
+
+  <!-- ======================= بخش ۰۱ ======================= -->
+  <section class="brand-section" id="bakhsh-01">
+    <h2><span class="kicker">بخش ۰۱</span> مأموریت برند <span class="latin">(Mission)</span></h2>
+    <blockquote>
+      <strong>«ما در کیوپلاست متعهدیم که دقت مهندسی و پایداری صنعتی را با ظرافت و زیبایی دنیای آرایشی پیوند بزنیم.»</strong>
+    </blockquote>
+    <p><strong>ترجمه عملی مأموریت:</strong></p>
+    <ul>
+      <li>تولید پمپ و قطعات بسته‌بندی برای صنعت آرایشی و بهداشتی با ثبات بچ و تلورانس کنترل‌شده</li>
+      <li>حذف ریسک از خط تولید مشتری: محصولی که نباید باعث توقف شود</li>
+      <li>تجربه خرید B2B حرفه‌ای: پاسخ دقیق، نمونه واقعی، تحویل قابل برنامه‌ریزی</li>
+    </ul>
+  </section>
+
+  <!-- ======================= بخش ۰۲ ======================= -->
+  <section class="brand-section" id="bakhsh-02">
+    <h2><span class="kicker">بخش ۰۲</span> چشم‌انداز برند <span class="latin">(Vision)</span></h2>
+    <blockquote>«نام اول ذهن برندهای ایرانی زیبایی، وقتی پای پمپ و بسته‌بندی پرمیوم در میان است.»</blockquote>
+    <ul>
+      <li><strong>افق میان‌مدت:</strong> تکمیل گروه محصولات، مستندسازی فنی کامل، حضور منظم در نمایشگاه‌های تخصصی صنعت</li>
+      <li><strong>افق بلندمدت:</strong> صادرات منطقه‌ای با همان استانداردی که در بازار داخلی تحویل می‌دهیم</li>
+    </ul>
+
+    <h3>قابلیت‌های محصولات</h3>
+    <ul>
+      <li><strong>انواع اسپری:</strong> میست اسپری، اسپری روغن</li>
+      <li><strong>انواع لوسیون:</strong> تریتمنت، لوسیون، میسلار واتر</li>
+      <li><strong>مزیت رقابتی:</strong> تمامی گروه‌های محصولی (همتا، آریا، پارس، سپنتا، Q Oil Spray) این توانایی را دارند — مشتری برحسب نیاز خود انتخاب می‌کند</li>
+      <li><strong>حذف محدودیت:</strong> ما محدودیت‌های انتخاب را از بین برده‌ایم</li>
+    </ul>
+  </section>
+
+  <!-- ======================= بخش ۰۳ ======================= -->
+  <section class="brand-section" id="bakhsh-03">
+    <h2><span class="kicker">بخش ۰۳</span> ارزش‌های برند <span class="latin">(Values)</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>ارزش</th><th>معنا</th><th>نمود در عمل</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>دقت</strong></td><td>عدد و تلورانس، به‌جای صفت و شعار</td><td>مشخصات فنی شفاف در همه اسناد و پاسخ‌ها</td></tr>
+          <tr><td><strong>ثبات</strong></td><td>سفارش امروز باید مثل سفارش قبلی باشد</td><td>کنترل یکنواختی بچ به بچ</td></tr>
+          <tr><td><strong>اتکا</strong></td><td>مشتری می‌تواند برنامه‌ریزی کند، نه نگران باشد</td><td>تعهد مکتوب به زمان‌بندی و مشخصات</td></tr>
+          <tr><td><strong>شراکت</strong></td><td>هم‌سطح برند مشتری، نه فقط فروشنده</td><td>مشاوره فنی قبل از فروش، پشتیبانی بعد از آن</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================= بخش ۰۴ ======================= -->
+  <section class="brand-section" id="bakhsh-04">
+    <h2><span class="kicker">بخش ۰۴</span> جایگاه‌یابی و مزیت رقابتی <span class="latin">(Positioning &amp; USP)</span></h2>
+    <p><strong>جمله جایگاه‌یابی:</strong><br>
+    «برای برندهای آرایشی–بهداشتی که بسته‌بندی بخشی از کیفیت محصولشان است، کیوپلاست تولیدکننده ایرانی پمپ‌هایی است که پایداری صنعتی را با ظرافت پرمیوم تحویل می‌دهد — یک شریک فنی، نه فقط یک تأمین‌کننده.»</p>
+    <p><strong>USP — سه ستون تمایز:</strong></p>
+    <ol>
+      <li><strong>پیوند دو دنیا:</strong> دقت مهندسی صنعتی + حساسیت زیبایی‌شناختی دنیای آرایشی</li>
+      <li><strong>ثبات بچ:</strong> یکنواختی قابل اتکا بین سفارش‌ها</li>
+      <li><strong>انتخاب هوشمند:</strong> فیلتر فنی در <code>pages/products.html#beauty</code> برای رسیدن سریع به پمپ مناسب</li>
+    </ol>
+
+    <h3>Elevator Pitch (نسخه گفتاری ۳۰–۴۵ ثانیه)</h3>
+    <blockquote>
+      «من از طرف کیوپلاست هستم.<br>
+      ما به برندهای آرایشی کمک می‌کنیم پمپ اسپری دقیقاً مناسب محصولشان را پیدا کنند — از نظر دهانه، حجم و عملکرد — بدون آزمون‌وخطا.<br>
+      نتیجه‌اش اینه که بسته‌بندی‌شون حرفه‌ای می‌مونه، خط تولیدشون متوقف نمی‌شه و مشتری نهایی حس پرمیوم رو لمس می‌کنه.»
+    </blockquote>
+  </section>
+
+  <!-- ======================= بخش ۰۵ ======================= -->
+  <section class="brand-section" id="bakhsh-05">
+    <h2><span class="kicker">بخش ۰۵</span> مخاطب، پرسونا و روایت برند</h2>
+
+    <h3>پرسونای اصلی — «مدیر محصول/خرید برند زیبایی»</h3>
+    <ul>
+      <li><strong>نقش:</strong> تصمیم‌گیر انتخاب تأمین‌کننده بسته‌بندی</li>
+      <li><strong>دغدغه‌ها:</strong> نوسان کیفیت بین سفارش‌ها، نشتی، توقف خط پرکن، ظاهر محصول روی قفسه</li>
+      <li><strong>معیار خرید:</strong> نمونه فیزیکی، مستندات فنی، پاسخ سریع و دقیق</li>
+      <li><strong>پیام کلیدی برای او:</strong> «اول تست کنید، بعد با خیال راحت سفارش بدهید.»</li>
+    </ul>
+
+    <h3>پرسونای ثانویه — «مهندس/مسئول فنی خط تولید»</h3>
+    <ul>
+      <li><strong>نقش:</strong> تصمیم‌گیر فنی سازگاری پمپ با خط پرکن و فرمولاسیون</li>
+      <li><strong>دغدغه‌ها:</strong> سازگاری با خط پرکن، تلورانس ابعادی، پایداری مکانیزم، نشتی در حین کار</li>
+      <li><strong>معیار خرید:</strong> مستندات فنی، جدول تلورانس، نتایج تست پایداری، نمونه اولیه</li>
+      <li><strong>پیام کلیدی:</strong> «اعداد و جدول بدهید، نه شعار.»</li>
+    </ul>
+
+    <h3><span class="latin">BrandScript</span> (روایت هشت‌گانه)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>عنصر</th><th>محتوا</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>کاراکتر</strong></td><td>برند زیبایی که بسته‌بندی درخشان و بی‌دردسر می‌خواهد</td></tr>
+          <tr><td><strong>مشکل</strong></td><td>نااطمینانی به ثبات کیفیت تأمین‌کننده‌ها</td></tr>
+          <tr><td><strong>راهنما</strong></td><td>کیوپلاست — تجربه صنعتی با نگاه زیبایی‌شناسانه</td></tr>
+          <tr><td><strong>برنامه</strong></td><td>۱. مشخص کنید ← ۲. انتخاب و تست ← ۳. سفارش مطمئن</td></tr>
+          <tr><td><strong>فراخوان مستقیم</strong></td><td>«همین حالا استعلام قیمت بگیرید»</td></tr>
+          <tr><td><strong>فراخوان انتقالی</strong></td><td>«پمپ مناسب خود را با فیلتر هوشمند انتخاب کنید»</td></tr>
+          <tr><td><strong>پرهیز از شکست</strong></td><td>نشتی، ناهماهنگی بچ، توقف خط</td></tr>
+          <tr><td><strong>دستیابی به موفقیت</strong></td><td>محصولی که روی قفسه همان‌قدر خوب است که در آزمایشگاه</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>شخصیت برند <span class="latin">(Brand Personality)</span></h3>
+    <p>اگر کیوپلاست آدم بود: مهندسی منظم و خوش‌تیپ؛ کم‌حرف اما کلامش سند؛ وقت‌شناس؛ عدد می‌دهد، نه شعار.</p>
+    <p><strong>پنج صفت:</strong> دقیق، مطمئن، بی‌ادعا، مدرن، هم‌سطح.</p>
+  </section>
+
+  <!-- ======================= بخش ۰۶ ======================= -->
+  <section class="brand-section" id="bakhsh-06">
+    <h2><span class="kicker">بخش ۰۶</span> هویت بصری و سبک تصویری</h2>
+
+    <h3>لوگو</h3>
+    <div style="text-align:center;margin:16px 0;">
+      <img src="assets/logo-brand.jpg" alt="لوگوی Q Plast" style="max-width:200px;height:auto;">
+    </div>
+    <ul>
+      <li>قرارگیری: راست در صفحات فارسی (RTL)، چپ در نسخه انگلیسی (LTR)</li>
+      <li>حریم امن: حداقل به اندازه ارتفاع حرف «Q» از هر سو</li>
+      <li>ممنوع: کشیدن، تغییر رنگ، افزودن سایه، قرارگیری روی پس‌زمینه شلوغ</li>
+      <li>نسخه‌ها: تمام‌سفید (روی تیره)، تمام‌تیره (روی روشن)، تک‌رنگ طلایی (چاپ خاص)</li>
+    </ul>
+
+    <h3>پالت رنگ</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>نقش</th><th>نام</th><th>HEX</th><th>CMYK</th><th>کاربرد</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>لهجه اصلی</strong></td><td>طلایی کیوپلاست</td>
+            <td><span class="swatch" style="background:#C19A55;"></span><code style="color:#000!important;">#C19A55</code></td>
+            <td>15/35/75/5</td><td>خط تأکید، دکمه‌ها، جزئیات ⚠️ فقط پس‌زمینه/خط — هرگز متن روی روشن</td>
+          </tr>
+          <tr>
+            <td><strong>لهجه تیره</strong></td><td>طلایی تیره</td>
+            <td><span class="swatch" style="background:#9C7A3E;"></span><code style="color:#000!important;">#9C7A3E</code></td>
+            <td>20/40/80/15</td><td>هاور دکمه، تأکید ثانویه</td>
+          </tr>
+          <tr>
+            <td><strong>مشکی گرم</strong></td><td>زغالی</td>
+            <td><span class="swatch" style="background:#1B1915;"></span><code style="color:#000!important;">#1B1915</code></td>
+            <td>50/40/40/80</td><td>تیتر، بدنه، پس‌زمینه تیره</td>
+          </tr>
+          <tr>
+            <td><strong>خاکستری متن</strong></td><td>طوسی متن</td>
+            <td><span class="swatch" style="background:#5F5A50;"></span><code style="color:#000!important;">#5F5A50</code></td>
+            <td>30/25/30/40</td><td>متن ثانویه، کپشن</td>
+          </tr>
+          <tr>
+            <td><strong>کرمی روشن</strong></td><td>کرم</td>
+            <td><span class="swatch" style="background:#FAF8F4;"></span><code style="color:#000!important;">#FAF8F4</code></td>
+            <td>2/2/5/0</td><td>پس‌زمینه اصلی</td>
+          </tr>
+          <tr>
+            <td><strong>سفید</strong></td><td>سفید</td>
+            <td><span class="swatch" style="background:#FFFFFF; border:1px solid #eee;"></span><code style="color:#000!important;">#FFFFFF</code></td>
+            <td>0/0/0/0</td><td>کارت‌ها، فضای منفی</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>نسبت استفاده:</strong> حدود ۸۰٪ سطح روشن، ۱۵٪ زغالی، ۵٪ طلایی — طلایی «ادویه» است، نه «غذا».</p>
+
+    <div style="background:#FFF3CD;border:1px solid #FFD700;border-radius:8px;padding:12px;margin:12px 0;">
+      <p><strong>⚠️ رعایت اجباری (WCAG 2.1):</strong></p>
+      <ul style="margin:8px 0;">
+        <li>طلایی <code style="color:#000!important;">#C19A55</code> هرگز به‌عنوان رنگ متن روی زمینه روشن (<code style="color:#000!important;">#FFFFFF</code> یا <code style="color:#000!important;">#FAF8F4</code>) استفاده نشود — کنتراست ۲٫۶:۱ (زیر حد ۴٫۵:۱)</li>
+        <li>طلایی تیره <code style="color:#000!important;">#9C7A3E</code> فقط برای متن درشت (۱۸px+ یا ۱۴px Bold) مجاز است — کنتراست ۴٫۲:۱</li>
+        <li>ترکیب استاندارد دکمه: پس‌زمینه <code style="color:#000!important;">#C19A55</code> + متن <code style="color:#000!important;">#1B1915</code> — کنتراست ۶٫۷:۱ ✅</li>
+        <li>این قانون در تمام صفحات وب، پست‌های اینستاگرام، و اسناد چاپی اجباری است</li>
+      </ul>
+    </div>
+
+    <h3>تایپوگرافی</h3>
+    <ul>
+      <li>فارسی (fa): <strong>وزیرمتن (Vazirmatn)</strong> — تیتر Bold، بدنه Regular | جهت: RTL</li>
+      <li>انگلیسی (en): <strong><span class="latin">Playfair Display</span></strong> برای تیترها؛ <strong><span class="latin">Inter</span></strong> برای بدنه | جهت: LTR</li>
+      <li>عربی (ar): <strong><span class="latin">Tajawal</span></strong> — تیتر Bold، بدنه Regular | جهت: RTL</li>
+      <li>ترکی (tr): <strong><span class="latin">Inter</span></strong> (همان انگلیسی) | جهت: LTR</li>
+      <li>چینی (zh): <strong><span class="latin">Noto Sans SC</span></strong> — تیتر Medium، بدنه Regular | جهت: LTR</li>
+      <li>وب: اندازه پایه ۱۶px، ارتفاع خط ۱٫۶</li>
+    </ul>
+
+    <h3>سبک تصویری <span class="latin">(Imagery Style)</span></h3>
+    <ul>
+      <li>عکس محصول: پس‌زمینه روشن یکدست، نور نرم جانبی، سایه ملایم</li>
+      <li>جزئیات مکانیکی: نمای ماکرو از دهانه و مکانیزم — دقت را «دیدنی» کنیم</li>
+      <li>فضای منفی سخاوتمندانه؛ ترکیب‌بندی مینیمال</li>
+      <li>ممنوع: استوک کلیشه‌ای، فیلتر اشباع، المان‌های بی‌ربط به محصول</li>
+    </ul>
+
+    <h3>نمونه پرامپت Midjourney برای عکاسی محصول</h3>
+    <div style="background:var(--tint);padding:16px;border-radius:8px;margin:12px 0;">
+      <p><strong>پرامپت استاندارد:</strong></p>
+      <code style="display:block;background:#1B1915;color:#C19A55;padding:12px;border-radius:6px;font-size:.85rem;direction:ltr;text-align:left;white-space:pre-wrap;">A premium cosmetic pump bottle on a clean white background, soft side lighting, subtle shadow, minimalist composition, commercial product photography, 8K, ultra-detailed, studio lighting --ar 1:1 --v 6</code>
+    </div>
+    <div style="background:var(--tint);padding:16px;border-radius:8px;margin:12px 0;">
+      <p><strong>پرامپت ماکرو (جزئیات مکانیکی):</strong></p>
+      <code style="display:block;background:#1B1915;color:#C19A55;padding:12px;border-radius:6px;font-size:.85rem;direction:ltr;text-align:left;white-space:pre-wrap;">Macro shot of a gold cosmetic pump mechanism, showing precision engineering details, soft directional lighting, shallow depth of field, white background, commercial photography --ar 4:3 --v 6</code>
+    </div>
+    <div style="background:var(--tint);padding:16px;border-radius:8px;margin:12px 0;">
+      <p><strong>پرامپت لایف‌استایل (روی قفسه):</strong></p>
+      <code style="display:block;background:#1B1915;color:#C19A55;padding:12px;border-radius:6px;font-size:.85rem;direction:ltr;text-align:left;white-space:pre-wrap;">Premium cosmetic products on a marble shelf, elegant bathroom setting, soft natural light, gold accents, luxury brand aesthetic, editorial photography --ar 16:9 --v 6</code>
+    </div>
+  </section>
+
+  <!-- ======================= بخش ۰۷ ======================= -->
+  <section class="brand-section" id="bakhsh-07">
+    <h2><span class="kicker">بخش ۰۷</span> هویت کلامی <span class="latin">(Verbal Identity)</span></h2>
+    <p>صدای برند کیوپلاست سه صفت بنیادین دارد. هر متن — از تیتر سایت تا پیام واتساپ — باید هر سه را همزمان رعایت کند.</p>
+
+    <h3>۱. بی‌ادعا</h3>
+    <ul>
+      <li><strong class="lbl-do">Do:</strong> ادعا را با عدد و واقعیت پشتیبانی کنید؛ اجازه دهید محصول حرف بزند.</li>
+      <li><strong class="lbl-dont">Don't:</strong> صفت‌های مطلق تبلیغاتی: «بهترین»، «بی‌نظیر»، «انقلابی»، «شماره یک».</li>
+    </ul>
+    <p class="example-label"><span class="latin">Example:</span></p>
+    <p class="good">✅ «هر بچ پیش از ارسال، تست یکنواختی می‌شود.»</p>
+    <p class="bad">❌ «بهترین پمپ دنیا، فقط اینجا!»</p>
+
+    <h3>۲. مطمئن</h3>
+    <ul>
+      <li><strong class="lbl-do">Do:</strong> جمله کوتاه، فعل معلوم، لحن قاطع بدون تردید.</li>
+      <li><strong class="lbl-dont">Don't:</strong> واژه‌های مردد («شاید»، «احتمالاً»، «فکر کنم») — و در مقابل، غرور بی‌پشتوانه.</li>
+    </ul>
+    <p class="example-label"><span class="latin">Example:</span></p>
+    <p class="good">✅ «این پمپ برای خطوط پرکن اتوماتیک تست شده است.»</p>
+    <p class="bad">❌ «فکر می‌کنیم شاید برای خط شما هم مناسب باشد.»</p>
+
+    <h3>۳. دقیق</h3>
+    <ul>
+      <li><strong class="lbl-do">Do:</strong> مشخصات را شفاف بگویید: دهانه، حجم، کاربرد، شرایط تست.</li>
+      <li><strong class="lbl-dont">Don't:</strong> کلی‌گویی («کیفیت بالا»، «مناسب همه کاربردها») بدون تعریف.</li>
+    </ul>
+    <p class="example-label"><span class="latin">Example:</span></p>
+    <p class="good">✅ «همتا — دهانه ۲۴، برای بطری‌های سایز متوسط رو به بزرگ.»</p>
+    <p class="bad">❌ «کیفیتی فوق‌العاده برای هر محصولی که تصورش را بکنید.»</p>
+
+    <p><strong>قانون جمع‌بندی:</strong> اگر جمله‌ای یکی از این سه صفت را نقض کند، بازنویسی می‌شود — حتی اگر جذاب باشد.</p>
+  </section>
+
+  <!-- ======================= بخش ۰۸ ======================= -->
+  <section class="brand-section" id="bakhsh-08">
+    <h2><span class="kicker">بخش ۰۸</span> پیام‌های کلیدی <span class="latin">(Key Messages)</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>#</th><th>محور</th><th>پیام</th><th>محل استفاده</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>۱</td><td><strong>کیفیت</strong></td><td>«کیفیت برای ما تعریف فنی دارد: ثبات بچ، تلورانس کنترل‌شده، تست قبل از ارسال.»</td><td>وب‌سایت (صفحه کیفیت)، کاتالوگ، مستندات</td></tr>
+          <tr><td>۲</td><td><strong>دقت</strong></td><td>«هر جزء با تلورانس مهندسی‌شده تولید می‌شود؛ چون خط شما حق توقف ندارد.»</td><td>وب‌سایت، برگه فنی، مذاکره فروش</td></tr>
+          <tr><td>۳</td><td><strong>عملکرد</strong></td><td>«پمپ‌های کیوپلاست برای کارکرد پیوسته روی خطوط پرکن طراحی و تست شده‌اند.»</td><td>کاتالوگ، صفحه محصولات، فروش</td></tr>
+          <tr><td>۴</td><td><strong>راهکار تخصصی</strong></td><td>«ما فقط پمپ نمی‌فروشیم؛ برای محصول و خط شما راهکار بسته‌بندی می‌سازیم.»</td><td>فروش، درباره ما، ایمیل</td></tr>
+          <tr><td>۵</td><td><strong>اعتماد</strong></td><td>«اول نمونه بگیرید و تست کنید؛ ما به محصولمان همین‌قدر مطمئنیم.»</td><td>فروش، اینستاگرام، صفحه استعلام</td></tr>
+          <tr><td>۶</td><td><strong>نوآوری</strong></td><td>«فیلتر هوشمند انتخاب محصول، نمونه‌ای از نگاه مهندسی ما به تجربه خرید است.»</td><td>وب‌سایت (<code>products.html#beauty</code>)، تبلیغات</td></tr>
+          <tr><td>۷</td><td><strong>ظرافت پرمیوم</strong></td><td>«جزئیاتی که مصرف‌کننده از نزدیک می‌بیند — و برند شما را متمایز می‌کند.»</td><td>اینستاگرام، بسته‌بندی، تبلیغات</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>قواعد استفاده:</strong></p>
+    <ul>
+      <li>هر محتوا در هر لحظه حداکثر ۱–۲ پیام محوری؛ همزمان‌پاشی همه پیام‌ها ممنوع</li>
+      <li>پیام بدون شاهد (عدد، تست، نمونه) حذف یا بازنویسی می‌شود</li>
+    </ul>
+  </section>
+
+  <!-- ======================= بخش ۰۹ ======================= -->
+  <section class="brand-section" id="bakhsh-09">
+    <h2><span class="kicker">بخش ۰۹</span> لحن برند بر اساس کانال <span class="latin">(Tone of Voice by Channel)</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>کانال</th><th>سطح رسمی</th><th>سطح فنی</th><th>سطح احساسی</th><th>مثال</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>وب‌سایت</strong></td><td>متوسط</td><td>متوسط</td><td>کم</td><td>«پمپ همتا، دهانه ۲۴ — طراحی‌شده برای خطوط پرکن اتوماتیک. همین حالا استعلام قیمت بگیرید.»</td></tr>
+          <tr><td><strong>اینستاگرام</strong></td><td>کم</td><td>کم تا متوسط</td><td>متوسط</td><td>«آنچه از دور دیده نمی‌شود، همان‌جاست که کیفیت ساخته می‌شود.»</td></tr>
+          <tr><td><strong>واتساپ</strong></td><td>کم تا متوسط</td><td>متوسط</td><td>کم</td><td>«سلام، وقت بخیر. برای آریا دهانه ۱۸، موجودی و شرایط ارسال را امروز اعلام می‌کنیم.»</td></tr>
+          <tr><td><strong>ایمیل</strong></td><td>زیاد</td><td>متوسط</td><td>کم</td><td>«با سلام؛ مشخصات فنی پمپ همتا (دهانه ۲۴) جهت بررسی پیوست ارسال می‌گردد.»</td></tr>
+          <tr><td><strong>کاتالوگ</strong></td><td>زیاد</td><td>زیاد</td><td>کم</td><td>«جدول ۲ — تلورانس حجم خروجی در بازه دمای کاری.»</td></tr>
+          <tr><td><strong>فروش (مذاکره)</strong></td><td>متوسط</td><td>متوسط تا زیاد</td><td>متوسط</td><td>«قبل از پیشنهاد، اجازه بدهید نیاز خط شما را دقیق بپرسم.»</td></tr>
+          <tr><td><strong>مستندات فنی</strong></td><td>زیاد</td><td>بسیار زیاد</td><td>هیچ</td><td>«حداکثر انحراف حجمی: نیازمند تأیید توسط واحد فنی.»</td></tr>
+          <tr><td><strong>پشتیبانی مشتری</strong></td><td>متوسط</td><td>متوسط</td><td>متوسط</td><td>«درخواست شما ثبت شد؛ پاسخ فنی حداکثر تا ۲ روز کاری اعلام می‌شود.»</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>قاعده سراسری:</strong> کانال، سطح لحن را تعیین می‌کند؛ اما سه صفت هویت کلامی (بی‌ادعا، مطمئن، دقیق) در همه کانال‌ها ثابت است.</p>
+  </section>
+
+  <!-- ======================= بخش ۱۰ ======================= -->
+  <section class="brand-section" id="bakhsh-10">
+    <h2><span class="kicker">بخش ۱۰</span> سامانه شعار <span class="latin">(Tagline System)</span></h2>
+    <p><strong>شعار اصلی — ثابت و تغییرناپذیر:</strong></p>
+    <div class="tagline-hero">«دقت مهندسی، ظرافت پرمیوم»</div>
+
+    <h3>نسخه‌های زبانی شعار</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>زبان</th><th>نسخه رسمی</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>فارسی</td><td>دقت مهندسی، ظرافت پرمیوم</td></tr>
+          <tr><td>انگلیسی</td><td><span dir="ltr">Engineering Precision, Premium Elegance</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>قانون طلایی:</strong> هسته شعار هرگز بازنویسی، ترجمه آزاد یا کوتاه نمی‌شود. در هر بستر فقط <strong>پیشوند یا پسوند زمینه‌ای</strong> مجاز است.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>بستر</th><th>نسخه زمینه‌ای</th><th>توضیح</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>وب‌سایت (Hero)</strong></td><td>«دقت مهندسی، ظرافت پرمیوم»</td><td>بدون الحاق؛ زیر آن یک‌لاینر برند</td></tr>
+          <tr><td><strong>بسته‌بندی محصول</strong></td><td>«کیوپلاست · دقت مهندسی، ظرافت پرمیوم»</td><td>یک‌خطی کوچک زیر لوگو</td></tr>
+          <tr><td><strong>کاتالوگ (جلد)</strong></td><td>«دقت مهندسی، ظرافت پرمیوم» + زیرنویس «پمپ و قطعات بسته‌بندی صنعت زیبایی»</td><td>زیرنویس با فونت بدنه</td></tr>
+          <tr><td><strong>شبکه‌های اجتماعی</strong></td><td>«دقت مهندسی، ظرافت پرمیوم · <span dir="ltr">@Qplast.1</span>»</td><td>در بایو و امضای پست‌های ثابت</td></tr>
+          <tr><td><strong>تبلیغات</strong></td><td>پیام کمپین + امضای پایانی «دقت مهندسی، ظرافت پرمیوم»</td><td>شعار نقش <span class="latin">end-frame</span> دارد</td></tr>
+          <tr><td><strong>امضای ایمیل</strong></td><td>«کیوپلاست — دقت مهندسی، ظرافت پرمیوم»</td><td>یک خط، زیر مشخصات تماس</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================= بخش ۱۱ ======================= -->
+  <section class="brand-section" id="bakhsh-11">
+    <h2><span class="kicker">بخش ۱۱</span> راهنمای برند در وب‌سایت</h2>
+    <p><strong>زمینه کلی:</strong> سایت B2B صنعتی است؛ هدف نهایی همه مسیرها، استعلام قیمت است.</p>
+    <p><strong>CTA مستقیم (همه‌جا):</strong> «همین حالا استعلام قیمت بگیرید»</p>
+    <p><strong>CTA انتقالی:</strong> «پمپ مناسب خود را با فیلتر هوشمند انتخاب کنید»</p>
+    <p><strong>فرآیند سه‌مرحله‌ای (در صفحات کلیدی تکرار شود):</strong></p>
+    <blockquote>۱. مشخص کنید ← ۲. انتخاب و تست ← ۳. سفارش مطمئن</blockquote>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>صفحه</th><th>هدف</th><th>قواعد محتوا</th><th>جایگاه CTA</th><th>لحن SEO</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Homepage</strong> (<code>index.html</code>)</td>
+            <td>دروازه ورود و مسیریابی با یک انتخاب ساده</td>
+            <td>تیتر = شعار؛ کارت‌های مسیر (محصولات، درباره ما، کیفیت، استعلام، تماس)؛ بدون شعار تبلیغاتی</td>
+            <td>دکمه مستقیم بالای فولد؛ انتقالی بعد از کارت‌ها</td>
+            <td>متا با کلیدواژه «پمپ بسته‌بندی آرایشی»، طبیعی و بدون انباشت</td>
+          </tr>
+          <tr>
+            <td><strong>Header</strong></td>
+            <td>هویت + ناوبری ثابت</td>
+            <td>لوگو + منوی ۵گانه + سوییچ FA/EN + منوی موبایل</td>
+            <td>CTA مستقیم به‌صورت دکمه در انتهای منو</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Footer</strong></td>
+            <td>اعتماد و دسترسی</td>
+            <td>شعار + کپی‌رایت + تلفن <span dir="ltr">+98 21 7714 8471</span> + <code>info@qplast.ir</code> + <span dir="ltr">@Qplast.1</span> + لینک صفحات</td>
+            <td>لینک استعلام کنار اطلاعات تماس</td>
+            <td>لینک‌سازی داخلی کامل</td>
+          </tr>
+          <tr>
+            <td><strong>Product Pages</strong> (<code>pages/products.html</code>)</td>
+            <td>نمایش گروه‌ها و هدایت به استعلام</td>
+            <td>فرمت توصیف: ۱ جمله معرفی ← جدول مشخصات ← کاربرد ← CTA؛ فیلتر هوشمند در <code>#beauty</code></td>
+            <td>انتقالی بالای لیست؛ مستقیم انتهای هر محصول</td>
+            <td>نام گروه + دهانه در Title و H1</td>
+          </tr>
+          <tr>
+            <td><strong>About</strong> (<code>pages/about.html</code>)</td>
+            <td>ساخت اعتماد و هم‌سطحی</td>
+            <td>فلسفه، ارزش‌ها (دقت، ثبات، اتکا، شراکت)؛ بدون اغراق و تاریخچه طولانی</td>
+            <td>انتقالی به محصولات/استعلام</td>
+            <td>روایت برند با کلیدواژه‌های برند</td>
+          </tr>
+          <tr>
+            <td><strong>Quality</strong> (<code>pages/quality.html</code>)</td>
+            <td>اثبات ادعا</td>
+            <td>تعهد کیفیت، ثبات بچ، مستندات، تلورانس کنترل‌شده؛ هر ادعا = سند</td>
+            <td>مستقیم، پس از بخش مستندات</td>
+            <td>ترکیب کلیدواژه کیفی و فنی</td>
+          </tr>
+          <tr>
+            <td><strong>Contact</strong> (<code>pages/contact.html</code>)</td>
+            <td>تسهیل ارتباط</td>
+            <td>اطلاعات تماس دقیق، ساعت پاسخگویی، فرم کوتاه</td>
+            <td>مستقیم (فرم)</td>
+            <td>NAP یکدست در همه‌جا</td>
+          </tr>
+          <tr>
+            <td><strong>Inquiry</strong> (<code>pages/inquiry.html</code>)</td>
+            <td>تبدیل نهایی</td>
+            <td>فرم پیش‌فاکتور: گروه، حجم، تعداد؛ تعهد شفاف زمان پاسخ (عدد نیازمند تأیید)</td>
+            <td>خودِ فرم = CTA</td>
+            <td>کلیدواژه «استعلام قیمت پمپ»</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>قواعد سراسری وب:</strong></p>
+    <ul>
+      <li>RTL کامل فارسی / LTR کامل انگلیسی؛ اعداد فارسی در نسخه فارسی</li>
+      <li>فرمت توصیف محصول هرگز از الگوی بالا منحرف نمی‌شود</li>
+      <li>هر صفحه دقیقاً یک CTA اصلی دارد</li>
+    </ul>
+  </section>
+
+  <!-- ======================= بخش ۱۲ ======================= -->
+  <section class="brand-section" id="bakhsh-12">
+    <h2><span class="kicker">بخش ۱۲</span> چاپ و بسته‌بندی <span class="latin">(Print &amp; Packaging)</span></h2>
+
+    <h3>مشخصات فنی سراسری چاپ</h3>
+    <ul>
+      <li><strong>حالت رنگ:</strong> CMYK (RGB در فایل چاپ مطلقاً ممنوع)</li>
+      <li><strong>رزولوشن تصاویر:</strong> حداقل <strong>300dpi</strong> در سایز چاپ واقعی</li>
+      <li><strong>Bleed (خط برش اضافه):</strong> <strong>3mm</strong> از هر چهار طرف</li>
+      <li><strong>Safe Area (حریم امن):</strong> <strong>5mm</strong> داخل خط برش — هیچ متن یا لوگو خارج از آن قرار نگیرد</li>
+      <li><strong>فونت:</strong> Outline/Embed شده در فایل نهایی؛ تحویل با PDF/X</li>
+      <li><strong>مشکی سطوح بزرگ:</strong> Rich Black (مثلاً 60/40/40/100)؛ متن‌ها Black ساده</li>
+    </ul>
+
+    <h3>پالت چاپی (CMYK)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>رنگ</th><th>CMYK</th><th>کاربرد</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="swatch" style="background:#C19A55;"></span><strong>طلایی کیوپلاست</strong></td><td>15/35/75/5</td><td>لهجه، خط تأکید، لوگو</td></tr>
+          <tr><td><span class="swatch" style="background:#9C7A3E;"></span><strong>طلایی تیره</strong></td><td>20/40/80/15</td><td>هاور، تأکید ثانویه</td></tr>
+          <tr><td><span class="swatch" style="background:#1B1915;"></span><strong>مشکی گرم (زغالی)</strong></td><td>50/40/40/80</td><td>تیتر، بدنه، پس‌زمینه تیره</td></tr>
+          <tr><td><span class="swatch" style="background:#5F5A50;"></span><strong>خاکستری متن</strong></td><td>30/25/30/40</td><td>متن ثانویه</td></tr>
+          <tr><td><span class="swatch" style="background:#FAF8F4;"></span><strong>کرمی روشن</strong></td><td>2/2/5/0</td><td>زمینه</td></tr>
+          <tr><td><span class="swatch" style="background:#FFFFFF; border:1px solid #eee;"></span><strong>سفید</strong></td><td>0/0/0/0</td><td>کارت‌ها</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>قواعد آیتم‌به‌آیتم</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>آیتم</th><th>قواعد</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>کاتالوگ</strong></td><td>A4 عمودی؛ گرید ۱۲ ستونه؛ لوگو بالا-راست جلد + شعار زیر آن؛ عکس‌ها 300dpi با پس‌زمینه روشن؛ جدول‌های فنی با خط نازک طلایی؛ پانوشت تماس در پایان هر بخش</td></tr>
+          <tr><td><strong>بروشور</strong></td><td>تاشو از A4؛ هر پنل حداکثر یک پیام کلیدی؛ CTA مستقیم در پنل آخر همراه اطلاعات تماس</td></tr>
+          <tr><td><strong>کارت ویزیت</strong></td><td>85×48mm + bleed 3mm؛ روی: لوگو + نام برند؛ پشت: نام، سمت، تلفن، ایمیل، سایت؛ حداقل سایز فونت 7pt؛ طلایی فقط برای یک عنصر</td></tr>
+          <tr><td><strong>بسته‌بندی</strong></td><td>لوگو + نام گروه + دهانه در یک نگاه خوانا؛ شعار یک‌خطی کوچک؛ نسبت رنگ 80/15/5؛ تست رنگ روی جنس واقعی پیش از تیراژ</td></tr>
+          <tr><td><strong>برچسب محصول (Label)</strong></td><td>نام محصول، گروه، دهانه، حجم؛ QR به صفحه محصول در <code>pages/products.html</code>؛ بارکد داخل safe area؛ الزامات قانونی برچسب نیازمند تأیید حقوقی</td></tr>
+          <tr><td><strong>برگه فنی (Technical Sheet)</strong></td><td>A4 تک‌صفحه؛ سربرگ استاندارد؛ جدول مشخصات بدون عکس تزئینی بزرگ؛ پانوشت: «مشخصات پیش از سفارش با واحد فنی تأیید شود»</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ======================= بخش ۱۳ ======================= -->
+  <section class="brand-section" id="bakhsh-13">
+    <h2><span class="kicker">بخش ۱۳</span> ارتباطات فروش <span class="latin">(Sales Communication)</span></h2>
+    <p><strong>اصول:</strong> حرفه‌ای، دقیق، مشاوره‌محور — بدون ادعای اغراق‌آمیز. هر وعده عددی نیازمند تأیید داخلی است.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>سناریو</th><th>اسکریپت/قالب</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>معرفی اولیه</strong></td><td>«سلام، از کیوپلاست تماس می‌گیرم؛ تولیدکننده پمپ و قطعات بسته‌بندی صنعت آرایشی. اگر بسته‌بندی پمپی در برنامه دارید، چند سؤال کوتاه دارم تا ببینیم موضوع برایتان موضوعیت دارد یا نه.»</td></tr>
+          <tr><td><strong>پاسخ به مشتری (گوش دادن)</strong></td><td>«متوجه شدم؛ اولویت شما کیفیت ثابت بچ است. درست فهمیدم؟ قبل از هر پیشنهادی بگذارید کامل بفرمایید.»</td></tr>
+          <tr><td><strong>معرفی محصول</strong></td><td>«همتا (میست اسپری) برای محصولات مراقبت از پوست طراحی شده. پیشنهاد ما: نمونه بگیرید و روی خط خودتان تست کنید — تصمیم با تست شما محکم‌تر است.»</td></tr>
+          <tr><td><strong>پاسخ به اعتراض (قیمت)</strong></td><td>«قیمت ما ارزان‌ترین نیست؛ مبنای ما ثبات بچ و حذف هزینه توقف خط شماست. اگر مقایسه فقط روی قیمت واحد باشد، صادقانه بگویم انتخاب دیگری به‌صرفه‌تر است.»</td></tr>
+          <tr><td><strong>پاسخ به اعتراض (تجربه بد قبلی)</strong></td><td>«حق دارید محتاط باشید. پیشنهاد ما شروع کوچک است: یک سفارش آزمایشی با تست کامل، تا کیفیت را خودتان بسنجید.»</td></tr>
+          <tr><td><strong>درخواست قیمت</strong></td><td>«برای پیش‌فاکتور دقیق سه مورد لازم داریم: گروه محصول، حجم، تعداد. این سه را بفرمایید تا پیش‌فاکتور در همان روز ارسال شود.»</td></tr>
+          <tr><td><strong>Follow-up</strong></td><td>«سلام مجدد؛ پیگیری استعلام هفته گذشته. اگر اولویت‌ها تغییر کرده بفرمایید تا فایل را به‌روز کنیم؛ در غیر این صورت منتظر نظر شما هستیم.»</td></tr>
+          <tr><td><strong>نمونه‌گیری</strong></td><td>«نمونه ارسال می‌شود. لطفاً روی خط خودتان تست کنید؛ چک‌لیست تست پیوست است تا مقایسه منصفانه باشد.»</td></tr>
+          <tr><td><strong>سفارش</strong></td><td>«تأیید سفارش شامل سه سند است: تعداد و مشخصات، زمان‌بندی تحویل، شرایط پرداخت. هر سه مکتوب برایتان ارسال می‌شود.»</td></tr>
+          <tr><td><strong>پس از فروش</strong></td><td>«تحویل انجام شد. ۲ هفته بعد تماس می‌گیریم تا عملکرد روی خط را مرور کنیم؛ هر ایرادی قبل از آن، همین امروز در خدمتیم.»</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>ممنوع در گفتار فروش:</strong> «رقیب نداریم»، «همیشه بدون خطا»، «قیمتمان از همه بهتر است»، وعده تحویل بدون تأیید برنامه تولید.</p>
+  </section>
+
+  <!-- ======================= بخش ۱۴ ======================= -->
+  <section class="brand-section" id="bakhsh-14">
+    <h2><span class="kicker">بخش ۱۴</span> قواعد برند برای عامل‌های هوشمند <span class="latin">(AI &amp; Agent Rules)</span></h2>
+
+    <h3>اطلاعات مجاز <span class="latin">(CAN USE)</span></h3>
+    <ul>
+      <li>واقعیات برند: نام، شعار، یک‌لاینر، ارزش‌ها، اطلاعات تماس، آدرس صفحات</li>
+      <li>گروه‌های محصول و کاربرد کلی: همتا (دهانه ۲۴)، آریا (دهانه ۱۸/۲۰)</li>
+      <li>فرآیند سه‌مرحله‌ای، قواعد لحن، پیام‌های کلیدی بخش ۰۸</li>
+    </ul>
+
+    <h3>اطلاعات غیرقابل حدس <span class="latin">(MUST NOT GUESS)</span></h3>
+    <p>قیمت، تخفیف، موجودی، زمان تحویل، تلورانس‌های عددی، ظرفیت تولید، جنس مواد، گواهینامه‌ها و استانداردها.<br>
+    اگر پرسیده شد: «این مورد نیازمند تأیید است؛ درخواست شما را به تیم مربوطه می‌رسانم.» + برچسب <strong>«نیازمند تأیید»</strong></p>
+
+    <h3>چه زمانی سؤال بپرسد <span class="latin">(ASK)</span></h3>
+    <ul>
+      <li>درخواست قیمت بدون یکی از سه ورودی: گروه، حجم، تعداد</li>
+      <li>کاربرد خارج از حوزه معمول (مثلاً صنعت غیرآرایشی) ← ارجاع به تیم فنی</li>
+      <li>ابهام در دهانه یا حجم ← شفاف‌سازی قبل از پاسخ</li>
+    </ul>
+
+    <h3>چه زمانی تأیید انسان لازم است <span class="latin">(HUMAN APPROVAL)</span></h3>
+    <ul>
+      <li>هر ادعای فنی جدید که در پایگاه دانش نیست</li>
+      <li>پاسخ به شکایت یا موضوع حقوقی</li>
+      <li>هر عددی که در این سند نیامده</li>
+    </ul>
+
+    <h3>نحوه صحبت با مشتری <span class="latin">(VOICE)</span></h3>
+    <ul>
+      <li>سه صفت: بی‌ادعا، مطمئن، دقیق</li>
+      <li>جملات کوتاه؛ فارسی رسمی-دوستانه؛ بدون ایموجی در پاسخ‌های رسمی</li>
+      <li>عدم قطعیت را صادقانه بگو، حدس نزن</li>
+    </ul>
+
+    <h3>ادعاهای ممنوع <span class="latin">(FORBIDDEN CLAIMS)</span></h3>
+    <p>«بهترین / بی‌رقیب / شماره یک»، «تضمین صددرصد»، «سازگار با همه فرمول‌ها»، ادعای استاندارد یا گواهی بدون سند، مقایسه مستقیم با برند رقیب.</p>
+
+    <h3>حفظ صدای برند</h3>
+    <p>پیش از ارسال هر پاسخ بپرس: آیا بی‌ادعا است؟ آیا مطمئن است؟ آیا دقیق است؟ اگر یکی «نه» بود ← بازنویسی.</p>
+
+    <h3>انتقال مشخصات محصول</h3>
+    <p>فقط از PRODUCT_FACTS بخش ۱۷ نقل‌قول کن؛ چیزی که آنجا نیست ← «نیازمند تأیید» + ارجاع به واحد فنی. هرگز عدد فنی از حافظه عمومی تولید نکن.</p>
+
+    <h3>پروتکل بحران کیفیت <span class="latin">(Quality Crisis Protocol)</span></h3>
+    <p>اگر بچ ارسالی دچار تلورانس خارج از محدوده شد و خط تولید مشتری متوقف شد:</p>
+    <ol>
+      <li><strong>فوری:</strong> عذرخواصی رسمی + اعلام بررسی فوری واحد فنی</li>
+      <li><strong>۲۴ ساعت:</strong> ارائه گزارش اولیه علت (Root Cause Analysis)</li>
+      <li><strong>۴۸ ساعت:</strong> ارائه طرح اصلاحی + برنامه جبران (شامل ارسال بچ جایگزین در اسرع وقت)</li>
+      <li><strong>تمام مراحل:</strong> فقط مدیر برند یا مالک برند مجاز به ارتباط با مشتری هستند</li>
+      <li><strong>مستندسازی:</strong> تمام مکاتبات و اقدامات در پرونده مشتری ثبت می‌شود</li>
+    </ol>
+  </section>
+
+  <!-- ======================= بخش ۱۵ ======================= -->
+  <section class="brand-section" id="bakhsh-15">
+    <h2><span class="kicker">بخش ۱۵</span> حاکمیت برند <span class="latin">(Brand Governance)</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>موضوع</th><th>مسئول تصمیم</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>تصمیم نهایی موارد مهم برند</td><td><strong>مالک برند</strong></td></tr>
+          <tr><td>مدیریت و نگهداشت سیستم برند</td><td><strong>مدیر برند کیوپلاست (Q Plast Manager)</strong></td></tr>
+          <tr><td>تغییر اطلاعات محصول</td><td>پیشنهاد: واحد فنی ← تأیید: مدیر برند ← ثبت: پایگاه دانش</td></tr>
+          <tr><td>تغییر قیمت</td><td>فقط با تأیید مالک برند</td></tr>
+          <tr><td>انتشار محتوا</td><td>مدیر برند، در چارچوب همین سند</td></tr>
+          <tr><td>موارد خارج از چارچوب سند</td><td>ارجاع به مالک برند</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>نیازمند تأیید مالک برند:</strong> تغییر شعار، لوگو، پالت رنگ، ادعاهای فنی، قیمت‌گذاری، پیام اصلی کمپین‌های بزرگ، ورود به کانال جدید.</p>
+    <p><strong>اصل بنیادین:</strong></p>
+    <blockquote>مدیر کیوپلاست سیستم برند را مدیریت می‌کند، اما تصمیم نهایی در موارد مهم با مالک برند است.</blockquote>
+    <p><strong>چرخه بازنگری:</strong> این سند هر ۶ ماه بازبینی می‌شود؛ هر تغییر با ثبت تاریخ و شماره نسخه.</p>
+  </section>
+
+  <!-- ======================= بخش ۱۶ ======================= -->
+  <section class="brand-section" id="bakhsh-16">
+    <h2><span class="kicker">بخش ۱۶</span> چک‌لیست کنترل کیفیت برند <span class="latin">(Brand QA Checklist)</span></h2>
+    <p>قبل از انتشار <strong>هر</strong> محتوا (پست، صفحه، کاتالوگ، ایمیل، پاسخ عامل هوشمند):</p>
+
+    <div class="qa-grid">
+      <div class="qa-card">
+        <h4>برند</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> شعار دست‌نخورده است؟ (بدون بازنویسی)</label></li>
+          <li><label><input type="checkbox"> لحن سه‌صفتی رعایت شده؟ (بی‌ادعا، مطمئن، دقیق)</label></li>
+          <li><label><input type="checkbox"> ارزش‌ها (دقت، ثبات، اتکا، شراکت) نقض نشده؟</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>بصری</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> لوگو با حریم امن و بدون تغییر رنگ؟</label></li>
+          <li><label><input type="checkbox"> رنگ‌ها طبق HEX/CMYK سند؟</label></li>
+          <li><label><input type="checkbox"> فونت وزیرمتن (FA) / Playfair Display + Inter (EN)؟</label></li>
+          <li><label><input type="checkbox"> چاپ: 300dpi، bleed 3mm، safe area رعایت شده؟</label></li>
+          <li><label><input type="checkbox"> <strong>تست کنتراست اجباری:</strong> Lighthouse یا WebAIM — کنتراست متن حداقل ۴.۵:۱ (طلایی #C19A55 هرگز متن روی زمینه روشن نباشد)</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>پیام</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> ادعای مطلق یا اغراق وجود ندارد؟</label></li>
+          <li><label><input type="checkbox"> CTA صحیح: مستقیم یا انتقالی طبق بخش ۱۱؟</label></li>
+          <li><label><input type="checkbox"> حداکثر ۱–۲ پیام کلیدی در هر محتوا؟</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>محصول</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> مشخصات فقط از PRODUCT_FACTS نقل شده؟</label></li>
+          <li><label><input type="checkbox"> همه موارد «نیازمند تأیید» حل شده‌اند؟</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>فنی</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> لینک‌ها صحیح؟ (<code>pages/products.html#beauty</code> و…)</label></li>
+          <li><label><input type="checkbox"> RTL/LTR و اعداد فارسی درست؟</label></li>
+          <li><label><input type="checkbox"> نمای موبایل بررسی شده؟</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>فروش</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> اسکریپت طبق بخش ۱۳؟</label></li>
+          <li><label><input type="checkbox"> هیچ وعده زمانی/قیمتی بدون تأیید؟</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>حقوقی</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> اطلاعات تماس صحیح و یکدست؟</label></li>
+          <li><label><input type="checkbox"> ادعای استاندارد/گواهی فقط با سند؟</label></li>
+        </ul>
+      </div>
+      <div class="qa-card">
+        <h4>کیفیت</h4>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> املاء و نگارش فارسی بررسی شده؟</label></li>
+          <li><label><input type="checkbox"> نسخه دوزبانه هماهنگ؟</label></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="stop-rule">⚠ قانون توقف: هر پاسخ «خیر» یعنی انتشار متوقف می‌شود تا اصلاح شود.</p>
+  </section>
+
+  <!-- ======================= بخش ۱۷ ======================= -->
+  <section class="brand-section" id="bakhsh-17">
+    <h2><span class="kicker">بخش ۱۷</span> نسخه پایگاه دانش هوش مصنوعی <span class="latin">(AI Knowledge Base Version)</span></h2>
+<div class="kb-block">
+<span class="kb-section">[BRAND_FACTS]</span>
+name: Q Plast / کیوپلاست
+industry: پمپ و قطعات بسته‌بندی صنعت آرایشی و بهداشتی
+tagline: «دقت مهندسی، ظرافت پرمیوم»
+one_liner: «ما در کیوپلاست متعهدیم که دقت مهندسی و پایداری صنعتی را با ظرافت و زیبایی دنیای آرایشی پیوند بزنیم.»
+cta_direct: «همین حالا استعلام قیمت بگیرید»
+cta_transitional: «پمپ مناسب خود را با فیلتر هوشمند انتخاب کنید»
+phone: +98 21 7714 8471
+mobile: +98 990 970 2100
+email: info@qplast.ir
+instagram: @Qplast.1
+linkedin: https://www.linkedin.com/company/qplast
+website_pages: index.html, pages/products.html, pages/about.html, pages/quality.html, pages/contact.html, pages/inquiry.html
+process: ۱. مشخص کنید → ۲. انتخاب و تست → ۳. سفارش مطمئن
+
+<span class="kb-section">[PRODUCT_FACTS]</span>
+family_1: همتا — دهانه ۲۴ (گروه همتا)
+family_2: آریا — دهانه ۱۸/۲۰ (گروه آریا)
+family_3: پارس — دهانه ۲۰، متالایز (گروه پارس)
+family_4: سپنتا — آیرلس، ۳۰/۵۰/۸۰ میلی‌لیتر (گروه سپنتا)
+family_5: Q Oil Spray — دهانه ۲۴، ۱۴۰ میلی‌لیتر (اسپری روغن)
+product_finder: pages/products.html#beauty (انکر صفحه محصولات — فیلترهای فنی)
+numeric_specs: تلورانس حجم خروجی: ±۰.۱ سی‌سی؛ تلورانس قطر دهانه: ±۰.۵ میلی‌متر (هر دو عدد نیازمند تأیید نهایی واحد فنی)
+pricing: نیازمند تأیید — فقط مالک برند
+lead_time: موجودی قابل تأمین است؛ زمان دقیق تحویل باید برای هر سفارش استعلام شود
+
+<span class="kb-section">[AUDIENCE]</span>
+primary: مدیر محصول/خرید برند آرایشی؛ دغدغه: ثبات کیفیت، نشتی، توقف خط، ظاهر قفسه
+secondary: مهندس/مسئول فنی خط تولید؛ زبان مناسب: داده و جدول؛ معیار: مستندات فنی، نتایج تست
+
+<span class="kb-section">[POSITIONING]</span>
+statement: برای برندهای آرایشی–بهداشتی که بسته‌بندی بخشی از کیفیت محصولشان است، کیوپلاست تولیدکننده ایرانی پمپ‌هایی است که پایداری صنعتی را با ظرافت پرمیوم تحویل می‌دهد — یک شریک فنی، نه فقط تأمین‌کننده.
+
+<span class="kb-section">[USP]</span>
+usp_1: پیوند دقت مهندسی صنعتی با ظرافت دنیای آرایشی
+usp_2: ثبات بچ بین سفارش‌ها
+usp_3: انتخاب هوشمند با فیلتر فنی
+
+<span class="kb-section">[VALUES]</span>
+value_1: دقت — عدد و تلورانس به‌جای صفت
+value_2: ثبات — سفارش امروز مثل سفارش قبلی
+value_3: اتکا — برنامه‌ریزی‌پذیر برای مشتری
+value_4: شراکت — هم‌سطح برند مشتری
+
+<span class="kb-section">[VOICE]</span>
+traits: بی‌ادعا، مطمئن، دقیق
+rules: ادعا با عدد؛ جمله کوتاه و قاطع؛ مشخصات شفاف
+forbidden_words: بهترین، بی‌نظیر، انقلابی، شماره یک، تضمین صددرصد
+
+<span class="kb-section">[TONE]</span>
+website: رسمی متوسط، فنی متوسط
+instagram: رسمی کم، احساسی متوسط
+whatsapp: رسمی کم تا متوسط، پاسخ سریع
+email: رسمی زیاد
+catalog: رسمی زیاد، فنی زیاد
+sales: مشاوره‌محور، رسمی متوسط
+tech_docs: کاملاً رسمی و فنی
+support: متعادل، همدلانه و دقیق
+
+<span class="kb-section">[VISUAL_RULES]</span>
+colors_hex: gold #C19A55, dark_gold #9C7A3E, warm_black #1B1915, text_gray #5F5A50, cream #FAF8F4, white #FFFFFF
+colors_cmyk: gold 15/35/75/5, dark_gold 20/40/80/15, warm_black 50/40/40/80, text_gray 30/25/30/40, cream 2/2/5/0, white 0/0/0/0
+color_ratio: 80 درصد روشن / 15 درصد زغالی / 5 درصد طلایی
+contrast_rule: طلایی اصلی #C19A55 هرگز متن روی زمینه روشن نباشد. ترکیب دکمه: پس‌زمینه طلایی + متن #1B1915
+fonts_fa: وزیرمتن (Vazirmatn)
+fonts_en: Playfair Display برای تیترها، Inter برای متن
+logo_rules: حریم امن = ارتفاع Q؛ بدون تغییر رنگ، کشیدگی یا سایه
+imagery: پس‌زمینه روشن، نور نرم، ماکروی جزئیات مکانیکی، فضای منفی زیاد
+print_specs: CMYK، حداقل 300dpi، bleed 3mm، safe area 5mm
+
+<span class="kb-section">[CONTENT_RULES]</span>
+max_key_messages_per_content: 2
+product_description_format: معرفی یک‌جمله‌ای ← جدول مشخصات ← کاربرد ← CTA
+tagline_integrity: هسته شعار تغییرناپذیر؛ فقط پیشوند/پسوند زمینه‌ای مجاز
+numbers: اعداد فارسی در نسخه فارسی
+
+<span class="kb-section">[SALES_RULES]</span>
+quote_requires: گروه + حجم + تعداد
+approach: مشاوره‌محور؛ نمونه و تست قبل از سفارش
+never: وعده تحویل یا قیمت بدون تأیید؛ اغراق؛ مقایسه مستقیم با رقیب
+
+<span class="kb-section">[WEBSITE_RULES]</span>
+gateway: index.html = دروازه ورود با یک انتخاب ساده
+cta_placement: مستقیم بالای فولد خانه؛ انتقالی پیش از لیست محصولات؛ مستقیم انتهای هر محصول
+finder: pages/products.html#beauty
+bilingual: FA (RTL) / EN (LTR) کامل
+news_section: pages/news.html — بخش هفتگی اخبار صنعت آرایشی و بسته‌بندی (در اولویت فعلی: نقشه راه آینده)
+
+<span class="kb-section">[AGENT_RULES]</span>
+can_use: BRAND_FACTS, PRODUCT_FACTS, VALUES, VOICE, TONE, WEBSITE_RULES
+must_not_guess: قیمت، موجودی، زمان تحویل، تلورانس عددی، گواهینامه‌ها، مواد
+ask_when: درخواست قیمت ناقص؛ کاربرد خارج از حوزه؛ ابهام در دهانه یا حجم
+human_approval: تعهد مالی؛ ادعای فنی جدید؛ شکایت یا موضوع حقوقی؛ هر عدد خارج از پایگاه دانش
+uncertainty_phrase: «این مورد نیازمند تأیید است»
+spec_source: فقط PRODUCT_FACTS؛ در غیر این صورت ارجاع به واحد فنی
+
+<span class="kb-section">[DO_NOT]</span>
+do_not_1: بازنویسی یا ترجمه آزاد شعار
+do_not_2: صفت‌های مطلق: بهترین، بی‌نظیر، انقلابی، شماره یک
+do_not_3: تضمین صددرصد یا وعده بدون سند
+do_not_4: مقایسه مستقیم با برند رقیب
+do_not_5: تولید عدد فنی یا قیمتی از حافظه عمومی
+do_not_6: تغییر رنگ یا فرم لوگو
+do_not_7: استفاده RGB در فایل چاپ
+
+<span class="kb-section">[REQUIRES_APPROVAL]</span>
+approval_1: تغییر شعار، لوگو، پالت رنگ
+approval_2: هر قیمت، تخفیف، شرایط پرداخت
+approval_3: ادعای فنی یا استاندارد جدید
+approval_4: زمان تحویل و موجودی
+approval_5: پاسخ به شکایت یا موضوع حقوقی
+approval_6: پیام اصلی کمپین‌های بزرگ
+approval_7: ورود به کانال جدید
+</div>
+  </section>
+
+  <!-- ======================= ممیزی نهایی ======================= -->
+  <section class="brand-section" id="quality-audit">
+    <h2><span class="kicker">پیش‌نهایی</span> ممیزی نهایی کیفیت سند <span class="latin">(Quality Audit)</span></h2>
+    <p>این سند تمام ۲۰ مؤلفه برند را پوشش می‌دهد:</p>
+    <ul class="audit-grid">
+      <li><span class="tick">✓</span> Mission — بخش ۰۱</li>
+      <li><span class="tick">✓</span> Vision — بخش ۰۲</li>
+      <li><span class="tick">✓</span> Values — بخش ۰۳</li>
+      <li><span class="tick">✓</span> Positioning — بخش ۰۴</li>
+      <li><span class="tick">✓</span> USP — بخش ۰۴</li>
+      <li><span class="tick">✓</span> Buyer Persona — بخش ۰۵</li>
+      <li><span class="tick">✓</span> BrandScript — بخش ۰۵</li>
+      <li><span class="tick">✓</span> Brand Personality — بخش ۰۵</li>
+      <li><span class="tick">✓</span> Brand Voice — بخش ۰۷</li>
+      <li><span class="tick">✓</span> Tone by Channel — بخش ۰۹</li>
+      <li><span class="tick">✓</span> Key Messages — بخش ۰۸</li>
+      <li><span class="tick">✓</span> Visual Identity — بخش ۰۶</li>
+      <li><span class="tick">✓</span> Imagery Style — بخش ۰۶</li>
+      <li><span class="tick">✓</span> Website Guidelines — بخش ۱۱</li>
+      <li><span class="tick">✓</span> Packaging Guidelines — بخش ۱۲</li>
+      <li><span class="tick">✓</span> Sales Guidelines — بخش ۱۳</li>
+      <li><span class="tick">✓</span> AI/Agent Rules — بخش ۱۴</li>
+      <li><span class="tick">✓</span> Governance — بخش ۱۵</li>
+      <li><span class="tick">✓</span> QA Checklist — بخش ۱۶</li>
+      <li><span class="tick">✓</span> AI Knowledge Base — بخش ۱۷</li>
+    </ul>
+    <div class="banner">نتیجه ممیزی: ۲۰/۲۰ ✓ — سند برند کامل است.</div>
+  </section>
+
+  <!-- ======================= تاریخچه نسخه‌ها ======================= -->
+  <section class="brand-section">
+    <h2><span class="kicker">تاریخچه</span> نسخه‌ها <span class="latin">(Changelog)</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>نسخه</th><th>تاریخ</th><th>تغییرات</th><th>تأییدکننده</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>۱٫۰</strong></td><td>اوت ۲۰۲۶</td><td>نسخه اولیه — تمام ۲۰ مؤلفه برند</td><td>کیومرث مظلوم ساکی</td></tr>
+          <tr><td><strong>۱٫۱</strong></td><td>اوت ۲۰۲۶</td><td>اصلاحات: Q Oil Spray، تکمیل specs_numeric، فونت عربی/ترکی/چینی، مسیر بخش اخبار، یادداشت کنتراست، جدول تاریخچه، تأیید مالک برند</td><td>کیومرث مظلوم ساکی</td></tr>
+          <tr><td><strong>۱٫۲</strong></td><td>اوت ۲۰۲۶</td><td>پاکسازی کامل بخش ۱۷ (نام برند، جملات ناقص)؛ تکمیل website_pages؛ تکمیل specs_numeric با واحد مشخص؛ یکسان‌سازی نهایی کل سند</td><td>کیومرث مظلوم ساکی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p class="ftag">Q Plast — دقت مهندسی، ظرافت پرمیوم</p>
+    <p><span dir="ltr">info@qplast.ir</span> · <span dir="ltr">+98 21 7714 8471</span> · <span dir="ltr">@Qplast.1</span></p>
+  </footer>
+
+</div>
+
+</body>
+</html>

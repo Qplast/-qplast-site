@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qplast.ir/sitemap.xml
+
+# Disallow admin/private paths only
+Disallow: /admin/
+Disallow: /private/
+
+# Updated 2026-08-30: full public crawl enabled via Allow: / above
