@@ -174,7 +174,7 @@
       ]
     },
     dropper: {
-      family: { fa: "قطره چکان", en: "Dropper", ar: "قطارة", tr: "Damlalık", zh: "滴管" },
+      family: { fa: "آرتا", en: "Arta", ar: "آرتا", tr: "Arta", zh: "Arta" },
       diameter: 36,
       cap: 49,
       material: "PET",
@@ -202,11 +202,11 @@
 
   function recText(lang, fam) {
     var NAMES = {
-      fa: { hamta: "«همتا»", arya: "«آریا»", pars: "«پارس»", sepanta: "«سپنتا»", qoil: "«اسپری روغن Q»", dropper: "«قطره چکان»" },
-      en: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q Oil Spray", dropper: "Dropper" },
-      ar: { hamta: "«همتا»", arya: "«آريا»", pars: "«بارس»", sepanta: "«سبنتا»", qoil: "«رذاذ الزيت Q»", dropper: "«قطارة»" },
-      tr: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q Yağ Spreyi", dropper: "Damlalık" },
-      zh: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q油雾喷头", dropper: "滴管" }
+      fa: { hamta: "«همتا»", arya: "«آریا»", pars: "«پارس»", sepanta: "«سپنتا»", qoil: "«اسپری روغن Q»", dropper: "«آرتا»" },
+      en: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q Oil Spray", dropper: "Arta" },
+      ar: { hamta: "«همتا»", arya: "«آريا»", pars: "«بارس»", sepanta: "«سبنتا»", qoil: "«رذاذ الزيت Q»", dropper: "«آرتا»" },
+      tr: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q Yağ Spreyi", dropper: "Arta" },
+      zh: { hamta: "Hamta", arya: "Arya", pars: "Pars", sepanta: "Sepanta", qoil: "Q油雾喷头", dropper: "Arta" }
     };
     var names = NAMES[lang] || NAMES.en;
 
@@ -632,7 +632,7 @@
       var qty = document.getElementById("fQty").value.trim();
       var msg = document.getElementById("fMsg").value.trim();
 
-      var familyLabel = family === "hamta" ? "Hamta (Neck 24)" : family === "arya" ? "Arya (Neck 18)" : family === "pars" ? "Pars (Neck 20)" : family === "sepanta" ? "Sepanta (Airless)" : family === "dropper" ? "Dropper" : family === "qoil" ? "Q Oil Spray" : family;
+      var familyLabel = family === "hamta" ? "Hamta (Neck 24)" : family === "arya" ? "Arya (Neck 18)" : family === "pars" ? "Pars (Neck 20)" : family === "sepanta" ? "Sepanta (Airless)" : family === "dropper" ? "Arta" : family === "qoil" ? "Q Oil Spray" : family;
       var subject = "Quote request — " + (company || name);
 
       var lines = [
