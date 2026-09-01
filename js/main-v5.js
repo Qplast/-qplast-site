@@ -190,15 +190,12 @@
     },
     sepanta: {
       family: { fa: "سپنتا", en: "Sepanta", ar: "سبنتا", tr: "Sepanta", zh: "塞潘塔" },
-      diameter: 45,
-      pump: 45,
-      material: "PP",
       airless: true,
-      fixedNeck: true,
+      unverified: true,
       bottles: [
-        { vol: 30, h: 110, neck: 0 },
-        { vol: 50, h: 140, neck: 0 },
-        { vol: 80, h: 170, neck: 0 }
+        { vol: 30 },
+        { vol: 50 },
+        { vol: 80 }
       ]
     }
   };
@@ -263,6 +260,7 @@
 
   function buildBlueprint(fam, vol) {
     var f = SPECS_DATA[fam];
+    if (!f || f.unverified) return "";
     var bottle = null;
     var list = fam === "dropper" ? bottlesFor(fam, currentNeck) : f.bottles;
     for (var i = 0; i < list.length; i++) {
@@ -421,31 +419,44 @@
       volBtns.appendChild(bEl);
     });
 
-    /* drawing */
-    drawEl.innerHTML = buildBlueprint(currentFamily, currentVol);
-
-    /* caption */
-    var bottle = null;
-    for (var i = 0; i < famBottles.length; i++) {
-      if (famBottles[i].vol === currentVol) { bottle = famBottles[i]; break; }
-    }
-    var caps = [];
-    caps.push({ l: "Bottle", v: fmt(bottle.h) + " mm" });
-    caps.push({ l: f.airless ? "NeckFixed" : "Neck", v: f.airless ? "•" : fmt(bottle.neck || 24) + " mm" });
-    caps.push({ l: f.cap ? "Cap" : "Pump", v: fmt(f.cap || f.pump) + " mm" });
-    caps.push({ l: "Straw", v: fmt(bottle.h) + " mm" });
-    caps.push({ l: "Body", v: f.material });
-    var DIM_LABELS = {
-      fa: { Bottle: "ارتفاع بطری", Neck: "دهانه", NeckFixed: "دهانهٔ ثابت", Pump: "طول پمپ", Cap: "کاپ", Straw: "نی", Body: "جنس بدنه" },
-      en: { Bottle: "Bottle height", Neck: "Neck", NeckFixed: "Fixed neck", Pump: "Pump length", Cap: "Cap", Straw: "Straw", Body: "Body material" },
-      ar: { Bottle: "ارتفاع الزجاجة", Neck: "العنق", NeckFixed: "عنق ثابت", Pump: "طول المضخة", Cap: "الغطاء", Straw: "المصاصة", Body: "مادة الجسم" },
-      tr: { Bottle: "Şişe yüksekliği", Neck: "Boyun", NeckFixed: "Sabit boyun", Pump: "Pompa uzunluğu", Cap: "Kapak", Straw: "Pipet", Body: "Gövde malzemesi" },
-      zh: { Bottle: "瓶高", Neck: "口径", NeckFixed: "固定口径", Pump: "泵长", Cap: "瓶盖", Straw: "吸管", Body: "主体材质" }
+    /* drawing or unverified-specs message */
+    var SPEC_NOTE = {
+      fa: "مشخصات فنی این مدل در مرجع فعلی ثبت نشده است.",
+      en: "Technical specifications for this model are not recorded in the current reference.",
+      ar: "المواصفات الفنية لهذا الموديل غير مسجلة في المرجع الحالي.",
+      tr: "Bu modelin teknik özellikleri mevcut referansta kayıtlı değildir.",
+      zh: "该型号的技术规格未记录在当前参考文件中。"
     };
-    var L = DIM_LABELS[currentLang] || DIM_LABELS.en;
-    capEl.innerHTML = caps.map(function (c) {
-      return '<span class="specs__cap-item">' + L[c.l] + ': <b>' + c.v + '</b></span>';
-    }).join("");
+    if (f.unverified) {
+      drawEl.innerHTML = '<p style="text-align:center;color:var(--ink-soft);padding:40px 10px;font-size:14px">' + (SPEC_NOTE[currentLang] || SPEC_NOTE.en) + '</p>';
+      capEl.innerHTML = "";
+    } else {
+      /* drawing */
+      drawEl.innerHTML = buildBlueprint(currentFamily, currentVol);
+
+      /* caption */
+      var bottle = null;
+      for (var i = 0; i < famBottles.length; i++) {
+        if (famBottles[i].vol === currentVol) { bottle = famBottles[i]; break; }
+      }
+      var caps = [];
+      caps.push({ l: "Bottle", v: fmt(bottle.h) + " mm" });
+      caps.push({ l: f.airless ? "NeckFixed" : "Neck", v: f.airless ? "•" : fmt(bottle.neck || 24) + " mm" });
+      caps.push({ l: f.cap ? "Cap" : "Pump", v: fmt(f.cap || f.pump) + " mm" });
+      caps.push({ l: "Straw", v: fmt(bottle.h) + " mm" });
+      caps.push({ l: "Body", v: f.material });
+      var DIM_LABELS = {
+        fa: { Bottle: "ارتفاع بطری", Neck: "دهانه", NeckFixed: "دهانهٔ ثابت", Pump: "طول پمپ", Cap: "کاپ", Straw: "نی", Body: "جنس بدنه" },
+        en: { Bottle: "Bottle height", Neck: "Neck", NeckFixed: "Fixed neck", Pump: "Pump length", Cap: "Cap", Straw: "Straw", Body: "Body material" },
+        ar: { Bottle: "ارتفاع الزجاجة", Neck: "العنق", NeckFixed: "عنق ثابت", Pump: "طول المضخة", Cap: "الغطاء", Straw: "المصاصة", Body: "مادة الجسم" },
+        tr: { Bottle: "Şişe yüksekliği", Neck: "Boyun", NeckFixed: "Sabit boyun", Pump: "Pompa uzunluğu", Cap: "Kapak", Straw: "Pipet", Body: "Gövde malzemesi" },
+        zh: { Bottle: "瓶高", Neck: "口径", NeckFixed: "固定口径", Pump: "泵长", Cap: "瓶盖", Straw: "吸管", Body: "主体材质" }
+      };
+      var L = DIM_LABELS[currentLang] || DIM_LABELS.en;
+      capEl.innerHTML = caps.map(function (c) {
+        return '<span class="specs__cap-item">' + L[c.l] + ': <b>' + c.v + '</b></span>';
+      }).join("");
+    }
   }
 
   function updateFinder() {
