@@ -735,6 +735,14 @@ ul { list-style: none; }
 .finder__rec { text-align: center; font-size: 16px; font-weight: 700; color: var(--ink); }
 .finder__hint { text-align: center; margin-top: 8px; font-size: 13.5px; color: var(--ink-soft); }
 
+.finder__suggest { display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 24px; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg); box-shadow: var(--shadow-sm); }
+.finder__suggest[hidden] { display: none; }
+.finder__suggest-img { flex-shrink: 0; width: 120px; height: 120px; border-radius: 12px; overflow: hidden; background: var(--ui); display: flex; align-items: center; justify-content: center; }
+.finder__suggest-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.finder__suggest-body { max-width: 460px; text-align: start; }
+.finder__suggest-title { font-size: 16px; font-weight: 800; color: var(--gold-dark); margin: 0 0 6px; }
+.finder__suggest-desc { font-size: 14px; line-height: 1.7; color: var(--ink-soft); margin: 0; }
+
 /* Finder dropdown (icon + vertical menu) */
 .finder__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 30px; }
 .finder__drop { position: relative; }
@@ -1263,6 +1271,13 @@ a.contact-info__item:focus-visible {
 .news__more::before { content: "\2190"; }
 [dir="ltr"] .news__more::before { content: "\2192"; }
 .news__more:hover { text-decoration: underline; opacity: 0.85; }
+
+.news__body { margin-top: 16px; }
+.news__body p { margin-bottom: 14px; font-size: 16.5px; line-height: 1.85; color: var(--ink); }
+.news__why { margin-top: 20px; padding: 16px 18px; border-right: 3px solid var(--gold-dark); background: var(--cream); border-radius: 0 12px 12px 0; }
+.news__why-label { font-size: 13.5px; font-weight: 700; color: var(--gold-dark); margin-bottom: 8px; }
+.news__why p { font-size: 15.5px; line-height: 1.8; color: var(--ink-soft); margin: 0; }
+.news__source { margin-top: 12px; font-size: 13px; color: var(--text-muted); font-style: italic; }
 
 @media (max-width: 720px) {
   .news { grid-template-columns: 1fr; }
