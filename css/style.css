@@ -1063,6 +1063,17 @@ section[id] { scroll-margin-top: 80px; }
 /* ============================================================
    Responsive
    ============================================================ */
+@media (max-width: 1250px) and (min-width: 901px) {
+  .header__cta { display: none; }
+  .nav { gap: 18px; }
+  .nav a { font-size: 13.5px; }
+}
+
+@media (max-width: 1040px) and (min-width: 901px) {
+  .nav { gap: 12px; }
+  .nav a { font-size: 12.5px; }
+}
+
 @media (max-width: 900px) {
   .nav {
     position: fixed;
