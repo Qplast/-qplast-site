@@ -86,4 +86,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/inquiry.html" />
   </url>
 
+  <!-- News -->
+  <url>
+    <loc>https://qplast.ir/pages/news.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/pages/news.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/pages/news.html?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/pages/news.html?lang=tr" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/pages/news.html?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/news.html" />
+  </url>
+
 </urlset>
