@@ -13,7 +13,16 @@
     localStorage.removeItem("qplast-lang");
     localStorage.setItem("qplast-ver", SITE_VER);
   }
-  var currentLang = localStorage.getItem("qplast-lang") || "fa";
+  /* Language priority: URL (path segment or ?lang=) > localStorage > default fa */
+  var urlLang = null;
+  var firstSeg = location.pathname.split("/").filter(Boolean)[0];
+  if (LANGS.indexOf(firstSeg) !== -1) {
+    urlLang = firstSeg;
+  } else {
+    var q = new URLSearchParams(location.search).get("lang");
+    if (q && LANGS.indexOf(q) !== -1) urlLang = q;
+  }
+  var currentLang = urlLang || localStorage.getItem("qplast-lang") || "fa";
   if (LANGS.indexOf(currentLang) === -1) currentLang = "fa";
 
   function applyLang(lang) {
@@ -392,11 +401,16 @@
         qoil: "../assets/qoil-product.jpg",
         sepanta: "../assets/sepanta-product.jpg"
       };
+      var neckVolMap = {
+        "18": { "30": "../assets/arya-30.jpg" }
+      };
       var src;
       if (currentFamily === "dropper") {
         src = currentNeck === 18 ? "../assets/dropper-18.png" : "../assets/dropper-product.png";
       } else {
-        src = imgMap[currentFamily];
+        var activeNeck = String(f.bottles[0].neck || "");
+        var perVol = neckVolMap[activeNeck] && neckVolMap[activeNeck][String(currentVol)];
+        src = perVol || imgMap[currentFamily];
       }
       photoEl.innerHTML = src ? '<img src="' + src + '" alt="' + famName + '" loading="lazy"/>' : "";
     }
