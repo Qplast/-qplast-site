@@ -30,6 +30,15 @@
   <link rel="alternate" hreflang="zh" href="https://qplast.ir/pages/quality.html?lang=zh" />
   <link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
 
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <link rel="icon" href="../assets/logo-header.png" type="image/png" />
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="../css/fonts.css" />
@@ -125,7 +134,7 @@
             </ul>
           </div>
           <div class="quality__visual" style="border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,0.4)">
-            <img src="../assets/hamta-hero.jpg" alt="Q Plast quality" loading="lazy" style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/5" />
+            <picture><source type="image/webp" srcset="../assets/hamta-hero.webp" /><img src="../assets/hamta-hero.jpg" alt="Q Plast quality" loading="lazy" style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/5" /></picture>
           </div>
         </div>
       </div>
