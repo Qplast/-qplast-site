@@ -628,7 +628,8 @@
   bindSpecsClose();
   updateFinder();
 
-  var SEND_ENDPOINT = (function(){ var p = (window.location.pathname.split("/").filter(Boolean)); return p.length > 1 && p[0].toLowerCase() === "pages" ? "../mail/send-mail.php" : "mail/send-mail.php"; })();
+  var LOCALE_PREFIXES = ["pages", "en", "ar", "tr", "zh"];
+  var SEND_ENDPOINT = (function(){ var p = (window.location.pathname.split("/").filter(Boolean)); return p.length > 1 && LOCALE_PREFIXES.indexOf(p[0].toLowerCase()) > -1 ? "../mail/send-mail.php" : "mail/send-mail.php"; })();
 
   /* ---------- Inquiry form ---------- */
   var form = document.getElementById("inquiryForm");
