@@ -896,7 +896,8 @@
     function prev() { index = (index - 1 + items.length) % items.length; render(); }
 
     document.querySelectorAll(".gallery-trigger").forEach(function (trigger) {
-      trigger.addEventListener("click", function () {
+      trigger.addEventListener("click", function (e) {
+        e.stopPropagation();
         var g = trigger.getAttribute("data-gallery");
         var arr = GALLERIES[g];
         if (!arr || !arr.length) return;
