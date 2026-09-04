@@ -804,6 +804,7 @@ ul { list-style: none; }
 }
 .finder__opt:hover { background: var(--gold-soft); color: var(--ink); }
 .finder__opt.active { background: var(--gold); color: #fff; }
+.finder__opt.disabled { opacity: .35; pointer-events: none; cursor: default; text-decoration: line-through; }
 @media (max-width: 640px) {
   .finder__row { flex-direction: column; align-items: stretch; }
   .finder__drop { width: 100%; }

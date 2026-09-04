@@ -473,6 +473,13 @@
     }
   }
 
+  /* neck → allowed volumes mapping */
+  var NECK_VOLS = {
+    "24": ["90", "100", "140", "170", "220"],
+    "18": ["30", "50", "80"],
+    "20": ["30", "50", "80"]
+  };
+
   function updateFinder() {
     if (!finderRec || !beautyCards) return;
     var type = "all";
@@ -484,6 +491,34 @@
     if (typeActive) type = typeActive.getAttribute("data-type");
     if (volActive) vol = volActive.getAttribute("data-vol");
     if (neckActive) neck = neckActive.getAttribute("data-neck");
+
+    /* --- neck → volume constraint --- */
+    if (finderVol) {
+      var allowedVols = NECK_VOLS[neck] || null;
+      var volOpts = finderVol.querySelectorAll(".finder__opt");
+      var activeStillValid = false;
+      volOpts.forEach(function (opt) {
+        var v = opt.getAttribute("data-vol");
+        if (v === "all") { opt.classList.remove("disabled"); return; }
+        var valid = !allowedVols || allowedVols.indexOf(v) !== -1;
+        opt.classList.toggle("disabled", !valid);
+        if (valid && opt.classList.contains("active")) activeStillValid = true;
+      });
+      if (!activeStillValid) {
+        var fallback = finderVol.querySelector('.finder__opt[data-vol="all"]');
+        if (fallback) {
+          volOpts.forEach(function (o) { o.classList.remove("active"); });
+          fallback.classList.add("active");
+          vol = "all";
+        }
+      }
+      document.querySelectorAll(".finder__dropSel").forEach(function (sel) {
+        var menu = sel.closest(".finder__drop").querySelector(".finder__menu");
+        if (!menu || menu !== finderVol) return;
+        var act = menu.querySelector(".finder__opt.active");
+        if (act) sel.innerHTML = act.innerHTML;
+      });
+    }
 
     var cards = beautyCards.querySelectorAll(".card[data-family]");
     var dropperNeck = null;
