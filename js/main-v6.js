@@ -230,6 +230,17 @@
       return noMatch[lang] || noMatch.en;
     }
 
+    if (fam === "multi") {
+      var multi = {
+        fa: "از لیست بالا انتخاب‌ها را کامل کنید تا محصول مناسب نمایش داده شود.",
+        en: "Complete your selections from the list above to show the right product.",
+        ar: "أكمل اختياراتك من القائمة أعلاه لإظهار المنتج المناسب.",
+        tr: "Doğru ürünü göstermek için yukarıdaki listeden seçimlerinizi tamamlayın.",
+        zh: "请从上方列表完成选择，以显示合适的产品。"
+      };
+      return multi[lang] || multi.en;
+    }
+
     var families = fam.split("+");
     var labeled = families.map(function (f) {
       return '<button type="button" class="finder__rec-link" style="display:inline;padding:0;margin:0;border:0;background:none;font:inherit;font-weight:800;color:var(--gold-dark);text-decoration:underline;cursor:pointer" data-family="' + f + '">' + (names[f] || f) + '</button>';
@@ -552,7 +563,7 @@
         dropperImg.src = "../assets/dropper-product.png";
       }
     }
-    var msg = recText(currentLang, shown.length ? shown.join("+") : "none");
+    var msg = recText(currentLang, shown.length > 1 ? "multi" : (shown.length ? shown.join("+") : "none"));
     finderRec.innerHTML = msg;
 
     /* when the customer narrows down to a single product, show it directly */
