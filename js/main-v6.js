@@ -372,6 +372,7 @@
   var currentFamily = "hamta";
   var currentVol = 220;
   var currentNeck = 24;
+  var currentType = "all";
 
   /* filter bottles for the family — for dropper, only the selected neck's set */
   function bottlesFor(fam, neck) {
@@ -397,7 +398,9 @@
     /* product photo — dropper switches image by neck */
     if (photoEl) {
       var imgMap = {
-        hamta: "../assets/hamta-mist-24.jpg",
+        hamta: currentType === "mist" || currentType === "all" || currentType === "oil"
+          ? "../assets/hamta-mist-24.jpg"
+          : "../assets/hamta-lotion-24.jpg",
         arya: "../assets/arya-white.jpg",
         pars: "../assets/pars-product.png",
         qoil: "../assets/qoil-product.jpg",
@@ -573,6 +576,12 @@
     if (!specsPanel) return;
     currentFamily = fam;
 
+    /* read current type selection (photo depends on type) */
+    if (finderType) {
+      var tActive = finderType.querySelector(".finder__opt.active");
+      if (tActive) currentType = tActive.getAttribute("data-type") || "all";
+    }
+
     /* read current neck selection (dropper has two necks) */
     var selNeck = null;
     if (finderNeck) {
@@ -642,6 +651,9 @@
         var v = opt.getAttribute("data-vol");
         if (menu === finderVol && v !== "all" && /^\d+$/.test(v)) {
           currentVol = Number(v);
+          renderSpecs();
+        } else if (menu === finderType && specsPanel && !specsPanel.hidden) {
+          currentType = opt.getAttribute("data-type") || "all";
           renderSpecs();
         }
       }
