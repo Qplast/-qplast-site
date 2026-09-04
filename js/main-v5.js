@@ -428,7 +428,8 @@
       bEl.type = "button";
       bEl.className = "specs__vol" + (b.vol === currentVol ? " active" : "");
       bEl.textContent = b.vol + " ml";
-      bEl.addEventListener("click", function () {
+      bEl.addEventListener("click", function (e) {
+        e.stopPropagation();
         currentVol = b.vol;
         renderSpecs();
       });
