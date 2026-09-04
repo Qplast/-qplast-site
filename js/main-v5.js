@@ -904,6 +904,18 @@
 
   /* ---------- Lightbox gallery ---------- */
   (function initGallery() {
+    document.querySelectorAll(".card__media").forEach(function (media) {
+      var hint = media.querySelector(".gallery-hint");
+      if (media.classList.contains("gallery-trigger")) {
+        media.classList.remove("gallery-trigger");
+        var g = media.getAttribute("data-gallery");
+        media.removeAttribute("data-gallery");
+        if (hint && g) {
+          hint.setAttribute("data-gallery", g);
+          hint.classList.add("gallery-trigger");
+        }
+      }
+    });
     var GALLERIES = {
       hamta: [
         { src: "../assets/hamta-product.jpg", caption: "Hamta" },
