@@ -499,9 +499,10 @@
       var activeStillValid = false;
       volOpts.forEach(function (opt) {
         var v = opt.getAttribute("data-vol");
-        if (v === "all") { opt.classList.remove("disabled"); return; }
+        if (v === "all") { opt.classList.remove("disabled"); opt.removeAttribute("disabled"); return; }
         var valid = !allowedVols || allowedVols.indexOf(v) !== -1;
         opt.classList.toggle("disabled", !valid);
+        if (valid) { opt.removeAttribute("disabled"); } else { opt.setAttribute("disabled", ""); }
         if (valid && opt.classList.contains("active")) activeStillValid = true;
       });
       if (!activeStillValid) {
