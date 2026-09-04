@@ -657,12 +657,13 @@ ul { list-style: none; }
   color: var(--ink);
   font-size: 12px; font-weight: 700;
   padding: 6px 14px; border-radius: 20px;
-  opacity: 0; transform: translateY(6px);
+  opacity: 1; transform: translateY(0);
   transition: opacity .3s ease, transform .3s ease;
-  pointer-events: none;
+  pointer-events: auto;
+  z-index: 2;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-.card:hover .gallery-hint { opacity: 1; transform: translateY(0); }
+.card:hover .gallery-hint { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .lightbox { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; }
 .lightbox[hidden] { display: none !important; }
 .lightbox__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); }
