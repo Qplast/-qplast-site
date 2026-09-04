@@ -397,7 +397,7 @@
     /* product photo — dropper switches image by neck */
     if (photoEl) {
       var imgMap = {
-        hamta: "../assets/hamta-product.jpg",
+        hamta: "../assets/hamta-mist-24.jpg",
         arya: "../assets/arya-white.jpg",
         pars: "../assets/pars-product.png",
         qoil: "../assets/qoil-product.jpg",
