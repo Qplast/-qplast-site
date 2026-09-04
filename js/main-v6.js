@@ -554,6 +554,13 @@
     }
     var msg = recText(currentLang, shown.length ? shown.join("+") : "none");
     finderRec.innerHTML = msg;
+
+    /* when the customer narrows down to a single product, show it directly */
+    if (shown.length === 1 && (type !== "all" || vol !== "all" || neck !== "all")) {
+      var solo = shown[0];
+      if (SPECS_DATA[solo] && specsPanel && specsPanel.hidden) showSpecs(solo);
+    }
+
     document.querySelectorAll(".finder__dropSel").forEach(function (sel) {
       var menu = sel.closest(".finder__drop").querySelector(".finder__menu");
       if (!menu) return;
@@ -635,16 +642,12 @@
       });
       opt.classList.add("active");
       var specsOpen = specsPanel && !specsPanel.hidden;
+      var v = opt.getAttribute("data-vol");
+      if (menu === finderVol && v !== "all" && /^\d+$/.test(v)) currentVol = Number(v);
       if (!specsOpen) hideSpecs();
       closeFinderMenus();
       cb(opt);
-      if (specsOpen) {
-        var v = opt.getAttribute("data-vol");
-        if (menu === finderVol && v !== "all" && /^\d+$/.test(v)) {
-          currentVol = Number(v);
-          renderSpecs();
-        }
-      }
+      if (specsOpen && menu === finderVol && v !== "all" && /^\d+$/.test(v)) renderSpecs();
     });
   }
   bindFinderMenu(finderType, function () { updateFinder(); });
