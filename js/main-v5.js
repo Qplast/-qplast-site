@@ -232,7 +232,7 @@
 
     var families = fam.split("+");
     var labeled = families.map(function (f) {
-      return '<button type="button" class="finder__rec-link" data-family="' + f + '">' + (names[f] || f) + '</button>';
+      return '<button type="button" class="finder__rec-link" style="display:inline;padding:0;margin:0;border:0;background:none;font:inherit;font-weight:800;color:var(--gold-dark);text-decoration:underline;cursor:pointer" data-family="' + f + '">' + (names[f] || f) + '</button>';
     });
     var joined;
     if (labeled.length === 1) joined = labeled[0];
