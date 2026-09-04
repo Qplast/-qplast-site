@@ -231,7 +231,9 @@
     }
 
     var families = fam.split("+");
-    var labeled = families.map(function (f) { return names[f] || f; });
+    var labeled = families.map(function (f) {
+      return '<button type="button" class="finder__rec-link" data-family="' + f + '">' + (names[f] || f) + '</button>';
+    });
     var joined;
     if (labeled.length === 1) joined = labeled[0];
     else if (labeled.length === 2) joined = labeled[0] + " و " + labeled[1];
@@ -550,7 +552,7 @@
       }
     }
     var msg = recText(currentLang, shown.length ? shown.join("+") : "none");
-    finderRec.textContent = msg;
+    finderRec.innerHTML = msg;
     document.querySelectorAll(".finder__dropSel").forEach(function (sel) {
       var menu = sel.closest(".finder__drop").querySelector(".finder__menu");
       if (!menu) return;
@@ -638,6 +640,15 @@
   bindFinderMenu(finderType, function () { updateFinder(); });
   bindFinderMenu(finderVol, function () { updateFinder(); });
   bindFinderMenu(finderNeck, function () { updateFinder(); });
+
+  if (finderRec) {
+    finderRec.addEventListener("click", function (e) {
+      var link = e.target.closest(".finder__rec-link");
+      if (!link) return;
+      e.stopPropagation();
+      showSpecs(link.getAttribute("data-family"));
+    });
+  }
 
   if (beautyCards) {
     beautyCards.addEventListener("click", function (e) {

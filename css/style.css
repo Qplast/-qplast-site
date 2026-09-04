@@ -733,6 +733,8 @@ ul { list-style: none; }
 .finder__sub { color: var(--ink-soft); margin-top: 8px; font-size: 15px; }
 .finder__result { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
 .finder__rec { text-align: center; font-size: 16px; font-weight: 700; color: var(--ink); }
+.finder__rec-link { display: inline; padding: 0; margin: 0; border: none; background: none; font: inherit; font-weight: 800; color: var(--gold-dark); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.finder__rec-link:hover, .finder__rec-link:focus-visible { color: var(--gold); text-decoration-thickness: 2px; outline: none; }
 .finder__hint { text-align: center; margin-top: 8px; font-size: 13.5px; color: var(--ink-soft); }
 
 .finder__suggest { display: flex; gap: 20px; align-items: center; justify-content: center; margin-top: 24px; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg); box-shadow: var(--shadow-sm); }
