@@ -705,6 +705,9 @@
             note.className = "form__note success";
             note.textContent = (okText[currentLang] || okText.en);
             form.reset();
+            if (typeof gtag === "function") {
+              gtag("event", "generate_lead", { form_type: "inquiry", form_location: currentLang });
+            }
           } else {
             var waUrl = "https://wa.me/989909702100?text=" + encodeURIComponent(bodyLines(lines));
             note.className = "form__note error";
@@ -794,6 +797,9 @@
             cNote.className = "form__note success";
             cNote.textContent = (okText[currentLang] || okText.en);
             cForm.reset();
+            if (typeof gtag === "function") {
+              gtag("event", "generate_lead", { form_type: "contact", form_location: currentLang });
+            }
           } else {
             var waUrl = "https://wa.me/989909702100?text=" + encodeURIComponent(bodyLines(lines));
             cNote.className = "form__note error";
