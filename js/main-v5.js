@@ -628,13 +628,22 @@
     menu.addEventListener("click", function (e) {
       var opt = e.target.closest(".finder__opt");
       if (!opt) return;
+      e.stopPropagation();
       menu.querySelectorAll(".finder__opt").forEach(function (c) {
         c.classList.remove("active");
       });
       opt.classList.add("active");
-      hideSpecs();
+      var specsOpen = specsPanel && !specsPanel.hidden;
+      if (!specsOpen) hideSpecs();
       closeFinderMenus();
       cb(opt);
+      if (specsOpen) {
+        var v = opt.getAttribute("data-vol");
+        if (menu === finderVol && v !== "all" && /^\d+$/.test(v)) {
+          currentVol = Number(v);
+          renderSpecs();
+        }
+      }
     });
   }
   bindFinderMenu(finderType, function () { updateFinder(); });
