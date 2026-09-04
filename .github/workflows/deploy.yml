@@ -50,5 +50,10 @@ jobs:
             --exclude-glob .gitignore \
             --parallel=4 \
             . "$RDIR/"
+          put pages/products.html -o "$RDIR/pages/products.html"
+          put en/products.html -o "$RDIR/en/products.html"
+          put ar/products.html -o "$RDIR/ar/products.html"
+          put tr/products.html -o "$RDIR/tr/products.html"
+          put zh/products.html -o "$RDIR/zh/products.html"
           bye
           EOF
