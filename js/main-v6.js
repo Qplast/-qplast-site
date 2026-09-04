@@ -483,7 +483,7 @@
     "20": ["30", "50", "80"]
   };
 
-  function updateFinder() {
+  function updateFinder(noAuto) {
     if (!finderRec || !beautyCards) return;
     var type = "all";
     var vol = "all";
@@ -556,9 +556,12 @@
     finderRec.innerHTML = msg;
 
     /* when the customer narrows down to a single product, show it directly */
-    if (shown.length === 1 && (type !== "all" || vol !== "all" || neck !== "all")) {
+    if (shown.length === 1 && (type !== "all" || vol !== "all" || neck !== "all") && !noAuto) {
       var solo = shown[0];
-      if (SPECS_DATA[solo] && specsPanel && specsPanel.hidden) showSpecs(solo);
+      if (SPECS_DATA[solo]) {
+        if (specsPanel && !specsPanel.hidden && currentFamily && currentFamily !== solo) hideSpecs();
+        showSpecs(solo);
+      }
     }
 
     document.querySelectorAll(".finder__dropSel").forEach(function (sel) {
@@ -644,15 +647,24 @@
       var specsOpen = specsPanel && !specsPanel.hidden;
       var v = opt.getAttribute("data-vol");
       if (menu === finderVol && v !== "all" && /^\d+$/.test(v)) currentVol = Number(v);
-      if (!specsOpen) hideSpecs();
+      /* changing family filters while specs open = user starts a new search; close old specs */
+      var suppress = false;
+      if (menu === finderType || menu === finderNeck) {
+        if (specsOpen) {
+          hideSpecs();
+          suppress = true;
+        }
+      } else if (!specsOpen) {
+        hideSpecs();
+      }
       closeFinderMenus();
-      cb(opt);
+      cb(opt, suppress);
       if (specsOpen && menu === finderVol && v !== "all" && /^\d+$/.test(v)) renderSpecs();
     });
   }
-  bindFinderMenu(finderType, function () { updateFinder(); });
-  bindFinderMenu(finderVol, function () { updateFinder(); });
-  bindFinderMenu(finderNeck, function () { updateFinder(); });
+  bindFinderMenu(finderType, function (opt, suppress) { updateFinder(suppress); });
+  bindFinderMenu(finderVol, function (opt, suppress) { updateFinder(suppress); });
+  bindFinderMenu(finderNeck, function (opt, suppress) { updateFinder(suppress); });
 
   if (finderRec) {
     finderRec.addEventListener("click", function (e) {
