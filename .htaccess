@@ -7,7 +7,7 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/ld+json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript application/javascript application/json application/ld+json image/svg+xml
 </IfModule>
 
 <IfModule mod_expires.c>
@@ -18,5 +18,6 @@ ErrorDocument 404 /404.html
   ExpiresByType video/mp4 "access plus 1 month"
   ExpiresByType font/woff2 "access plus 1 month"
   ExpiresByType text/css "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
   ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
