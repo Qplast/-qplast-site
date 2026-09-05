@@ -967,7 +967,7 @@
     });
     var GALLERIES = {
       hamta: [
-        { src: "../assets/hamta-product.jpg", caption: "Hamta" },
+        { src: "../assets/hamta-product.jpg?v=2", caption: "Hamta" },
         { src: "../assets/hamta-gallery-dzYNo.jpg", caption: "Hamta" },
         { src: "../assets/hamta-gallery-media.jpg2K202608221948.jpeg", caption: "Hamta" },
         { src: "../assets/hamta-gallery-media.jpg2K202608221949.jpeg", caption: "Hamta" },
