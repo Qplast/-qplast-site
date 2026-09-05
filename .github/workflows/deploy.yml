@@ -47,8 +47,6 @@ jobs:
           mirror --reverse --delete --ignore-time --transfer-all \
             --exclude-glob .git/ \
             --exclude-glob .github/ \
-            --exclude-glob _backup_large/ \
-            --exclude-glob assets/backup/ \
             --exclude-glob scripts/ \
             --exclude-glob CNAME \
             --exclude-glob .gitignore \

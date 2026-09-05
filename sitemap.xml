@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage -->
+  <!-- index (fa) -->
   <url>
     <loc>https://qplast.ir/index.html</loc>
     <lastmod>2026-09-03</lastmod>
@@ -16,21 +16,63 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/index.html" />
   </url>
 
-  <!-- About -->
+  <!-- index (en) -->
   <url>
-    <loc>https://qplast.ir/pages/about.html</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/about.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/about.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/about.html" />
-    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/about.html" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/about.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/about.html" />
+    <loc>https://qplast.ir/en/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/index.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/index.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/index.html" />
   </url>
 
-  <!-- Products -->
+  <!-- index (ar) -->
+  <url>
+    <loc>https://qplast.ir/ar/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/index.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/index.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/index.html" />
+  </url>
+
+  <!-- index (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/index.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/index.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/index.html" />
+  </url>
+
+  <!-- index (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/index.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/index.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/index.html" />
+  </url>
+
+  <!-- products (fa) -->
   <url>
     <loc>https://qplast.ir/pages/products.html</loc>
     <lastmod>2026-08-17</lastmod>
@@ -44,35 +86,133 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/products.html" />
   </url>
 
-  <!-- Quality -->
+  <!-- products (en) -->
   <url>
-    <loc>https://qplast.ir/pages/quality.html</loc>
+    <loc>https://qplast.ir/en/products.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/products.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/products.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/products.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/products.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/products.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/products.html" />
+  </url>
+
+  <!-- products (ar) -->
+  <url>
+    <loc>https://qplast.ir/ar/products.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/products.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/products.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/products.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/products.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/products.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/products.html" />
+  </url>
+
+  <!-- products (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/products.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/products.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/products.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/products.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/products.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/products.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/products.html" />
+  </url>
+
+  <!-- products (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/products.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/products.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/products.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/products.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/products.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/products.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/products.html" />
+  </url>
+
+  <!-- about (fa) -->
+  <url>
+    <loc>https://qplast.ir/pages/about.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/about.html" />
+  </url>
+
+  <!-- about (en) -->
+  <url>
+    <loc>https://qplast.ir/en/about.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/quality.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/quality.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/quality.html" />
-    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/quality.html" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/quality.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/about.html" />
   </url>
 
-  <!-- Contact -->
+  <!-- about (ar) -->
   <url>
-    <loc>https://qplast.ir/pages/contact.html</loc>
+    <loc>https://qplast.ir/ar/about.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/contact.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/contact.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/contact.html" />
-    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/contact.html" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/contact.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/contact.html" />
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/about.html" />
   </url>
 
-  <!-- Inquiry -->
+  <!-- about (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/about.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/about.html" />
+  </url>
+
+  <!-- about (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/about.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/about.html" />
+  </url>
+
+  <!-- inquiry (fa) -->
   <url>
     <loc>https://qplast.ir/pages/inquiry.html</loc>
     <lastmod>2026-08-17</lastmod>
@@ -86,12 +226,264 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/inquiry.html" />
   </url>
 
-  <!-- News -->
+  <!-- inquiry (en) -->
+  <url>
+    <loc>https://qplast.ir/en/inquiry.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/inquiry.html" />
+  </url>
+
+  <!-- inquiry (ar) -->
+  <url>
+    <loc>https://qplast.ir/ar/inquiry.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/inquiry.html" />
+  </url>
+
+  <!-- inquiry (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/inquiry.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/inquiry.html" />
+  </url>
+
+  <!-- inquiry (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/inquiry.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/inquiry.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/inquiry.html" />
+  </url>
+
+  <!-- quality (fa) -->
+  <url>
+    <loc>https://qplast.ir/pages/quality.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/quality.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/quality.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/quality.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/quality.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/quality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
+  </url>
+
+  <!-- quality (en) -->
+  <url>
+    <loc>https://qplast.ir/en/quality.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/quality.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/quality.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/quality.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/quality.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/quality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
+  </url>
+
+  <!-- quality (ar) -->
+  <url>
+    <loc>https://qplast.ir/ar/quality.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/quality.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/quality.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/quality.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/quality.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/quality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
+  </url>
+
+  <!-- quality (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/quality.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/quality.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/quality.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/quality.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/quality.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/quality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
+  </url>
+
+  <!-- quality (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/quality.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/quality.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/quality.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/quality.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/quality.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/quality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/quality.html" />
+  </url>
+
+  <!-- contact (fa) -->
+  <url>
+    <loc>https://qplast.ir/pages/contact.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/contact.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/contact.html" />
+  </url>
+
+  <!-- contact (en) -->
+  <url>
+    <loc>https://qplast.ir/en/contact.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/contact.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/contact.html" />
+  </url>
+
+  <!-- contact (ar) -->
+  <url>
+    <loc>https://qplast.ir/ar/contact.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/contact.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/contact.html" />
+  </url>
+
+  <!-- contact (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/contact.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/contact.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/contact.html" />
+  </url>
+
+  <!-- contact (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/contact.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/contact.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/contact.html" />
+  </url>
+
+  <!-- news (fa) -->
   <url>
     <loc>https://qplast.ir/pages/news.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/news.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/news.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/news.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/news.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/news.html" />
+  </url>
+
+  <!-- news (en) -->
+  <url>
+    <loc>https://qplast.ir/en/news.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/news.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/news.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/news.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/news.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/news.html" />
+  </url>
+
+  <!-- news (ar) -->
+  <url>
+    <loc>https://qplast.ir/ar/news.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/news.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/news.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/news.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/news.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/news.html" />
+  </url>
+
+  <!-- news (tr) -->
+  <url>
+    <loc>https://qplast.ir/tr/news.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/news.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/news.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/news.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/news.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/news.html" />
+  </url>
+
+  <!-- news (zh) -->
+  <url>
+    <loc>https://qplast.ir/zh/news.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/news.html" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/news.html" />
