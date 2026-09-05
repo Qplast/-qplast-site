@@ -405,16 +405,15 @@
     var famName = f.family[currentLang] || f.family.en;
     document.getElementById("specsFamily").textContent = famName;
 
-    /* product photo — dropper switches image by neck, hamta by finder type */
+    /* product photo — switches by pump type (lotion vs mist) where two shots exist */
     if (photoEl) {
       var actType = finderType && finderType.querySelector(".finder__opt.active");
       var finderTypeVal = actType ? actType.getAttribute("data-type") : "all";
+      var lotionShot = finderTypeVal === "lotion" || finderTypeVal === "treatment" || finderTypeVal === "micellar";
       var imgMap = {
-        hamta: (finderTypeVal === "lotion" || finderTypeVal === "treatment" || finderTypeVal === "micellar")
-          ? "../assets/hamta-lotion-24.jpg"
-          : "../assets/hamta-mist-24.jpg",
-        arya: "../assets/arya-white.jpg",
-        pars: "../assets/pars-product.png",
+        hamta: lotionShot ? "../assets/hamta-lotion-24.jpg" : "../assets/hamta-mist-24.jpg",
+        arya: lotionShot ? "../assets/arya-lotion-18.jpg" : "../assets/arya-white.jpg",
+        pars: lotionShot ? "../assets/pars-lotion-20.jpg" : "../assets/pars-mist-20.jpg",
         qoil: "../assets/qoil-product.jpg",
         sepanta: "../assets/sepanta-product.jpg"
       };
