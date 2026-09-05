@@ -423,10 +423,10 @@
       }
       var lotionShot = finderTypeVal === "lotion" || finderTypeVal === "treatment" || finderTypeVal === "micellar";
       var imgMap = {
-        hamta: lotionShot ? "../assets/hamta-lotion-24.jpg" : "../assets/hamta-mist-24.jpg",
+        hamta: lotionShot ? "../assets/hamta-lotion-24.jpg" : "../assets/hamta-mist-24.jpg?v=2",
         arya: lotionShot ? "../assets/arya-lotion-18.jpg" : "../assets/arya-white.jpg",
-        pars: lotionShot ? "../assets/pars-lotion-20.jpg" : "../assets/pars-mist-20.jpg",
-        qoil: "../assets/qoil-product.jpg?v=2",
+        pars: lotionShot ? "../assets/pars-lotion-20.jpg?v=2" : "../assets/pars-mist-20.jpg",
+        qoil: "../assets/qoil-product.jpg?v=3",
         sepanta: "../assets/sepanta-product.jpg"
       };
       var neckVolMap = {
@@ -434,7 +434,7 @@
       };
       var src;
       if (currentFamily === "dropper") {
-        src = currentNeck === 18 ? "../assets/dropper-18.png" : "../assets/dropper-product.png";
+        src = currentNeck === 18 ? "../assets/dropper-18.jpg" : "../assets/dropper-product.jpg";
       } else {
         var activeNeck = String(f.bottles[0].neck || "");
         var perVol = neckVolMap[activeNeck] && neckVolMap[activeNeck][String(currentVol)];
@@ -575,7 +575,7 @@
       } else if (dropperImg.getAttribute("data-neck20")) {
         dropperImg.src = dropperImg.getAttribute("data-neck20");
       } else {
-        dropperImg.src = "../assets/dropper-product.png";
+        dropperImg.src = "../assets/dropper-product.jpg";
       }
     }
     var msg = recText(currentLang, shown.length > 1 ? "multi" : (shown.length ? shown.join("+") : "none"));
@@ -968,17 +968,20 @@
     var GALLERIES = {
       hamta: [
         { src: "../assets/hamta-product.jpg?v=2", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-dzYNo.jpg", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-media.jpg2K202608221948.jpeg", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-media.jpg2K202608221949.jpeg", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-media.jpg2K202608221956.jpeg", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-media.jpg2026082220091.jpeg", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-media.jpg2026082220092.jpeg", caption: "Hamta" }
+        { src: "../assets/hamta-gallery-dzYNo.jpg?v=2", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-media.jpg2K202608221948.jpeg?v=2", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-media.jpg2K202608221949.jpeg?v=2", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-media.jpg2K202608221956.jpeg?v=2", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-media.jpg2026082220091.jpeg?v=2", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-media.jpg2026082220092.jpeg?v=2", caption: "Hamta" }
       ],
       pars: [
-        { src: "../assets/pars-gallery-1.jpg", caption: "Pars" },
-        { src: "../assets/pars-gallery-2.png?v=2", caption: "Pars" },
-        { src: "../assets/pars-gallery-3.jpg", caption: "Pars" }
+        { src: "../assets/pars-gallery-1.jpg?v=2", caption: "Pars" },
+        { src: "../assets/pars-gallery-2.jpg", caption: "Pars" },
+        { src: "../assets/pars-gallery-3.jpg?v=2", caption: "Pars" },
+        { src: "../assets/pars-gallery-4.jpg", caption: "Pars" },
+        { src: "../assets/pars-gallery-5.jpg", caption: "Pars" },
+        { src: "../assets/pars-gallery-6.jpg", caption: "Pars" }
       ]
     };
 
