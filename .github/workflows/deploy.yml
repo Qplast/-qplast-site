@@ -41,7 +41,7 @@ jobs:
           set net:timeout 30
           set net:max-retries 3
           set ftp:passive-mode true
-          mirror --reverse --delete --ignore-time \
+          mirror --reverse --delete --ignore-time --transfer-all \
             --exclude-glob .git/ \
             --exclude-glob .github/ \
             --exclude-glob _backup_large/ \
@@ -50,10 +50,5 @@ jobs:
             --exclude-glob .gitignore \
             --parallel=4 \
             . "$RDIR/"
-          put pages/products.html -o "$RDIR/pages/products.html"
-          put en/products.html -o "$RDIR/en/products.html"
-          put ar/products.html -o "$RDIR/ar/products.html"
-          put tr/products.html -o "$RDIR/tr/products.html"
-          put zh/products.html -o "$RDIR/zh/products.html"
           bye
           EOF
