@@ -979,9 +979,9 @@
         { src: "../assets/pars-gallery-1.jpg?v=5", caption: "Pars" },
         { src: "../assets/pars-gallery-2.jpg?v=5", caption: "Pars" },
         { src: "../assets/pars-gallery-3.jpg?v=5", caption: "Pars" },
-        { src: "../assets/pars-gallery-4.jpg?v=5", caption: "Pars" },
-        { src: "../assets/pars-gallery-5.jpg?v=5", caption: "Pars" },
-        { src: "../assets/pars-gallery-6.jpg?v=5", caption: "Pars" }
+        { src: "../assets/pars-gallery-4.jpg?v=6", caption: "Pars" },
+        { src: "../assets/pars-gallery-5.jpg?v=6", caption: "Pars" },
+        { src: "../assets/pars-gallery-6.jpg?v=6", caption: "Pars" }
       ],
       arya: [
         { src: "../assets/arya-gallery-1.jpg?v=5", caption: "Arya" },
