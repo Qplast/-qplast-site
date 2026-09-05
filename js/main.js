@@ -977,7 +977,7 @@
       ],
       pars: [
         { src: "../assets/pars-gallery-1.jpg", caption: "Pars" },
-        { src: "../assets/pars-gallery-2.png", caption: "Pars" },
+        { src: "../assets/pars-gallery-2.png?v=2", caption: "Pars" },
         { src: "../assets/pars-gallery-3.jpg", caption: "Pars" }
       ]
     };
