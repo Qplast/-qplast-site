@@ -18,6 +18,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check site consistency (blocks deploy if pages drifted out of sync)
+        run: python3 scripts/check-consistency.py
+
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
@@ -46,6 +49,7 @@ jobs:
             --exclude-glob .github/ \
             --exclude-glob _backup_large/ \
             --exclude-glob assets/backup/ \
+            --exclude-glob scripts/ \
             --exclude-glob CNAME \
             --exclude-glob .gitignore \
             --parallel=4 \
