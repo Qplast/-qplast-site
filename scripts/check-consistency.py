@@ -96,6 +96,21 @@ if stale_js_refs:
         + ", ".join(stale_js_refs)
     )
 
+# ---------- 1b. the "specs photo" filter-leak bug guard ----------
+# This exact bug (the technical-specs photo silently reusing whatever
+# "Product type" filter was left selected from an earlier, unrelated
+# search — instead of the reason THIS specs view was opened) has already
+# been reintroduced twice while extending the photo feature. If someone
+# removes the specsPhotoUseFilter guard again, catch it here instead of
+# a customer noticing a wrong product photo a third time.
+main_js = read("js/main.js")
+if "specsPhotoUseFilter" not in main_js:
+    fail(
+        "js/main.js: محافظ specsPhotoUseFilter از کد عکس مشخصات فنی حذف شده. "
+        "این یعنی احتمالاً همان باگ «عکس اشتباه محصول» (که قبلاً دوبار پیش آمده) دوباره برگشته — "
+        "قبل از دیپلوی این را بررسی کنید."
+    )
+
 # ---------- 2. every page: exactly one DOCTYPE / head / body, valid JSON-LD ----------
 for f in ALL_FILES:
     content = read(f)

@@ -383,6 +383,15 @@
   var currentFamily = "hamta";
   var currentVol = 220;
   var currentNeck = 24;
+  /* Guards the pump-type (lotion vs mist) photo choice below: only trust the
+     finder's live "Product type" filter when this specs view was actually
+     opened FROM that filter (a single-match auto-open, or the clickable name
+     in the recommendation text). A direct click on a product card must
+     always show that product's default photo — otherwise the photo silently
+     "inherits" whatever type was left selected from an earlier, unrelated
+     search. This exact bug has been reintroduced twice already; if you are
+     touching the photo-selection code below, keep this guard. */
+  var specsPhotoUseFilter = false;
 
   /* filter bottles for the family — for dropper, only the selected neck's set */
   function bottlesFor(fam, neck) {
@@ -407,8 +416,11 @@
 
     /* product photo — switches by pump type (lotion vs mist) where two shots exist */
     if (photoEl) {
-      var actType = finderType && finderType.querySelector(".finder__opt.active");
-      var finderTypeVal = actType ? actType.getAttribute("data-type") : "all";
+      var finderTypeVal = "all";
+      if (specsPhotoUseFilter) {
+        var actType = finderType && finderType.querySelector(".finder__opt.active");
+        finderTypeVal = actType ? actType.getAttribute("data-type") : "all";
+      }
       var lotionShot = finderTypeVal === "lotion" || finderTypeVal === "treatment" || finderTypeVal === "micellar";
       var imgMap = {
         hamta: lotionShot ? "../assets/hamta-lotion-24.jpg" : "../assets/hamta-mist-24.jpg",
@@ -574,7 +586,7 @@
       var solo = shown[0];
       if (SPECS_DATA[solo]) {
         if (specsPanel && !specsPanel.hidden && currentFamily && currentFamily !== solo) hideSpecs();
-        showSpecs(solo);
+        showSpecs(solo, true);
       }
     }
 
@@ -591,8 +603,9 @@
     if (p) p.hidden = true;
   }
 
-  function showSpecs(fam) {
+  function showSpecs(fam, useFilterType) {
     if (!SPECS_DATA[fam]) return;
+    specsPhotoUseFilter = !!useFilterType;
     var specsPanel = document.getElementById("specsPanel");
     if (!specsPanel) return;
     currentFamily = fam;
@@ -682,7 +695,7 @@
       var link = e.target.closest(".finder__rec-link");
       if (!link) return;
       e.stopPropagation();
-      showSpecs(link.getAttribute("data-family"));
+      showSpecs(link.getAttribute("data-family"), true);
     });
   }
 
