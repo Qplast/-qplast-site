@@ -982,6 +982,13 @@
         { src: "../assets/pars-gallery-4.jpg", caption: "Pars" },
         { src: "../assets/pars-gallery-5.jpg", caption: "Pars" },
         { src: "../assets/pars-gallery-6.jpg", caption: "Pars" }
+      ],
+      arya: [
+        { src: "../assets/arya-gallery-1.jpg", caption: "Arya" },
+        { src: "../assets/arya-gallery-2.jpg", caption: "Arya" },
+        { src: "../assets/arya-gallery-3.jpg", caption: "Arya" },
+        { src: "../assets/arya-gallery-4.jpg", caption: "Arya" },
+        { src: "../assets/arya-gallery-5.jpg", caption: "Arya" }
       ]
     };
 
