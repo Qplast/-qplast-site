@@ -426,7 +426,7 @@
         hamta: lotionShot ? "../assets/hamta-lotion-24.jpg" : "../assets/hamta-mist-24.jpg",
         arya: lotionShot ? "../assets/arya-lotion-18.jpg" : "../assets/arya-white.jpg",
         pars: lotionShot ? "../assets/pars-lotion-20.jpg" : "../assets/pars-mist-20.jpg",
-        qoil: "../assets/qoil-product.jpg",
+        qoil: "../assets/qoil-product.jpg?v=2",
         sepanta: "../assets/sepanta-product.jpg"
       };
       var neckVolMap = {
