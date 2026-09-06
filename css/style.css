@@ -344,17 +344,17 @@ ul { list-style: none; }
 .hero__eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: var(--gold);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: clamp(18px, 2.3vw, 24px);
+  font-weight: 700;
   margin-bottom: 24px;
   opacity: 0;
   animation: gw-rise 0.8s ease forwards 0.1s;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
-.hero__eyebrow::before { content: ""; width: 36px; height: 2px; background: var(--gold); }
+.hero__eyebrow::before { content: ""; width: 36px; height: 2px; background: var(--gold); flex-shrink: 0; }
 .hero__title {
   font-size: clamp(38px, 6.4vw, 74px);
   font-weight: 800;
