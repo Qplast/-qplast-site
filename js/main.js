@@ -976,7 +976,7 @@
         { src: "../assets/hamta-gallery-media.jpg2026082220092.jpeg?v=2", caption: "Hamta" }
       ],
       pars: [
-        { src: "../assets/pars-gallery-1.jpg?v=7", caption: "Pars" },
+        { src: "../assets/pars-gallery-1.jpg?v=8", caption: "Pars" },
         { src: "../assets/pars-gallery-2.jpg?v=5", caption: "Pars" },
         { src: "../assets/pars-gallery-3.jpg?v=5", caption: "Pars" },
         { src: "../assets/pars-gallery-4.jpg?v=7", caption: "Pars" },
