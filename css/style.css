@@ -84,6 +84,7 @@ ul { list-style: none; }
   border-inline-end: 1px solid var(--line);
   padding-inline-end: 12px;
   line-height: 1.3;
+  white-space: nowrap;
 }
 
 .nav { display: flex; gap: 26px; align-items: center; }
@@ -1071,6 +1072,17 @@ section[id] { scroll-margin-top: 80px; }
   .header__cta { display: none; }
   .nav { gap: 18px; }
   .nav a { font-size: 13.5px; }
+}
+
+/* Turkish nav labels ("Hakkımızda", "Fiyat Teklifi", ...) plus the brand
+   tagline no longer fit the 1160px header container at the wide (>1380px)
+   breakpoint where the CTA button reappears at full nav size — this keeps
+   the already-safe compact nav style for Turkish at every desktop width,
+   without touching the CTA/nav sizing for any other language. */
+@media (min-width: 901px) {
+  html[lang="tr"] .header__cta { display: none; }
+  html[lang="tr"] .nav { gap: 18px; }
+  html[lang="tr"] .nav a { font-size: 13.5px; }
 }
 
 @media (max-width: 1180px) and (min-width: 901px) {
