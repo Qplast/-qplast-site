@@ -140,6 +140,7 @@
       diameter: 45,
       pump: 54.95,
       material: "PET",
+      moq: 750,
       bottles: [
         { vol: 90, h: 66, neck: 24 },
         { vol: 100, h: 80, neck: 24 },
@@ -153,6 +154,7 @@
       diameter: 30.5,
       cap: 47,
       material: "PET",
+      moq: 1500,
       bottles: [
         { vol: 30, h: 66, neck: 18 },
         { vol: 50, h: 81, neck: 18 },
@@ -164,6 +166,7 @@
       diameter: 36,
       cap: 49,
       material: "PET",
+      moq: 1500,
       bottles: [
         { vol: 30, h: 35, neck: 20 },
         { vol: 50, h: 58.3, neck: 20 },
@@ -188,6 +191,7 @@
       cap: 49,
       material: "PET",
       dropper: true,
+      moq: 1500,
       bottles: [
         { vol: 30, h: 66, neck: 18, ref: "arya" },
         { vol: 50, h: 81, neck: 18, ref: "arya" },
@@ -201,6 +205,7 @@
       family: { fa: "سپنتا", en: "Sepanta", ar: "سبنتا", tr: "Sepanta", zh: "塞潘塔" },
       airless: true,
       unverified: true,
+      moqUnlimited: true,
       bottles: [
         { vol: 30 },
         { vol: 50 },
@@ -470,9 +475,24 @@
       tr: "Bu modelin teknik özellikleri mevcut referansta kayıtlı değildir.",
       zh: "该型号的技术规格未记录在当前参考文件中。"
     };
+    var MOQ_LABEL = {
+      fa: "حداقل سفارش", en: "Minimum order", ar: "الحد الأدنى للطلب", tr: "Minimum sipariş", zh: "起订量"
+    };
+    var MOQ_UNIT = {
+      fa: "کارتن", en: "cartons", ar: "كرتون", tr: "koli", zh: "箱"
+    };
+    var MOQ_UNLIMITED = {
+      fa: "بدون محدودیت", en: "No minimum", ar: "بدون حد أدنى", tr: "Minimum yok", zh: "无起订量限制"
+    };
     if (f.unverified) {
       drawEl.innerHTML = '<p style="text-align:center;color:var(--ink-soft);padding:40px 10px;font-size:14px">' + (SPEC_NOTE[currentLang] || SPEC_NOTE.en) + '</p>';
-      capEl.innerHTML = "";
+      if (f.moqUnlimited) {
+        var lbl0 = MOQ_LABEL[currentLang] || MOQ_LABEL.en;
+        var val0 = MOQ_UNLIMITED[currentLang] || MOQ_UNLIMITED.en;
+        capEl.innerHTML = '<span class="specs__cap-item">' + lbl0 + ': <b>' + val0 + '</b></span>';
+      } else {
+        capEl.innerHTML = "";
+      }
     } else {
       /* drawing */
       drawEl.innerHTML = buildBlueprint(currentFamily, currentVol);
@@ -499,6 +519,11 @@
       capEl.innerHTML = caps.map(function (c) {
         return '<span class="specs__cap-item">' + L[c.l] + ': <b>' + c.v + '</b></span>';
       }).join("");
+      if (f.moq) {
+        var lbl = MOQ_LABEL[currentLang] || MOQ_LABEL.en;
+        var unit = MOQ_UNIT[currentLang] || MOQ_UNIT.en;
+        capEl.innerHTML += '<span class="specs__cap-item">' + lbl + ': <b>' + f.moq + ' ' + unit + '</b></span>';
+      }
     }
   }
 
