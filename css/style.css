@@ -391,6 +391,7 @@ ul { list-style: none; }
 .header__cta {
   padding: 10px 22px;
   font-size: 13.5px;
+  white-space: nowrap;
 }
 
 /* ============================================================
