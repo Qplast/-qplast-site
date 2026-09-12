@@ -56,15 +56,12 @@ ul { list-style: none; }
   inset-inline: 0;
   top: 0;
   z-index: 60;
-  background: rgba(250, 248, 244, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: #faf8f4;
   border-bottom: 1px solid transparent;
-  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth), background var(--transition-smooth);
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 .header.scrolled {
   border-color: var(--line);
-  background: rgba(250, 248, 244, 0.95);
   box-shadow: 0 6px 30px rgba(27, 25, 21, 0.05);
 }
 .header__inner {
