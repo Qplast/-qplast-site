@@ -62,12 +62,15 @@
       e.stopPropagation();
       langMenu.classList.toggle("open");
     });
-    langMenu.querySelectorAll("button").forEach(function (b) {
-      b.addEventListener("click", function () {
-        currentLang = b.getAttribute("data-lang");
+    langMenu.addEventListener("click", function (e) {
+      var opt = e.target.closest("[data-lang]");
+      if (!opt) return;
+      currentLang = opt.getAttribute("data-lang");
+      localStorage.setItem("qplast-lang", currentLang);
+      if (opt.tagName === "BUTTON") {
         applyLang(currentLang);
         langMenu.classList.remove("open");
-      });
+      }
     });
     document.addEventListener("click", function (e) {
       if (langMenu && !langMenu.contains(e.target)) langMenu.classList.remove("open");
