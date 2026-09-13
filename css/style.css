@@ -1097,19 +1097,16 @@ section[id] { scroll-margin-top: 80px; }
 }
 
 /* Turkish nav labels ("Hakkımızda", "Fiyat Teklifi", ...) plus the brand
-   tagline no longer fit the 1160px header container at the wide (>1380px)
-   breakpoint where the CTA button reappears at full nav size — this keeps
-   the already-safe compact nav style for Turkish at every desktop width,
-   without touching the CTA/nav sizing for any other language. */
+   tagline no longer fit the fixed 1160px header container when the CTA
+   button is visible — keep Turkish on the compact desktop nav used by every
+   other language and simply hide the CTA (as before) to gain space. */
 @media (min-width: 901px) {
   html[lang="tr"] .header__cta { display: none; }
-  html[lang="tr"] .nav { gap: 18px; }
-  html[lang="tr"] .nav a { font-size: 13.5px; }
 }
 
 @media (max-width: 1180px) and (min-width: 901px) {
-  .nav { gap: 10px; }
-  .nav a { font-size: 12px; }
+  .nav { gap: 8px; }
+  .nav a { font-size: 11.5px; }
 }
 
 @media (max-width: 1040px) and (min-width: 901px) {
