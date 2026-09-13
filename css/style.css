@@ -1117,6 +1117,12 @@ section[id] { scroll-margin-top: 80px; }
   .lang-select__btn { padding: 7px 10px; font-size: 12px; gap: 6px; }
 }
 
+/* Arabic labels are slightly wider than Persian — shave 0.5px so the
+   tightest desktop widths (1041-1100px) fit on one line too. */
+@media (max-width: 1180px) and (min-width: 901px) {
+  html[lang="ar"] .nav a { font-size: 11px; }
+}
+
 @media (max-width: 900px) {
   .nav {
     position: fixed;
