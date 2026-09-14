@@ -492,4 +492,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/pages/news.html" />
   </url>
 
+  <url>
+    <loc>https://qplast.ir/blog/راهنمای-انتخاب-دهانه-پمپ-بسته-بندی-آرایشی.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/blog/راهنمای-انتخاب-دهانه-پمپ-بسته-بندی-آرایشی.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/blog/راهنمای-انتخاب-دهانه-پمپ-بسته-بندی-آرایشی.html" />
+  </url>
+
+  <url>
+    <loc>https://qplast.ir/blog/تست-نمونه-پمپ-قبل-از-سفارش-انبوه.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/blog/تست-نمونه-پمپ-قبل-از-سفارش-انبوه.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/blog/تست-نمونه-پمپ-قبل-از-سفارش-انبوه.html" />
+  </url>
+
 </urlset>
