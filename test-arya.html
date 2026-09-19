@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html><html lang="fa"><head><meta charset="utf-8"><title>Test Arya-30</title></head>
+<body style="font-family:sans-serif;background:#222;color:#fff;padding:40px">
+<h3>Test: logic for arya + vol=30</h3>
+<div id="out" style="font-size:22px;margin:10px 0"></div>
+<div><img id="img" style="max-width:350px;border:2px solid #fff"></div>
+<script>
+var SPECS_DATA = { arya: { bottles: [ {vol:30,h:66,neck:18}, {vol:50,h:81,neck:18}, {vol:80,h:126.5,neck:18} ] } };
+var currentFamily = "arya", currentVol = 30;
+var f = SPECS_DATA[currentFamily];
+var imgMap = { arya: "../assets/arya-white.jpg" };
+var neckVolMap = { "18": { "30": "../assets/arya-30.jpg" } };
+var activeNeck = String(f.bottles[0].neck || "");
+var perVol = neckVolMap[activeNeck] && neckVolMap[activeNeck][String(currentVol)];
+var src = perVol || imgMap[currentFamily];
+document.getElementById("out").textContent = "activeNeck=" + activeNeck + " -> img = " + src;
+document.getElementById("img").src = src;
+</script>
+</body></html>

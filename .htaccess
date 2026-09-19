@@ -4,6 +4,35 @@ ErrorDocument 404 /404.html
   RedirectMatch 301 ^/blog/(.*)$ /وبلاگ/$1
 </IfModule>
 
+# ------------------------------------------------------------------
+# SEO: legacy ?lang= URLs (e.g. /pages/quality.html?lang=en) were the
+# duplicated-content source in Google. 301 them to the definitive
+# per-language path in ONE hop (including a direct http -> https hop).
+# ------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # root index: index.html?lang=en|tr|ar|zh  ->  /<lang>/index.html
+  RewriteCond %{QUERY_STRING} (^|&)lang=(en|tr|ar|zh)(&|$) [NC]
+  RewriteRule ^index\.html$ https://%{HTTP_HOST}/%2/index.html [L,R=301,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=(en|tr|ar|zh)(&|$) [NC]
+  RewriteRule ^$ https://%{HTTP_HOST}/%2/index.html [L,R=301,QSD]
+
+  # inner fa pages: pages/<page>.html?lang=en|tr|ar|zh  ->  /<lang>/<page>.html
+  RewriteCond %{QUERY_STRING} (^|&)lang=(en|tr|ar|zh)(&|$) [NC]
+  RewriteRule ^pages/([^/]+)\.html$ https://%{HTTP_HOST}/%2/$1.html [L,R=301,QSD]
+
+  # ?lang=fa is the same document -> normalize to the canonical fa URL
+  RewriteCond %{QUERY_STRING} (^|&)lang=fa(&|$) [NC]
+  RewriteRule ^index\.html$ https://%{HTTP_HOST}/index.html [L,R=301,QSD]
+  RewriteCond %{QUERY_STRING} (^|&)lang=fa(&|$) [NC]
+  RewriteRule ^pages/([^/]+)\.html$ https://%{HTTP_HOST}/pages/$1.html [L,R=301,QSD]
+
+  # Force HTTPS for the whole site
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 <IfModule mod_headers.c>
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set X-Content-Type-Options "nosniff"

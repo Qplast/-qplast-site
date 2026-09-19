@@ -8,13 +8,13 @@ LANGS = ["fa", "en", "ar", "tr", "zh"]
 
 PAGES = [
     # kind, fa_path, changefreq, priority, lastmod
-    ("index", "index.html", "weekly", "1.0", "2026-09-03"),
-    ("products", "pages/products.html", "weekly", "0.9", "2026-08-17"),
-    ("about", "pages/about.html", "monthly", "0.8", "2026-08-17"),
-    ("inquiry", "pages/inquiry.html", "monthly", "0.8", "2026-08-17"),
-    ("quality", "pages/quality.html", "monthly", "0.7", "2026-08-17"),
-    ("contact", "pages/contact.html", "monthly", "0.6", "2026-08-17"),
-    ("news", "pages/news.html", "weekly", "0.6", "2026-09-03"),
+    ("index", "index.html", "weekly", "1.0", "2026-09-07"),
+    ("products", "pages/products.html", "weekly", "0.9", "2026-09-07"),
+    ("about", "pages/about.html", "monthly", "0.8", "2026-09-07"),
+    ("inquiry", "pages/inquiry.html", "monthly", "0.8", "2026-09-07"),
+    ("quality", "pages/quality.html", "monthly", "0.7", "2026-09-07"),
+    ("contact", "pages/contact.html", "monthly", "0.6", "2026-09-07"),
+    ("news", "pages/news.html", "weekly", "0.6", "2026-09-07"),
 ]
 
 
