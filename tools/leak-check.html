@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>چک نشتی و درخواست نمونه | Q Plast</title>
+  <meta name="description" content="پیشنهاد اولیه پمپ کیوپلاست بر اساس فرمولاسیون و دهانه بطری، همراه با درخواست نمونه رایگان قبل از سفارش انبوه.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #faf8f4;
+      --cream-deep: #f1eadf;
+      --white: #fff;
+      --charcoal: #1b1915;
+      --muted: #6d665c;
+      --gold: #c19a55;
+      --gold-dark: #9c7a3e;
+      --line: #e6ddcf;
+      --shadow: 0 22px 55px rgba(27, 25, 21, .11);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 10% 0%, #fff 0, var(--cream) 42%, #eee5d8 100%);
+      color: var(--charcoal);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 1.8;
+    }
+    .wrap { width: min(760px, calc(100% - 32px)); margin: 0 auto; padding: 54px 0 70px; }
+    .brand { color: var(--gold-dark); font-size: .85rem; font-weight: 700; letter-spacing: .04em; }
+    h1 { margin: 8px 0 10px; font-size: clamp(1.65rem, 5vw, 2.45rem); line-height: 1.45; }
+    .intro { margin: 0 0 28px; color: var(--muted); max-width: 620px; }
+    .card {
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(193,154,85,.26);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 5vw, 36px);
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    label { display: block; font-size: .9rem; font-weight: 700; margin-bottom: 7px; }
+    select, input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--white);
+      color: var(--charcoal);
+      font: inherit;
+      padding: 12px 13px;
+      outline: none;
+    }
+    select:focus, input:focus { border-color: var(--gold-dark); box-shadow: 0 0 0 3px rgba(193,154,85,.18); }
+    .result { margin-top: 24px; padding: 20px; border-radius: 16px; background: var(--charcoal); color: #fff; }
+    .result h2 { margin: 0 0 7px; font-size: 1.25rem; color: #f7dfad; }
+    .result p { margin: 0; color: #eee8de; }
+    .result .secondary { margin-top: 11px; color: #f1d49c; }
+    .note { margin: 22px 0 0; padding: 14px 16px; border-right: 4px solid var(--gold); background: #fffaf1; color: #51483b; border-radius: 10px; }
+    button {
+      border: 0;
+      border-radius: 11px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      padding: 12px 18px;
+      transition: transform .18s ease, background .18s ease;
+    }
+    button:hover { transform: translateY(-1px); }
+    .primary { width: 100%; margin-top: 22px; background: var(--gold); color: var(--charcoal); }
+    .primary:hover { background: #d0a967; }
+    .sample { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 24px; }
+    .sample h2 { margin: 0 0 14px; font-size: 1.1rem; }
+    .sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .submit { margin-top: 16px; background: var(--charcoal); color: #fff; }
+    .confirmation { margin-top: 16px; padding: 14px 16px; border-radius: 10px; background: #edf5ea; color: #31552d; font-weight: 600; }
+    [hidden] { display: none !important; }
+    @media (max-width: 620px) {
+      .grid, .sample-grid { grid-template-columns: 1fr; }
+      .wrap { padding-top: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">Q Plast · دقت مهندسی، ظرافت پرمیوم</div>
+    <h1>چک نشتی و درخواست نمونه</h1>
+    <p class="intro">برای انتخاب اولیه پمپ بسته‌بندی، نوع فرمولاسیون و دهانه بطری را مشخص کنید. نتیجه یک پیشنهاد اولیه است و نمونه رایگان، مسیر مناسب برای بررسی سازگاری محصول شماست.</p>
+
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title" hidden>انتخاب فرمولاسیون و دهانه</h2>
+      <div class="grid">
+        <div>
+          <label for="formula">نوع فرمولاسیون محصول شما</label>
+          <select id="formula">
+            <option value="">انتخاب کنید</option>
+            <option value="thick">کرم/لوسیون غلیظ</option>
+            <option value="serum">سرم آبکی</option>
+            <option value="oily">روغنی</option>
+            <option value="spray">اسپری</option>
+          </select>
+        </div>
+        <div>
+          <label for="neck">دهانه مدنظر</label>
+          <select id="neck">
+            <option value="">انتخاب کنید</option>
+            <option value="18">۱۸</option>
+            <option value="20">۲۰</option>
+            <option value="24">۲۴</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="result" class="result" hidden aria-live="polite">
+        <h2 id="recommendation"></h2>
+        <p id="recommendationText"></p>
+        <p id="secondary" class="secondary" hidden></p>
+      </div>
+
+      <p id="emptyNote" class="note">با انتخاب هر دو گزینه، پیشنهاد اولیه گروه محصول نمایش داده می‌شود.</p>
+      <button id="sampleButton" class="primary" type="button" hidden>درخواست نمونه رایگان</button>
+
+      <form id="sampleForm" class="sample" hidden>
+        <h2>ثبت درخواست نمونه</h2>
+        <div class="sample-grid">
+          <div>
+            <label for="name">نام</label>
+            <input id="name" name="name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="phone">شماره تماس</label>
+            <input id="phone" name="phone" required type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="brand">نام برند</label>
+            <input id="brand" name="brand" required autocomplete="organization">
+          </div>
+        </div>
+        <button class="submit" type="submit">ثبت درخواست نمونه</button>
+      </form>
+      <div id="confirmation" class="confirmation" hidden role="status">درخواست شما ثبت شد. نمونه ظرف چند روز کاری برایتان ارسال می‌شود.</div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const formula = document.getElementById("formula");
+      const neck = document.getElementById("neck");
+      const result = document.getElementById("result");
+      const recommendation = document.getElementById("recommendation");
+      const recommendationText = document.getElementById("recommendationText");
+      const secondary = document.getElementById("secondary");
+      const emptyNote = document.getElementById("emptyNote");
+      const sampleButton = document.getElementById("sampleButton");
+      const sampleForm = document.getElementById("sampleForm");
+      const confirmation = document.getElementById("confirmation");
+      const groups = { "18": "آریا", "20": "پارس", "24": "همتا" };
+
+      function updateRecommendation() {
+        const selectedFormula = formula.value;
+        const selectedNeck = neck.value;
+        const group = groups[selectedNeck];
+        if (!selectedFormula || !group) {
+          result.hidden = true;
+          sampleButton.hidden = true;
+          emptyNote.hidden = false;
+          return;
+        }
+        result.hidden = false;
+        sampleButton.hidden = false;
+        emptyNote.hidden = true;
+        recommendation.textContent = `پیشنهاد اولیه: گروه ${group}`;
+        recommendationText.textContent =
+          selectedFormula === "serum"
+            ? "برای سرم آبکی، سازگاری پمپ و فرمولاسیون اهمیت بیشتری دارد. برای اطمینان کامل از سازگاری با فرمولاسیون شما، پیشنهاد می‌کنیم قبل از سفارش انبوه نمونه رایگان تست کنید."
+            : "برای اطمینان کامل از سازگاری با فرمولاسیون شما، پیشنهاد می‌کنیم قبل از سفارش انبوه نمونه رایگان تست کنید.";
+        if (selectedFormula === "oily") {
+          secondary.hidden = false;
+          secondary.textContent = "گزینه دوم پیشنهادی: گروه سپنتا (ایرلس) برای بررسی فرمولاسیون‌های روغنی.";
+        } else {
+          secondary.hidden = true;
+          secondary.textContent = "";
+        }
+      }
+
+      formula.addEventListener("change", updateRecommendation);
+      neck.addEventListener("change", updateRecommendation);
+      sampleButton.addEventListener("click", () => {
+        sampleForm.hidden = false;
+        confirmation.hidden = true;
+        sampleForm.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+      sampleForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        sampleForm.hidden = true;
+        sampleButton.hidden = true;
+        confirmation.hidden = false;
+        sampleForm.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
