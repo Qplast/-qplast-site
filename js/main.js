@@ -1001,7 +1001,9 @@
         { src: "../assets/hamta-gallery-media.jpg2K202608221949.jpeg?v=2", caption: "Hamta" },
         { src: "../assets/hamta-gallery-media.jpg2K202608221956.jpeg?v=2", caption: "Hamta" },
         { src: "../assets/hamta-gallery-media.jpg2026082220091.jpeg?v=2", caption: "Hamta" },
-        { src: "../assets/hamta-gallery-media.jpg2026082220092.jpeg?v=2", caption: "Hamta" }
+        { src: "../assets/hamta-gallery-media.jpg2026082220092.jpeg?v=2", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-custom-1.jpeg?v=1", caption: "Hamta" },
+        { src: "../assets/hamta-gallery-custom-2.jpeg?v=1", caption: "Hamta" }
       ],
       pars: [
         { src: "../assets/pars-gallery-1.jpg?v=9", caption: "Pars" },
