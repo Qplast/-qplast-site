@@ -64,6 +64,7 @@
     }
   }
   </script>
+  <style>@media (max-width:600px){#inquiryForm{padding:24px 16px !important}}</style>
 </head>
 <body>
 
@@ -119,36 +120,10 @@
       </div>
     </section>
 
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section__head">
-          <p class="section__eyebrow">٣ خطوات بسيطة</p>
-          <h2 class="section__title">من التحديد إلى الطلب</h2>
-        </div>
-        <div class="process">
-          <div class="process__item">
-            <span class="process__num">١</span>
-            <h3>حدد</h3>
-            <p>حدد نوع السائل والعنق ١٨/٢٠/٢٤ والحجم المتوافق مع مجموعة منتجاتك.</p>
-          </div>
-          <div class="process__item">
-            <span class="process__num">٢</span>
-            <h3>اختر واختبر</h3>
-            <p>اختر من ٥ مجموعات واستلم عينات لاختبار توافق تركيبتك.</p>
-          </div>
-          <div class="process__item">
-            <span class="process__num">٣</span>
-            <h3>اطلب بثقة</h3>
-            <p>استلم عرض سعر شافٍ وأكمل طلبك.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="container">
-        <form class="form reveal-target" id="inquiryForm" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:44px 40px;max-width:820px">
-          <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+        <form class="form" id="inquiryForm" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:44px 40px;max-width:820px">
+          <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" style="position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip-path:inset(50%);pointer-events:none" aria-hidden="true">
           <div class="form__row">
             <div class="form__group">
               <label for="fName">الاسم الكامل *</label>
@@ -205,6 +180,31 @@
           <button type="submit" class="btn btn--gold btn--block">إرسال الطلب</button>
           <p class="form__note" id="formNote" hidden=""></p>
         </form>
+      </div>
+    </section>
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">٣ خطوات بسيطة</p>
+          <h2 class="section__title">من التحديد إلى الطلب</h2>
+        </div>
+        <div class="process">
+          <div class="process__item">
+            <span class="process__num">١</span>
+            <h3>حدد</h3>
+            <p>حدد نوع السائل والعنق ١٨/٢٠/٢٤ والحجم المتوافق مع مجموعة منتجاتك.</p>
+          </div>
+          <div class="process__item">
+            <span class="process__num">٢</span>
+            <h3>اختر واختبر</h3>
+            <p>اختر من ٥ مجموعات واستلم عينات لاختبار توافق تركيبتك.</p>
+          </div>
+          <div class="process__item">
+            <span class="process__num">٣</span>
+            <h3>اطلب بثقة</h3>
+            <p>استلم عرض سعر شافٍ وأكمل طلبك.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

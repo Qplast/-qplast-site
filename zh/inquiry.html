@@ -64,6 +64,7 @@
     }
   }
   </script>
+  <style>@media (max-width:600px){#inquiryForm{padding:24px 16px !important}}</style>
 </head>
 <body>
 
@@ -119,36 +120,10 @@
       </div>
     </section>
 
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section__head">
-          <p class="section__eyebrow">3个简单步骤</p>
-          <h2 class="section__title">从规格确认到订单</h2>
-        </div>
-        <div class="process">
-          <div class="process__item">
-            <span class="process__num">1</span>
-            <h3>确定</h3>
-            <p>确定您的液体类型、口径18/20/24和与产品系列兼容的容量。</p>
-          </div>
-          <div class="process__item">
-            <span class="process__num">2</span>
-            <h3>选择并测试</h3>
-            <p>从5个系列中选择并接收样品，测试您的配方兼容性。</p>
-          </div>
-          <div class="process__item">
-            <span class="process__num">3</span>
-            <h3>放心下单</h3>
-            <p>获取透明报价并最终确定您的订单。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="container">
-        <form class="form reveal-target" id="inquiryForm" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:44px 40px;max-width:820px">
-          <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+        <form class="form" id="inquiryForm" style="background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:44px 40px;max-width:820px">
+          <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" style="position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip-path:inset(50%);pointer-events:none" aria-hidden="true">
           <div class="form__row">
             <div class="form__group">
               <label for="fName">全名 *</label>
@@ -205,6 +180,31 @@
           <button type="submit" class="btn btn--gold btn--block">发送请求</button>
           <p class="form__note" id="formNote" hidden=""></p>
         </form>
+      </div>
+    </section>
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">3个简单步骤</p>
+          <h2 class="section__title">从规格确认到订单</h2>
+        </div>
+        <div class="process">
+          <div class="process__item">
+            <span class="process__num">1</span>
+            <h3>确定</h3>
+            <p>确定您的液体类型、口径18/20/24和与产品系列兼容的容量。</p>
+          </div>
+          <div class="process__item">
+            <span class="process__num">2</span>
+            <h3>选择并测试</h3>
+            <p>从5个系列中选择并接收样品，测试您的配方兼容性。</p>
+          </div>
+          <div class="process__item">
+            <span class="process__num">3</span>
+            <h3>放心下单</h3>
+            <p>获取透明报价并最终确定您的订单。</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
