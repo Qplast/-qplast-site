@@ -1,4 +1,4 @@
-ErrorDocument 404 /404.html
+ ErrorDocument 404 /404.html
 
 <IfModule mod_alias.c>
   RedirectMatch 301 ^/blog/(.*)$ /وبلاگ/$1
@@ -11,6 +11,10 @@ ErrorDocument 404 /404.html
 # ------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # SEO: one host only. www.qplast.ir -> https://qplast.ir (same path), one hop.
+  RewriteCond %{HTTP_HOST} ^www\.qplast\.ir$ [NC]
+  RewriteRule ^ https://qplast.ir%{REQUEST_URI} [L,R=301]
 
   # root index: index.html?lang=en|tr|ar|zh  ->  /<lang>/index.html
   RewriteCond %{QUERY_STRING} (^|&)lang=(en|tr|ar|zh)(&|$) [NC]
