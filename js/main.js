@@ -149,7 +149,7 @@
         { vol: 100, h: 80, neck: 24 },
         { vol: 140, h: 100, neck: 24 },
         { vol: 170, h: 112.27, neck: 24 },
-        { vol: 220, h: 150, neck: 24 }
+        { vol: 200, h: 150, neck: 24 }
       ]
     },
     arya: {
@@ -389,7 +389,7 @@
   /* ---------- Blueprint renderer state ---------- */
   var specsPanel = document.getElementById("specsPanel");
   var currentFamily = "hamta";
-  var currentVol = 220;
+  var currentVol = 200;
   var currentNeck = 24;
   /* Guards the pump-type (lotion vs mist) photo choice below: only trust the
      finder's live "Product type" filter when this specs view was actually
@@ -532,7 +532,7 @@
 
   /* neck → allowed volumes mapping */
   var NECK_VOLS = {
-    "24": ["90", "100", "140", "170", "220"],
+    "24": ["90", "100", "140", "170", "200"],
     "18": ["30", "50", "80"],
     "20": ["30", "50", "80"]
   };
