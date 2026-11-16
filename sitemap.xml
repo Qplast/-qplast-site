@@ -527,7 +527,7 @@
   <!-- news (fa) -->
   <url>
     <loc>https://qplast.ir/pages/news.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
@@ -541,7 +541,7 @@
   <!-- news (en) -->
   <url>
     <loc>https://qplast.ir/en/news.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
@@ -555,7 +555,7 @@
   <!-- news (ar) -->
   <url>
     <loc>https://qplast.ir/ar/news.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
@@ -569,7 +569,7 @@
   <!-- news (tr) -->
   <url>
     <loc>https://qplast.ir/tr/news.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
@@ -583,7 +583,7 @@
   <!-- news (zh) -->
   <url>
     <loc>https://qplast.ir/zh/news.html</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/pages/news.html" />
@@ -1794,5 +1794,65 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/blog/arta-dropper-neck-18-or-20.html" />
     <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/blog/arta-dropper-neck-18-or-20.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/وبلاگ/قطره‌چکان-آرتا-دهانه-۱۸-یا-۲۰.html" />
+  </url>
+  <url>
+    <loc>https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+  </url>
+  <url>
+    <loc>https://qplast.ir/en/blog/hamta-bottle-volume-guide-90-200-ml.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+  </url>
+  <url>
+    <loc>https://qplast.ir/ar/blog/hamta-bottle-volume-guide-90-200-ml.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+  </url>
+  <url>
+    <loc>https://qplast.ir/tr/blog/hamta-bottle-volume-guide-90-200-ml.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+  </url>
+  <url>
+    <loc>https://qplast.ir/zh/blog/hamta-bottle-volume-guide-90-200-ml.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://qplast.ir/en/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://qplast.ir/ar/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://qplast.ir/tr/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://qplast.ir/zh/blog/hamta-bottle-volume-guide-90-200-ml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qplast.ir/وبلاگ/راهنمای-انتخاب-حجم-بطری-همتا-۹۰-تا-۲۰۰-میلی‌لیتر.html" />
   </url>
 </urlset>
